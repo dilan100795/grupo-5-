@@ -1,6 +1,8 @@
 
 # GRUPO 5 LIBRERIA EL TIEMPO
 
+# Servicios o productos que ofrecemos: 
+
 # Integrantes:
 
 ## Dilan Martinez Salazar:
@@ -32,4 +34,8 @@
 4.   ● Por el publico al  que se dirige [Librería Cuspide] https://www.cuspide.com/
 
 5.   ● Por la interacion con el publica , tiene asistente virtual  [Librería sbs internacional] https://www.sbs.com.ar/
+ 
+ <div id="logo">
 
+#### Logo de Pagina
+![Logo](/Extras/libreriaeltiempo.jpg)
