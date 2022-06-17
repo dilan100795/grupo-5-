@@ -1,6 +1,8 @@
 
 # GRUPO 5 LIBRERIA EL TIEMPO
 
+# Servicios o productos que ofrecemos: 
+
 # Integrantes:
 
 ## Dilan Martinez Salazar:
