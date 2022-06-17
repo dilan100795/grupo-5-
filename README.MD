@@ -15,7 +15,7 @@
 
  ● 37 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
 
-*** ¡Bienvenidos a La libreria "el tiempo"! *** 
+*** ¡Bienvenidos a La libreria "El Tiempo"! *** 
 
 
 
