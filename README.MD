@@ -13,7 +13,7 @@
 
  ## Roberto Germán Payllalef :
 
- ● 37 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
+ ● 38 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
 
 *** ¡Bienvenidos a La libreria "El Tiempo"! *** 
 
