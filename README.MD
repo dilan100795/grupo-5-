@@ -1,11 +1,11 @@
 
 # Proyecto Ecommerce del grupo 5 : EL TIEMPO
 
-## *** ¡Bienvenidos a La libreria "El Tiempo"! *** 
+## *¡Bienvenidos a La libreria "El Tiempo"!*
 
-### Servicios o productos que ofrecemos: 
+### Servicios o productos que ofrecemos + Nuestra audiencia objetivo:
 
-En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la lectura agasajando a nuestros clientes con una amplia variedad de categorías literarias haciendo posible que todos puedan encontrar lo que buscan, desde los lectores más chicos, los amantes de los clásicos o los aficionados a la ciencia ficción.
+En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la lectura agasajando a nuestros clientes con una amplia variedad de categorías literarias haciendo posible que todos puedan encontrar lo que buscan, desde los lectores más chicos, los amantes de los clásicos a los aficionados a la ciencia ficción.
 
 ### Integrantes:
 
