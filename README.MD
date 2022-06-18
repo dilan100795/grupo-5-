@@ -1,5 +1,7 @@
 
-# GRUPO 5 LIBRERIA EL TIEMPO
+# Proyecto Ecommerce del grupo 5 : EL TIEMPO
+
+## *** ¡Bienvenidos a La libreria "El Tiempo"! *** 
 
 ### Servicios o productos que ofrecemos: 
 
@@ -18,8 +20,6 @@ En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la l
  #### Roberto Germán Payllalef :
 
  ● 38 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
-
-# *** ¡Bienvenidos a La libreria "El Tiempo"! *** 
 
 
 ### ***¡Paginas Referentes!***  
