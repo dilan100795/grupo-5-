@@ -1,5 +1,5 @@
 
-# Proyecto Ecommerce del grupo 5 : EL TIEMPO
+# Proyecto Ecommerce: EL TIEMPO
 
 ## *¡Bienvenidos a La libreria "El Tiempo"!*
 
