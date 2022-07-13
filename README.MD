@@ -7,7 +7,7 @@
 
 ## Dilan Martinez Salazar:
 
- ● 26 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
+ ● 27 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
 
  ## Melanie Rosi :
 
