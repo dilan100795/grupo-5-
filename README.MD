@@ -39,3 +39,7 @@
 
 #### Logo de Pagina
 ![Logo](/Extras/libreriaeltiempo.jpg)
+
+### Link al tablero de trello 
+
+![Trello](https://trello.com/b/VkYKSK8o/grupo5)
