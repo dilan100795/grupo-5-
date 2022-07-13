@@ -42,4 +42,4 @@
 
 ### Link al tablero de trello 
 
-![Trello](https://trello.com/b/VkYKSK8o/grupo5)
+>[Trello](https://trello.com/b/VkYKSK8o/grupo5)
