@@ -1,8 +1,8 @@
 # Retro sprint 1
 
 ## Comenzar a hacer
--Disolver los problemas apenas se prosentan, evitando que se creen obstaculos.
--Organizar la reuniones en días y horarios fijos con antelacion.
+-Disolver los problemas apenas se presenten, evitando que se creen obstaculos.
+-Organizar las reuniones en días y horarios fijos con antelacion.
 
 ## Hacer más.
 -Consultar más nuestras dudas cuando surjan.
