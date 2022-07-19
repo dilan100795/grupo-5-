@@ -17,10 +17,6 @@ En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la l
 
  ● 21 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
 
- #### Roberto Germán Payllalef :
-
- ● 38 años , estudiante de programación Web Full Stack en Digital House y Fundación Formar.
-
 
 ### ***¡Paginas Referentes!***  
 1.   ● Esta página la tomamos de referencia por su apariencia práctica y especialmente por las funcionalidades implementadas, por ejemplo el carrito de compras que nos pareció muy dinámico para el cliente que no ve interrumpida su búsqueda. [Librería Hernández]  https://www.libreriahernandez.com/
