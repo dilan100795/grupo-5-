@@ -3,7 +3,7 @@
 
 :root{
     /* Colores */
-    --colorPrincipal: white;
+    --blanco: white;
     --amarillo: #fff3b0;
     --naranja:#e09f3e;
     --rojizo:#9e2a2b;
@@ -11,5 +11,5 @@
     --azul: #335c67;
 
     /* Fuentes */
-
+--fuente: Verdana, Geneva, Tahoma, sans-serif;
 }

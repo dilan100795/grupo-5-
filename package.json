@@ -1,0 +1,19 @@
+{
+  "name": "grupo-5",
+  "version": "1.0.0",
+  "description": "En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la lectura agasajando a nuestros clientes con una amplia variedad de categorías literarias haciendo posible que todos puedan encontrar lo que buscan, desde los lectores más chicos, los amantes de los clásicos a los aficionados a la ciencia ficción.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilan100795/grupo-5-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilan100795/grupo-5-/issues"
+  },
+  "homepage": "https://github.com/dilan100795/grupo-5-#readme"
+}

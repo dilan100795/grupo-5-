@@ -1,0 +1,87 @@
+header {
+    background-color: var(--rojizo);
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+/*burger, logo y carrito*/
+header .top{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+header .burger label{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+header .burger input{
+    display:none
+}
+header .burger input:checked ~ nav{
+    display: none;
+}
+header nav{
+    width: 100%;
+    display: block;
+    margin: 20px;
+    font-size: medium;
+    justify-content: flex-start;
+}
+header nav ul{
+    width: 100%;
+    justify-content: flex-start;
+}
+header nav a{
+    display: block;
+    width: 100%;
+}
+header .logo img{
+    max-height:120px;
+    margin-top: 5px; 
+    margin-bottom: 30px;
+    align-self: center;
+}
+header .cart {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+/*lupa y barra de busqueda*/
+header .busqueda{
+    background-color:var(--amarillo);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end; 
+}
+header .lupa{
+    font-size: 1.1em;
+    margin: 5px;
+    margin-right: 5px;
+}
+header .lupa-boton{
+    background-color: var(--amarillo);
+    border-radius: 9px;
+}
+/*tablet*/ /*
+@media (min-width:460px) {
+    header{
+
+    }
+}
+*/
+/*desktop*/
+/*
+@media (min-width:768px) {
+    header{
+
+    }
+}*/
