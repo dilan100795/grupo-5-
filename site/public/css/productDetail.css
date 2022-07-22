@@ -5,8 +5,8 @@ a {
     text-decoration: none;
 }
 /*fondo del body*/
-body .home {
-    background-color: rgb(214, 141, 141);
+body .detalle-de-producto {
+    background-color: var(--colorPrincipal);
 }
 /*main*/
 main {
