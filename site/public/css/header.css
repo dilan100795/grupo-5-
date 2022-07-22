@@ -1,87 +1,182 @@
 header {
     background-color: var(--rojizo);
-    padding: 5px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+   
 }
-/*burger, logo y carrito*/
-header .top{
+header .top {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 1px;
 }
-header .burger label{
-    display:flex;
+header .top a{
+    
+        color: black;
+        text-decoration: none;
+    
+}
+header .top .icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/*burger desplegable*/
+header .top .burger label {
+    display: flex;
     margin-top: 20px;
     margin-left: 10px;
     font-size: 1.5em;
 }
-header .burger input{
-    display:none
+
+header .top .burger i {
+    color: var(--azul);
 }
-header .burger input:checked ~ nav{
+
+header .top .burger input {
+    display: none
+}
+
+header .top .burger input:checked~nav {
     display: none;
 }
-header nav{
+
+header .top .burger nav {
     width: 100%;
     display: block;
     margin: 20px;
     font-size: medium;
     justify-content: flex-start;
 }
-header nav ul{
+
+header .top .burger nav ul {
     width: 100%;
-    justify-content: flex-start;
+    background-color: var(--amarillo);
+    border: 2px solid var(--azul);
+    border-radius: 4px;
+    padding: 5px;
 }
-header nav a{
-    display: block;
+
+header .burger-op {
+
     width: 100%;
+    color: var(--azul);
+    text-align: center;
 }
-header .logo img{
-    max-height:120px;
-    margin-top: 5px; 
-    margin-bottom: 30px;
-    align-self: center;
+
+/*logo img*/
+header .top .log {
+    text-align: center;
 }
+
+header .logo img {
+    height: 120px;
+    margin-top: 5px;
+
+    text-align: center;
+}
+
+header .busqueda {
+    width: 60%;
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+header .busqueda input {
+    width: 70%;
+    height: 30%;
+}
+
+header .busqueda button {
+    height: 30%;
+}
+
+
+
+header .login-icon {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 1.5em;
+    color:aqua;
+
+}
+
 header .cart {
     margin-top: 20px;
     margin-right: 10px;
     font-size: 1.5em;
 }
-/*lupa y barra de busqueda*/
-header .busqueda{
-    background-color:var(--amarillo);
+
+
+header .menu-opciones {
+
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     width: 100%;
+    flex-grow: 1;
+}
+
+header .menu-opciones ul {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end; 
+    justify-content: space-around;
+    width: 100%;
+    
 }
-header .lupa{
-    font-size: 1.1em;
-    margin: 5px;
-    margin-right: 5px;
+
+header .menu-opciones li {
+    background-color: var(--azul);
+    padding: 5px;
+    margin: 4px;
+    border-radius: 5px;
+    text-align: center;
 }
-header .lupa-boton{
-    background-color: var(--amarillo);
-    border-radius: 9px;
+
+header .menu-opciones a {
+    color: var(--blanco);
+    text-transform: uppercase;
 }
-/*tablet*/ /*
-@media (min-width:460px) {
-    header{
+
+header .menu-opciones ul li:first-child {
+    display: none;
+}
+
+
+/*tablet*/
+@media (min-width:461px) {
+
+
+    header .burger {
+        display: none
+    }
+
+    header .menu-opciones {
+        display: flex;
+        
 
     }
+
+    header .login-icon {
+        display: flex;
+        justify-content: end;
+    }
+
+    header .cart {
+        justify-content: flex-end;
+    }
+
+    header .busqueda {
+        display: block;
+    }
+
 }
-*/
+
 /*desktop*/
-/*
-@media (min-width:768px) {
-    header{
-
+@media (min-width:76px) {
+    header .menu-opciones ul li:first-child {
+        display: flex;
     }
-}*/
+}

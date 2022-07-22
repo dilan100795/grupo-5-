@@ -11,7 +11,7 @@
     <title>LIBRERIA EL TIEMPO</title>
 </head>
 
-<body>
+<body class="home">
     <header>
 
         <section class="top">
@@ -21,10 +21,10 @@
                 <label for="burger"><i class="fas fa-bars"></i></label>
                 <nav>
                     <ul type="none" class="menu">
-                        <li><a href="#">Categorias</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Registro</a></li>
+                        <li><a class="burger-op" href="#">Categorias</a></li>
+                        <li><a class="burger-op" href="#">Contacto</a></li>
+                        <li><a class="burger-op" href="./login">Login</a></li>
+                        <li><a class="burger-op" href="./register">Registro</a></li>
                     </ul>
                 </nav>
             </div>
@@ -34,18 +34,42 @@
                     <img src="/images/logoprovisorio.png" alt="logo de página">
                 </a>
             </div>
-            <!--logo del carito que redireccione al carrito -->
-            <div class="cart">
-                <a href="/">
-                    <i class="fas fa-shopping-bag"></i>
-                </a>
+            <div class="busqueda">
+                <input type="search" placeholder="Buscar por libros, autores y más">
+                <button><i class="fab fa-sistrix"></i></button>
             </div>
-        </section>
-        <!--barra de busqueda-->
-        <section class="busqueda">
-            <div class="lupa"><button class="lupa-boton"><i class="fas fa-search"></i></button></div>
+
+            <section class="icon">
+                <!--logo de login pantallas grandes-->
+                <div class="login-icon">
+                    <a href="./login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <!--logo del carito que redireccione al carrito -->
+                <div class="cart">
+                    <a href="./carrito">
+                        <i class="fas fa-cart-arrow-down"></i>
+                    </a>
+                </div>
+            </section>
+
+
         </section>
 
+
+
+        <!--barra de busqueda-->
+
+        <!--opciones del menu de tablet y desktop-->
+        <section class="menu-opciones">
+            <ul type="none">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contactanos</a></li>
+            </ul>
+        </section>
 
     </header>
 
@@ -363,24 +387,30 @@
 
     <footer>
 
-        <!-- lista del footer-->
-        <section class="footer-top">
-           <!-- logo del footer que redirecciona a home-->
-           <div class="logo">
-            <a href="/">
-                <img src="/images/logoprovisorio.png" alt="logo de página">
-            </a>
-        </div> 
-            <nav>
-                <ul type="none" class="footer">
-                    <li><a href="#">Categorias</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-            
+        <section class="piedepagina">
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logoprovisorio.png" alt="logo de página">
+                </a>
+            </div>
+    
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">categoria</a></li>
+                <li><a href="#">novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+    
+            <article class="redes">
+                <!-- < class="lista-iconos">-->
+                <a Target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                <a Target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a Target="_blank"  href="https://www.gmail.com"><i class="far fa-envelope"></i></a>
+                <a Target="_blank" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+    
+            </article>
         </section>
-        <p class="derechos">Todos los derechos reservados.</p>
-
     </footer>
 </body>
 
