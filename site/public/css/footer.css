@@ -1,0 +1,40 @@
+footer {
+    background-color: var(--rojizo);
+    margin-bottom: 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+footer .footer-top{
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+footer .logo img{
+    height:100px ;
+    margin: 5px;
+}
+
+footer .derechos{
+    font-size: smaller;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*tablet*/ /*
+@media (min-width:460px) {
+    footer{
+
+    }
+}
+*/
+/*desktop*/
+/*
+@media (min-width:768px) {
+    footer{
+
+    }
+}*/
