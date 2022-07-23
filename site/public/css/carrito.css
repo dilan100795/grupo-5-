@@ -1,0 +1,236 @@
+/*articulo de cada producto*/
+.carrito section article{
+    background-color: var(--amarillo);
+    margin: 0 auto;
+    width: 90%;
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 20px
+}
+/*titulo de los productos*/
+.carrito section article h3{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color:var(--bordo)
+}
+.carrito section article .imagenes img{
+    margin-left: 15px;
+    width: 100%;
+    padding-bottom: 5px;
+}
+.carrito section article .imagenes{
+    width: 33%;
+}
+.carrito section article .detail{
+    width: 66%;
+    text-align: center;
+}
+.carrito section article .precio-descuento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carrito section article .precio-secundario{
+    font-size: 24px;
+    color: var(--rojizo);
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+.carrito section article span{
+    font-size: 24px;
+    color: var(--bordo);
+}
+.carrito section article .precio-principal{
+    font-size: 3rem;
+    color: var(--bordo);
+    width: 100%;
+}
+/*sumar, restar + input*/
+.carrito section article .añadir-elementos{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.carrito section article .añadir-elementos input{
+    width: 50px;
+    border: none;
+    text-align: center;
+}
+.carrito section article .añadir-elementos div{
+    background-color: var(--azul);
+    color: var(--amarillo);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+/* las x de cada producto agregado*/ 
+.carrito section article button{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    padding: 5px;
+    background-color: var(--azul);
+    color: var(--blaco);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+/*seccion de precios*/
+/*texto*/
+.carrito .Numeros{
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--naranja);
+    color: var(--bordo);
+    padding: 20px;
+    border-radius: 10px;
+}
+.carrito .Numeros h3{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.carrito .Numeros h3:first-child{
+    margin-top: 0;
+}
+.carrito .Numeros .valor-productos{
+    width: 50%;
+    font-size: 20px;
+    color: var(--azul);
+    border-bottom: 1px solid var(--azul);
+    text-align: end;
+    position: relative;
+}
+.carrito .Numeros .valor-productos .suma{
+    position: absolute;
+    bottom: 0;
+}
+.carrito .Numeros span{
+    display: inline-block;
+    width: 50%;
+    color: var(--azul);
+    font-size: 1.5rem;
+    text-align: end;
+    text-decoration: line-through;
+}
+
+.carrito .Numeros p.precio-principal{
+    width: 50%;
+    text-align: end;
+    font-size: 2rem;
+}
+.carrito .Numeros p{
+    color: var(--azul);
+}
+.carrito .Numeros .precio-ahorro{
+    font-size: 2rem;
+    text-align: end;
+}
+.carrito .Numeros .input{
+    display: none;
+}
+
+.carrito .Numeros .Precio-final{
+    font-size: 2rem;
+    text-align: end;
+    width: 60%;
+}
+.carrito .Numeros .precios-categorias{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.carrito .Numeros .postal{
+    border: 1px solid var(--bordo);
+    width: 70%;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carrito .Numeros .postal input{
+    border: none;
+    width: 110px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.carrito .Numeros .ofertas{
+    margin: 20px 0;
+    font-size: 1.4rem;
+}
+.carrito .Numeros button{
+    background-color: var(--bordo);
+    color: var(--amarillo);
+    border: none;
+    border-radius: 10px;
+    padding: 10px 75px;
+}
+
+.carrito .Numeros .botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/* Tablet */
+@media (min-width:426px){
+    .carrito section article .detail{
+        width: 66%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .carrito section form{
+        max-height: 650px;
+        max-width: 500px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+}
+/* Desktop */
+@media (min-width:769px){
+    .carrito main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .carrito main h1{
+        width: 100%;
+    }
+    .carrito main section{
+        width: 58%;
+        padding-top: 20px;
+    }
+    .carrito main section.Numeros{
+        width: 40%;
+        border-radius: 10px;
+    }
+}
+@media (min-width:800px){
+    .carrito main section.Numeros{
+        max-height: 600px;
+    }
+}
+@media (min-width:1306px){
+    .carrito main section.Numeros{
+        max-height: 560px;
+    }
+}

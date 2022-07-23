@@ -1,17 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f49c1e77a4.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Carrito de compra</title>
 </head>
+<body class="carrito">
+    <header>
+        <section class="top">
+            <!-- menu hamburguesa-->
+            <div class="burger">
+                <input type="checkbox" name="burger" id="burger" checked>
+                <label for="burger"><i class="fas fa-bars"></i></label>
+                <nav>
+                    <ul type="none" class="menu">
+                        <li><a class="burger-op" href="#">Categorias</a></li>
+                        <li><a class="burger-op" href="#">Contacto</a></li>
+                        <li><a class="burger-op" href="./login">Login</a></li>
+                        <li><a class="burger-op" href="./register">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--logo que redirecciona al home -->
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logoprovisorio.png" alt="logo de página">
+                </a>
+            </div>
+            <div class="busqueda">
+                <input type="search" placeholder="Buscar por libros, autores y más">
+                <button><i class="fab fa-sistrix"></i></button>
+            </div>
+            <section class="icon">
+                <!--icon de login pantallas grandes-->
+                <div class="login-icon">
+                    <a href="./login">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+                <!--icon del carito que redireccione al carrito -->
+                <div class="cart">
+                    <a href="./carrito">
+                        <i class="fas fa-cart-arrow-down"></i>
+                    </a>
+                </div>
+            </section>
+        </section>
+        <!--opciones del menu de tablet y desktop-->
+        <section class="menu-opciones">
+            <ul type="none">
+                <li><a href="./nosotros">Nosotros</a></li>
+                <li><a href="/">Categorias</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="./register">Contactanos</a></li>
 
-<body>
-    <header></header>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h3>Drácula, Bram Stoker</h3>
+                <div class="imagenes">
+                    <img src="/images/DraculaCover.jpg" alt="portada de Drácula">
+                </div>
+                <div class="detail">
+                    <div class="precio-descuento">
+                        <p class="precio-secundario">$12.158</p>
+                        <span>50%</span>
+                    </div>
+                    <p class="precio-principal">$6.079</p>
+                    <div class="añadir-elementos">
+                        <div class="restar">-</div>
+                        <input type="number" value="1">
+                        <div class="agregar">+</div>
+                    </div>
+                </div>
+                <button><i class="fas fa-times"></i></button>
+            </article>
+            <article>
+                <h3>Carrie, Stephen King</h3>
+                <div class="imagenes">
+                    <img src="/images/Carrie.PNG" alt="portada de Carrie">
+                </div>
+                <div class="detail">
+                    <div class="precio-descuento">
+                        <p class="precio-secundario">$5.598</p>
+                        <span>50%</span>
+                    </div>
+                    <p class="precio-principal">$2.799</p>
+                    <div class="añadir-elementos">
+                        <div class="restar">-</div>
+                        <input type="number" value="1">
+                        <div class="agregar">+</div>
+                    </div>
+                </div>
+                <button><i class="fas fa-times"></i></button>
+            </article>
+            <article>
+                <h3>El silencio de los corderos, Thomas Harris</h3>
+                <div class="imagenes">
+                    <img src="/images/SilenceOfTheLamb.PNG" alt="Portada de El silencio de los corderos">
+                </div>
+                <div class="detail">
+                    <div class="precio-descuento">
+                        <p class="precio-secundario">$7.254</p>
+                        <span>50%</span>
+                    </div>
+                    <p class="precio-principal">$3.627</p>
+                    <div class="añadir-elementos">
+                        <div class="restar">-</div>
+                        <input type="number" value="1">
+                        <div class="agregar">+</div>
+                    </div>
+                </div>
+                <button><i class="fas fa-times"></i></button>
+            </article>
+        </section>
+        <section class="Numeros">
+            <form action="" method="post">
+                <h3>Subtotal</h3>
+                <div class="valor-productos">
+                    <p>$6.079</p>
+                    <p>$2.799</p>
+                    <p>$3.627</p>
+                    <div class="suma"><i class="fas fa-plus"></i></div>
+                </div>
+                <span>$12.505</span>
+                <p class="precio-principal">$16.479</p>
+                <div class="precios">
+                    <div class="precios-categorias">
+                        <h3>¡Ahorro Total!</h3>
+                        <p class="precio-ahorro">-$3.974</p>
+                    </div>
+                    <div class="precios-categorias">
+                        <h3>Precio Final</h3>
+                        <p class="Precio-final">$12.505</p>
+                    </div>
+                </div>
 
-    <footer></footer>
+                <h3>Calcula tu envio</h3>
+
+                <div class="postal">
+                    <label for="envio">Codigo postal</label>
+                    <input type="number" name="envio" id="envio" placeholder="xxxx">
+                </div>
+
+                <div class="input">
+                    <input type="number" name="precio" id="precio" value="286000">
+                </div>
+                <div class="ofertas">
+                    <input type="checkbox" name="ofertas" id="ofertas">
+                    <label for="ofertas">Desea recibir nuestras proximas ofertas?</label>
+                </div>
+                <div class="botones">
+                    <button type="submit">Comprar Productos</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <article class="redes">
+            <!-- < class="lista-iconos">-->
+            <a Target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a Target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a Target="_blank" href="https://www.gmail.com"><i class="far fa-envelope"></i></a>
+            <a Target="_blank" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+
+        </article>
+        <section class="piedepagina">
+
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/logoprovisorio.png" alt="logo de página">
+                </a>
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">categoria</a></li>
+                <li><a href="#">novedades</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+
+            <section class="servicios">
+                <h4>Servicio de Atención al cliente</h4>
+                <p>Email: libreria@tiempo.com.ar</p>
+
+                <p> Central Telefónica: 0810 345 5577</p>
+
+                <p>WhatsApp: 1140374037</p>
+            </section>
+        </section>
+    </footer>
 </body>
 
 </html>
