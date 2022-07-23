@@ -1,40 +1,55 @@
-footer {
-    background-color: var(--rojizo);
-    margin-bottom: 0px auto;
+footer{
+    margin-top: 20px
+}
+footer .piedepagina{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-evenly;
-}
-footer .footer-top{
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-evenly;
+    background-color: var(--rojizo);
+    flex-wrap: wrap;
 }
-footer .logo img{
-    height:100px ;
-    margin: 5px;
+footer ul{
+    display:inline;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+footer ul li{
+    color:var(--amarillo);
+    list-style: none;  
+    margin: 10px;
+}
+footer ul li a{
+    text-transform: capitalize;
+    margin: 10px;
+    padding: 10px;   
+    color:var(--blanco);
 }
 
-footer .derechos{
-    font-size: smaller;
-    font-weight: bold;
+footer .piedepaginaa .log {
     text-align: center;
 }
 
-/*tablet*/ /*
-@media (min-width:460px) {
-    footer{
+footer .piedepagina img {
+    height: 120px;
+    margin-top: 5px;
 
+    text-align: center;
+}
+
+footer .piedepagina .servicios{
+    color:var(--blanco);
+}
+
+footer .redes{
+    background-color: var(--azul);
+}
+footer .redes a{
+   color:var(--amarillo);
+    margin: 10px;  
+}
+
+@media (min-width:769px) {
+
+    footer ul{
+        display:flex;
     }
 }
-*/
-/*desktop*/
-/*
-@media (min-width:768px) {
-    footer{
-
-    }
-}*/
