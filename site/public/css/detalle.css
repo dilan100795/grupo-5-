@@ -1,67 +1,63 @@
 
 /*enlaces con color negro*/
-a {
+.detalle-de-producto a {
     color: black;
     text-decoration: none;
 }
-/*fondo del body*/
-body .detalle-de-producto {
-    background-color: var(--colorPrincipal);
-}
 /*main*/
-main {
+.detalle-de-producto main {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
 }
-main .top-main{
+.detalle-de-producto main .top-main{
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 /*portada del libro y flechas*/ 
-main .libro{
+.detalle-de-producto main .libro{
     width: 100%;
     background-color: white;
     display: flex;
     flex-direction: inherit;
 }
-main .libro .previa{
+.detalle-de-producto main .libro .previa{
 align-self: center;
 }
-main .previa button{
+.detalle-de-producto main .previa button{
     background-color:var(--azul);
     color: var(--amarillo);
     border-radius: 5px;
     display: flex;
 }
-main .previa i,
-main .next i{
+.detalle-de-producto main .previa i,
+.detalle-de-producto main .next i{
     font-size: 42px;
 
 }
-main .libro .next{
+.detalle-de-producto main .libro .next{
     align-self: center;
 }
-main .next button{
+.detalle-de-producto main .next button{
     background-color:var(--azul);
     color: var(--amarillo);
     border-radius: 5px;
     display: flex;
 }
-main .portada{
+.detalle-de-producto main .portada{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
-main .portada img{
+.detalle-de-producto main .portada img{
     height: 315px;
 }
 /*titulo, precio*/
-main .datos{
+.detalle-de-producto main .datos{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -72,46 +68,46 @@ main .datos{
     border-radius: 5px;
     width: 100%;
 }
-main .titulo{
+.detalle-de-producto main .titulo{
     width: 100%;
     text-align: center;
     margin-bottom: 8px;
 }
-main .precio{
+.detalle-de-producto main .precio{
     width: 100%;
     font-weight: bold;
     text-align: center;
     margin: 5px 10px;
 }
 /* iconos de tarjeta de credito o efectivo*/
-main .promos{
+.detalle-de-producto main .promos{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
 }
-main .efectivo{
+.detalle-de-producto main .efectivo{
     display: flex;
     width: 100%;
     margin-left:10px;
 }
-main .credito{
+.detalle-de-producto main .credito{
     display:flex;
     width: 100%;
     margin-left:10px;
 }
-main .efectivo i,
-main .credito i{
+.detalle-de-producto main .efectivo i,
+.detalle-de-producto main .credito i{
     width: 10%;
     align-self: center;
 }
-main .promos p{
+.detalle-de-producto main .promos p{
     width: 80%;
     font-size: small;
 }
 /*boton de agregar al carrito y caja de envios y compra por local*/
-main .compra{
+.detalle-de-producto main .compra{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -119,7 +115,7 @@ main .compra{
     justify-content: center;
     background-color: var(--blanco);
 }
-main .boton-agregar{
+.detalle-de-producto main .boton-agregar{
     width: 50%;
     border-radius: 9px;
     font-size:medium;
@@ -128,7 +124,7 @@ main .boton-agregar{
     color: var(--white);
     margin-left: 10px;
 }
-main .envios{
+.detalle-de-producto main .envios{
     background-color: var(--azul);
     margin: 20px 10px 10px 10px;
     padding: 10px;
@@ -140,18 +136,18 @@ main .envios{
     justify-content: center;
     align-self: center;
 }
-main .envios h4{
+.detalle-de-producto main .envios h4{
     width: 100%;
     margin: 10px 10px;
     text-align: center;
     text-transform: uppercase;
 }
-main .calcular{
+.detalle-de-producto main .calcular{
     background-color: var(--amarillo);
     color: var(--azul);
     border-radius: 3px;
 }
-main .envios a{
+.detalle-de-producto main .envios a{
     width: 100%;
     text-align: start;
     font-size:x-small;
@@ -160,13 +156,13 @@ main .envios a{
     margin-top: 8px;
 }
 /*descripcion del libro*/
-main .descripción h3{
+.detalle-de-producto main .descripción h3{
     text-align: center;
     text-transform: uppercase;
     width: 100%;
     color: var(--azul);
 }
-main .descripción{
+.detalle-de-producto main .descripción{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -177,20 +173,20 @@ main .descripción{
     margin: 10px 20px 10px 20px;
     padding: 5px 5px;
 }
-main .descripción p{
+.detalle-de-producto main .descripción p{
     text-align: center;
     width: 60%;
     background-color: var(--amarillo);
     border:2px solid var(--azul);
     margin: 0;
 }
-main .descripción span{
+.detalle-de-producto main .descripción span{
     width: 40%;
     background-color: var(--amarillo);
     border:2px solid var(--azul);
 }
 /*espacio de redes sociales*/
-main .redes{
+.detalle-de-producto main .redes{
     background-color: var(--rojizo);
     margin:20px;
     border-radius: 4px;
@@ -200,19 +196,19 @@ main .redes{
     justify-content: space-evenly;
     flex-grow: 1;
 }
-main .red-icon{
+.detalle-de-producto main .red-icon{
     margin: 4px;
     font-size: 1.1em;
 }
 /*productos relacionados*/
-main .relacionados{
+.detalle-de-producto main .relacionados{
     width: 100%;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
     color:var(--azul);
 }
-main .parecidos{
+.detalle-de-producto main .parecidos{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -220,26 +216,26 @@ main .parecidos{
     justify-content: space-around;
 
 }
-main .otroslibros img{
+.detalle-de-producto main .otroslibros img{
     height: 200px;
     margin: 5px
 }
 
 /*tablet*/
 @media (min-width:460px) {
-    main .libro{
+    .detalle-de-producto main .libro{
         width: 80%;
         }
-    main .datos{
+    .detalle-de-producto main .datos{
             width: 80%;
         }
 }
 /*desktop*/
 @media (min-width:768px) {
-    main .libro{
+    .detalle-de-producto main .libro{
     width: 40%;
     }
-    main .datos{
+    .detalle-de-producto main .datos{
     width: 50%;
     }
 }
