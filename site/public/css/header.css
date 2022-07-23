@@ -29,7 +29,7 @@ header .top .burger label {
 }
 
 header .top .burger i {
-    color: var(--azul);
+    color: var(--blanco);
 }
 
 header .top .burger input {
@@ -50,16 +50,13 @@ header .top .burger nav {
 
 header .top .burger nav ul {
     width: 100%;
-    background-color: var(--amarillo);
-    border: 2px solid var(--azul);
-    border-radius: 4px;
     padding: 5px;
 }
 
 header .burger-op {
 
     width: 100%;
-    color: var(--azul);
+    color: var(--amarillo);
     text-align: center;
 }
 
@@ -98,7 +95,7 @@ header .login-icon {
     margin-top: 20px;
     margin-right: 10px;
     font-size: 1.5em;
-    color:aqua;
+    
 
 }
 
@@ -128,7 +125,7 @@ header .menu-opciones ul {
 }
 
 header .menu-opciones li {
-    background-color: var(--azul);
+    
     padding: 5px;
     margin: 4px;
     border-radius: 5px;

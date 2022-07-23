@@ -1,16 +1,16 @@
 
- main section.banner img{
+ .home main section.banner img{
    display: none;
     
    
  }
   
- main section h2{
+ .home main section h2{
     padding: 20px;
  }
  
  
- main section .articulos {
+ .home main section .articulos {
  display:flex;
  justify-content: space-evenly;
  text-align: center;
@@ -18,17 +18,17 @@
  }
  
  
- main section .articulos .libros{
+ .home main section .articulos .libros{
    margin: 10px;
     padding: 10px;
     border:solid 1px black;
     width: 200px;
  }
- main section .articulos .libros img{
+ .home main section .articulos .libros img{
    
     width: 100px;
  }
- main section .articulos .libros p{
+ .home main section .articulos .libros p{
     display:none;
  }
  
@@ -36,12 +36,12 @@
  @media (min-width:461px) {
  
  
-    main section.banner img{
+    .home main section.banner img{
        width :100%;
        display:block;     
     }
      
-    main section .articulos .libros p{
+    .home main section .articulos .libros p{
        display:block;
     }
  
