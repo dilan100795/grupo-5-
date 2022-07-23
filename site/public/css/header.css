@@ -10,7 +10,7 @@ header .top {
 }
 header .top a{
     
-        color: black;
+        color:var(--amarillo);
         text-decoration: none;
     
 }
@@ -175,7 +175,7 @@ header .menu-opciones ul li:first-child {
 }
 
 /*desktop*/
-@media (min-width:76px) {
+@media (min-width:769px) {
     header .menu-opciones ul li:first-child {
         display: flex;
     }

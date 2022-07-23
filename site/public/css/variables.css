@@ -1,5 +1,7 @@
 /* Fuente a utilizar */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&family=League+Gothic&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
 
 :root{
     /* Colores */
@@ -11,5 +13,5 @@
     --azul: #335c67;
 
     /* Fuentes */
-    --Fuente: font-family: 'Roboto', sans-serif;
+    --Fuente:'Open Sans', sans-serif;
 }
