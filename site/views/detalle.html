@@ -5,13 +5,154 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/f49c1e77a4.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Detalle de producto</title>
 </head>
 
-<body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+<body class="detalle-de-producto">
+    <header>
+        <section class="top">
+            <!-- menu hamburguesa-->
+            <div class="burger">
+                <input type="checkbox" name="burger" id="burger" checked>
+                <label for="burger"><i class="fas fa-bars"></i></label>
+                <nav>
+                    <ul type="none" class="menu">
+                        <li><a class="burger-op" href="/">Categorias</a></li>
+                        <li><a class="burger-op" href="/">Contacto</a></li>
+                        <li><a class="burger-op" href="/login">Login</a></li>
+                        <li><a class="burger-op" href="/register">Registro</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--logo que redirecciona al home -->
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/LogoColor.png" alt="logo de página">
+                </a>
+            </div>
+            <!--logo de login pantallas grandes-->
+            <div class="login-icon">
+                <a href="/login">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <!--logo del carito que redireccione al carrito -->
+            <div class="cart">
+                <a href="/carrito">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </a>
+            </div>
+        </section>
+        <!--barra de busqueda-->
+        <section class="busqueda">
+            <div class="lupa"><button class="lupa-boton"><i class="fas fa-search"></i></button></div>
+        </section>
+        <!--opciones del menu de tablet y desktop-->
+        <section class="menu-opciones">
+            <ul type="none">
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Categorias</a></li>
+                <li><a href="#">Novedades</a></li>
+                <li><a href="#">Contactanos</a></li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section class="top-main">
+            <section class="libro">
+                <!--iconos de flechas e imagen del libro-->
+                <div class="previa"><button><i class="fas fa-angle-left"></i></button></div>
+                <div class="portada"> <img src="/images/DraculaCover.jpg" alt="imagen del producto"> </div>
+                <div class="next"><button><i class="fas fa-angle-right"></i></button></div>
+            </section>
+            <!--titulo y precio + iconos de tarjeta de credito y billete y boton de compra-->
+            <section class="datos">
+                <h1 class="titulo">Drácula, Bram Stoker</h1>
+                <h3 class="precio">$6.079 </h3>
+                <!--datos de pagos-->
+                <article class="promos">
+                    <div class="credito">
+                        <i class="far fa-credit-card"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                    <div class="efectivo">
+                        <i class="far fa-money-bill-alt"></i>
+                        <p>Proin varius felis ut arcu scelerisque eleifend.</p>
+                    </div>
+                </article>
+                <!-- boton de agregar al carrito y caja de envios y compra por local-->
+                <section class="compra">
+                    <button class="boton-agregar">Agregar al carrito</button>
+                    <article class="envios">
+                        <h4>Metos de envio</h4>
+                        <input type="number" placeholder="Tu código postal">
+                        <button class="calcular">Calcular</button>
+                        <a href="/">No se mi codigo postal.</a>
+                    </article>
+                </section>
+            </section>
+        </section>
+        <!-- descripcion del producto-->
+        <section class="descripción">
+            <h3>Caracteristicas principales</h3>
+                <span>Título del libro :</span> <p>Drácula (english Edition)</p> 
+                <span>Autor : </span> <p>Stoker, Bram</p> 
+                <span>Idioma : </span> <p>Inglés</p> 
+                <span>Editorial del libro : </span> <p>CreateSpace Independent Publishing Platform</p>
+                <span>Tapa del libro : </span> <p>Blanda</p>
+                <span>Año de publicación : </span> <p>2018</p>
+                <span>Modelo : </span><p>Inglés</p>
+        </section>
+        <!--iconos de redes sociales-->
+        <article class="redes">
+            <!-- < class="lista-iconos">-->
+            <a class="red-icon" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a class="red-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a class="red-icon" href="https://www.gmail.com"><i class="far fa-envelope"></i></a>
+            <a class="red-icon" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+
+        </article>
+        <!--Productos parecidos-->
+        <section class="parecidos">
+            <h3 class="relacionados">Productos relacionados</h3>
+            <article class="otroslibros">
+                <a href="/detalle"><img src="/images/SilenceOfTheLamb.PNG" alt="portada de silence of the lamb"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/detalle"><img src="/images/Carrie.PNG" alt="portada de carrie"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/detalle"><img src="/images/interviewwiththevampire.PNG"
+                        alt="portada de interview with the vampire"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/detalle"><img src="/images/edgarallanpoe.PNG"
+                        alt="portada de coleccion de edgar allan poe"></a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <!-- lista del footer-->
+        <section class="footer-top">
+            <nav>
+                <ul type="none" class="footer">
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+            <!-- logo del footer que redirecciona a home-->
+            <div class="logo">
+                <a href="/">
+                    <img src="/images/LogoColor.png" alt="logo de página">
+                </a>
+            </div>
+        </section>
+        <p class="derechos">Todos los derechos reservados.</p>
+    </footer>
 </body>
 
 </html>
