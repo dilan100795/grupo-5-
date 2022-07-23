@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    margin-top: 20px;
 }
 /*portada del libro y flechas*/ 
 .detalle-de-producto main .libro{

@@ -1,0 +1,179 @@
+header {
+    background-color: var(--rojizo);
+   
+}
+header .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1px;
+}
+header .top a{
+    
+        color:var(--amarillo);
+        text-decoration: none;
+    
+}
+header .top .icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/*burger desplegable*/
+header .top .burger label {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+
+header .top .burger i {
+    color: var(--blanco);
+}
+
+header .top .burger input {
+    display: none
+}
+
+header .top .burger input:checked~nav {
+    display: none;
+}
+
+header .top .burger nav {
+    width: 100%;
+    display: block;
+    margin: 20px;
+    font-size: medium;
+    justify-content: flex-start;
+}
+
+header .top .burger nav ul {
+    width: 100%;
+    padding: 5px;
+}
+
+header .burger-op {
+
+    width: 100%;
+    color: var(--amarillo);
+    text-align: center;
+}
+
+/*logo img*/
+header .top .log {
+    text-align: center;
+}
+
+header .logo img {
+    height: 120px;
+    margin-top: 5px;
+
+    text-align: center;
+}
+
+header .busqueda {
+    width: 60%;
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+
+}
+
+header .busqueda input {
+    width: 70%;
+    height: 30%;
+}
+
+header .busqueda button {
+    height: 30%;
+}
+
+
+
+header .login-icon {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 1.5em;
+    
+
+}
+
+header .cart {
+    margin-top: 20px;
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+
+header .menu-opciones {
+
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    flex-grow: 1;
+}
+
+header .menu-opciones ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+header .menu-opciones li {
+    
+    padding: 5px;
+    margin: 4px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+header .menu-opciones a {
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+header .menu-opciones ul li:first-child {
+    display: none;
+}
+
+
+/*tablet*/
+@media (min-width:461px) {
+
+
+    header .burger {
+        display: none
+    }
+
+    header .menu-opciones {
+        display: flex;
+        
+
+    }
+
+    header .login-icon {
+        display: flex;
+        justify-content: end;
+    }
+
+    header .cart {
+        justify-content: flex-end;
+    }
+
+    header .busqueda {
+        display: block;
+    }
+
+}
+
+/*desktop*/
+@media (min-width:769px) {
+    header .menu-opciones ul li:first-child {
+        display: flex;
+    }
+}

@@ -8,7 +8,8 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    margin-top:20px;
 }
 /*titulo de los productos*/
 .carrito section article h3{
@@ -96,6 +97,7 @@
     color: var(--bordo);
     padding: 20px;
     border-radius: 10px;
+    margin-top:20px;
 }
 .carrito .Numeros h3{
     margin-top: 20px;
