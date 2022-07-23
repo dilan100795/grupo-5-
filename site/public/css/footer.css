@@ -1,33 +1,26 @@
+footer{
+    margin-top: 20px
+}
 footer .piedepagina{
     display: flex;
     justify-content: space-evenly;
     background-color: var(--rojizo);
     flex-wrap: wrap;
-    
-   
 }
-
 footer ul{
     display:inline;
     justify-content:space-around;
     flex-wrap: wrap;
-   
- 
-   
 }
 footer ul li{
-     color:var(--amarillo);
-    list-style: none;
-   
+    color:var(--amarillo);
+    list-style: none;  
     margin: 10px;
-  
 }
 footer ul li a{
-   
+    text-transform: capitalize;
     margin: 10px;
-    padding: 10px;
-    
-    
+    padding: 10px;   
     color:var(--blanco);
 }
 
@@ -49,12 +42,9 @@ footer .piedepagina .servicios{
 footer .redes{
     background-color: var(--azul);
 }
-
-
 footer .redes a{
    color:var(--amarillo);
-    margin: 10px;
-    
+    margin: 10px;  
 }
 
 @media (min-width:769px) {

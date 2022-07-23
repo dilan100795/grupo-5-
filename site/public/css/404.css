@@ -1,0 +1,80 @@
+@keyframes rotarLogo{
+    0%{
+        -webkit-animation: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg)
+    }
+    25%{
+        -webkit-animation: rotate3d(0, 0, 1, 90deg);
+        transform: rotate3d(0, 0, 1, 90deg)
+    }
+    50%{
+        -webkit-animation: rotate3d(0, 0, 1, 180deg);
+        transform: rotate3d(0, 0, 1, 180deg)
+    }
+    75%{
+        -webkit-animation: rotate3d(0, 0, 1, 270deg);
+        transform: rotate3d(0, 0, 1, 270deg)
+    }
+    100%{
+        -webkit-animation: rotate3d(0, 0, 1, 360deg);
+        transform: rotate3d(0, 0, 1, 360deg)
+    }
+}
+/*body*/
+.error-404{
+    background-color: var(--azul);
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+}
+/*titulo*/
+.error-404 h1{
+    width: 100%;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--amarillo);
+    margin: 20px 10px;
+}
+/*imagen*/
+.error-404 section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.error-404 img{
+    height: 265px;
+    animation: rotarLogo 5s normal linear infinite;
+}
+/*boton que redirecciona al home*/
+.error-404 article{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.error-404 article a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.error-404 button{
+    width: 33%;
+    background-color: var(--amarillo);
+    color:var(--azul);
+    border-radius: 7px;
+}
+@media (min-width:426px){
+    .error-404 button{
+        width:21% ;
+
+    }
+
+}
+@media (min-width:769px){
+    .error-404 button{
+        width:14% ;
+    }
+}
