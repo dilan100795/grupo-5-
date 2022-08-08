@@ -25,5 +25,5 @@ app.use('/usuarios', usuariosRouter);
 app.use('/productos', productosRouter);
 app.use('/administrador', administradorRouter);
 
-app.get('*',(req,res) => res.sendFile(path.resolve(__dirname,'views','404.html')));
+/*app.get('*',(req,res) => res.sendFile(path.resolve(__dirname,'views','404.html')));*/
 app.listen(port,() => console.log(`Servidor corriendo en http://localhost:${port}`))
