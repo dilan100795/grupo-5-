@@ -8,11 +8,11 @@
 <%- include('./partials/header') %>
 
     <main>
-        <section>
+        <section class="primeraSection">
             <article>
-                <h3>Drácula, Bram Stoker</h3>
+                <a href="/productos/detalle"><h3>Drácula, Bram Stoker</h3></a>
                 <div class="imagenes">
-                    <img src="/images/DraculaCover.jpg" alt="portada de Drácula">
+                    <a href="/productos/detalle"><img src="/images/DraculaCover.jpg" alt="portada de Drácula"></a>
                 </div>
                 <div class="detail">
                     <div class="precio-descuento">
@@ -26,12 +26,12 @@
                         <div class="agregar">+</div>
                     </div>
                 </div>
-                <button><i class="fas fa-times"></i></button>
+                <button class="button"><i class="fas fa-times"></i></button>
             </article>
             <article>
-                <h3>Carrie, Stephen King</h3>
+                <a href="/productos/detalle"><h3>Carrie, Stephen King</h3></a>
                 <div class="imagenes">
-                    <img src="/images/Carrie.PNG" alt="portada de Carrie">
+                    <a href="/productos/detalle"><img src="/images/Carrie.PNG" alt="portada de Carrie"></a>
                 </div>
                 <div class="detail">
                     <div class="precio-descuento">
@@ -45,12 +45,12 @@
                         <div class="agregar">+</div>
                     </div>
                 </div>
-                <button><i class="fas fa-times"></i></button>
+                <button class="button"><i class="fas fa-times"></i></button>
             </article>
             <article>
-                <h3>El silencio de los corderos, Thomas Harris</h3>
+                <a href="/productos/detalle"><h3>El silencio de los corderos, Thomas Harris</h3></a>
                 <div class="imagenes">
-                    <img src="/images/SilenceOfTheLamb.PNG" alt="Portada de El silencio de los corderos">
+                   <a href="/productos/detalle"><img src="/images/SilenceOfTheLamb.PNG" alt="Portada de El silencio de los corderos"></a> 
                 </div>
                 <div class="detail">
                     <div class="precio-descuento">
@@ -64,7 +64,7 @@
                         <div class="agregar">+</div>
                     </div>
                 </div>
-                <button><i class="fas fa-times"></i></button>
+                <button class="button"><i class="fas fa-times"></i></button>
             </article>
         </section>
         <section class="Numeros">
@@ -74,7 +74,7 @@
                     <p>$6.079</p>
                     <p>$2.799</p>
                     <p>$3.627</p>
-                    <div class="suma"><i class="fas fa-plus"></i></div>
+                    <!--<div class="suma"><i class="fas fa-plus"></i></div>-->
                 </div>
                 <span>$25.010</span>
                 <p class="precio-principal">$12.505</p>
@@ -88,24 +88,23 @@
                         <p class="Precio-final">$12.505</p>
                     </div>
                 </div>
-
-                <h3>Calcula tu envio</h3>
-
-                <div class="postal">
-                    <label for="envio">Codigo postal</label>
-                    <input type="number" name="envio" id="envio" placeholder="xxxx">
-                </div>
-
-                <div class="input">
-                    <input type="number" name="precio" id="precio" value="286000">
-                </div>
-                <div class="ofertas">
-                    <input type="checkbox" name="ofertas" id="ofertas">
-                    <label for="ofertas">Desea recibir nuestras proximas ofertas?</label>
-                </div>
-                <div class="botones">
-                    <button type="submit">Comprar Productos</button>
-                </div>
+                <article class="bottom">
+                    <h3>Calcula tu envio</h3>
+                    <div class="postal">
+                        <label for="envio">Codigo postal</label>
+                        <input type="number" name="envio" id="envio" placeholder="xxxx">
+                    </div>
+                    <div class="input">
+                        <input type="number" name="precio" id="precio" value="286000">
+                    </div>
+                    <div class="ofertas">
+                        <input type="checkbox" name="ofertas" id="ofertas">
+                        <label for="ofertas">Desea recibir nuestras proximas ofertas?</label>
+                    </div>
+                    <div class="botones">
+                        <button class="comprarBoton" type="submit">Comprar Productos</button>
+                    </div>
+                </article>
             </form>
         </section>
     </main>
