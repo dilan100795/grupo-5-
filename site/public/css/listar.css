@@ -1,0 +1,37 @@
+main.listar{
+    margin: 30px auto;
+	width: 100% ;
+    text-align: center;
+}
+
+main .crearboton {
+    margin: 20px ;
+}
+
+
+main table{
+	background-color: white;
+	text-align: center;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+main table thead{
+	background-color: var(--rojizo);
+	border-bottom: solid 5px var(--azul);
+	color: white;
+}
+
+main table thead th, td{
+	padding:20px 5px;
+    margin:200px;
+}
+
+main tr:nth-child(even){
+	background-color: #ddd;
+}
+
+main tr:hover td{
+	background-color: var(--azul);
+	color: white;
+}

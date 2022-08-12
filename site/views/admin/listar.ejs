@@ -7,7 +7,88 @@
 
 <%- include('../partials/header') %>
 
-<main></main>
+<main class="listar">
+    <h1>Administrador</h1>
+    <div class="crearboton"><a href="/administrador/crear">
+        <button type="button" >Crear Producto</button>
+    </a></div>
+   
+
+		<table>
+			<thead>
+				<tr>
+					<th>Título del libro</th>
+                    <th>Autor</th>
+                    <th>Idioma</th>
+                    <th>Precio</th>
+                    <th>Accion</th>
+				</tr>
+			</thead>
+
+			<tr>
+				<td>El Aleph</td><td>Jorge Luis Borges</td><td>Español</td><td>$ 3,770</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+			<tr>
+				<td>La Ciudad y Los Perros</td><td>Mario Vargas LLosa</td><td>Español</td><td>$6,770</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+			<tr>
+				<td>Drácula</td><td>Bram Stoker</td><td>Inglés</td><td>$ 3,000</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+			<tr>
+				<td>El Silencio De Los Corderos</td><td>Thomas Harris</td><td>Inglés</td><td>$ 7,254</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+            <tr>
+				<td>Carrie</td><td>Stephen King</td><td>Inglés</td><td>$ 5.598</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+            <tr>
+				<td>Entrevista con El Vampiro</td><td>Anne Rice</td><td>Español</td><td>$ 5,800</td><td> <div class="login-icon">
+                    <a href="/administrador/editar">
+                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                    </a>
+                    <a href="/administador/delete">
+                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                    </a>
+                </div></td>
+			</tr>
+		</table>
+	
+
+</main>
 
 <%- include('../partials/footer') %>
 
