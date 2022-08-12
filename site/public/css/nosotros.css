@@ -1,8 +1,44 @@
-
 .nosotros main h2{
     text-align: center;
 
 }
 .nosotros main {
-   margin: 30px 100px ;
+   margin: 30px 30px ;
+   padding: 0;
+}
+
+.nosotros .consultas{
+    font-weight:bold;
+
+}
+.nosotros .redes{
+    background-color: var(--rojizo);
+    margin-top:20px;
+    margin-bottom:20px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    width: 100%;
+}
+.nosotros .red-icon{
+    margin: 4px;
+    font-size: 1.1em;
+    color:var(--blanco)
+}
+
+
+/*tablet*/
+@media (min-width:460px) {
+    .nosotros .mapa{
+        text-align: center;
+    }
+    .nosotros .redes{
+        margin-right: 20px;
+    }
+    .nosotros .red-icon{
+        font-size: 1.4em;
+    }
 }
