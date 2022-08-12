@@ -11,7 +11,7 @@
     font-weight:bold;
 
 }
-.nosotros .redes{
+.nosotros .redes-banner{
     background-color: var(--rojizo);
     margin-top:20px;
     margin-bottom:20px;
@@ -23,7 +23,7 @@
     flex-grow: 1;
     width: 100%;
 }
-.nosotros .red-icon{
+.nosotros .red-icon-banner{
     margin: 4px;
     font-size: 1.1em;
     color:var(--blanco)
@@ -35,10 +35,10 @@
     .nosotros .mapa{
         text-align: center;
     }
-    .nosotros .redes{
+    .nosotros .redes-banner{
         margin-right: 20px;
     }
-    .nosotros .red-icon{
+    .nosotros .red-icon-banner{
         font-size: 1.4em;
     }
 }
