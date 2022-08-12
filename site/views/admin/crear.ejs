@@ -3,13 +3,86 @@
 
 <%- include('../partials/head') %>
 
-<body>
+    <body class="crearProducto">
 
-<%- include('../partials/header') %>
+        <%- include('../partials/header') %>
 
-<main></main>
+            <main class="crear-editar">
 
-<%- include('../partials/footer') %>
+                <h2>Completa los datos de tu nuevo producto</h2>
 
-</body>
+                <form action="/admin/crear" method="post">
+                    <section class="campos">
+                        <div class="titulo">
+                            <input type="text" name="Titulo" class="titulo" id="Titulo" placeholder="Titulo">
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="autor">
+                            <input type="text" name="Autor" class="autor" id="Autor" placeholder="Autor">
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="idioma">
+                            <input type="text" name="idioma" class="idioma" id="Idioma" placeholder="Idioma">
+                        </div>
+                        <div class="editorial">
+                            <input type="text" name="editorial" class="editorial" id="Editorial" placeholder="Editorial">
+                        </div>
+                        <div class="tapa">
+                            <input type="text" name="Tapa" class="Tapa" id="Tapa" placeholder="Tapa">
+                        </div>
+                        <div class="modelo">
+                            <input type="text" name="Modelo" class="modelo" id="Modelo" placeholder="Modelo">
+                        </div>
+                        <div class="categorias">
+                            <select class="categoria" name="Categoria" id="" aria-label="">
+                                <option selected hidden>Selecciona una opcion</option>
+                                <option value="Suspenso">Suspenso</option>
+                                <option value="Ciencia Ficcion">Ciencia Ficción</option>
+                                <option value="No Ficcion">No Ficción</option>
+                                <option value="Poesia">Poesia</option>
+                                <option value="Educativo">Educativo</option>
+                                <option value="Novelas">Novelas</option>
+                                <option value="Clasicos">Clásicos</option>
+                                <option value="Infantiles">Infantiles</option>
+
+                            </select>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="precio">
+                            <input type="number" name="Precio" class="precio" id="Precio" placeholder="Precio">
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="descuento">
+                            <input type="number" name="Descuento" class="descuento" id="Descuento" value="0"
+                                placeholder="Descuento"> 
+                            <small>Descuento opcional</small>
+                        </div>
+                        <div class="stock">
+                            <input type="number" name="Stock" class="stock" id="Stock" placeholder="Stock">
+                        </div>
+                    </section>
+                    <section class="bottom">
+                        <div class="descripcion">
+                            <textarea class="" name="Descripcion"
+                                placeholder="Por favor inserte la descripcion del producto" id=""></textarea>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="archivos">
+                            <label for="" class="">Subir imagenes del producto</label>
+                            <input class="subirImagen" type="file" id="" multiple>
+                            
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="boton">
+                            <button class="botonCrear" type="submit">Crear Producto</button>
+                        </div>
+
+                    </section>
+                </form>
+            </main>
+
+            <%- include('../partials/footer') %>
+
+    </body>
+
 </html>

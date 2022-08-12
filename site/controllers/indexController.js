@@ -5,8 +5,9 @@ module.exports = {
     },
     nosotros: (req,res) => {
         return res.render('nosotros')
-    },
-    error404: (req,res) => {
-        return res.render('404')
     }
+ /*   error404: (req,res) => {
+        return res.render('404')
+    }*/
+
 }

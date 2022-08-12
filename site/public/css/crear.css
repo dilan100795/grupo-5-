@@ -1,0 +1,121 @@
+.crearProducto .crear-editar{
+    box-sizing: border-box;
+    margin-top: 20px;
+    padding: 0;
+    font-family: var(--fuente);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.crear-editar small{
+    color: var(--rojizo);
+    width: 100%;
+}
+.crear-editar h2{
+    text-align: center;
+    width: 100%;
+    color: var(--azul);
+}
+.crear-editar form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.crear-editar .campos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.crear-editar .titulo input,
+.crear-editar .autor input,
+.crear-editar .idioma input,
+.crear-editar .editorial input,
+.crear-editar .tapa input,
+.crear-editar .modelo input,
+.crear-editar .precio input,
+.crear-editar .descuento input,
+.crear-editar .stock input{
+    background-color: var(--amarillo);
+    color: var(--azul);
+    border-radius: 3px;
+    width: 99%;
+    height: 35px;
+}
+.crear-editar .idioma input,
+.crear-editar .editorial input,
+.crear-editar .tapa input,
+.crear-editar .modelo input{
+    margin-bottom: 10px;
+}
+
+.crear-editar .categoria{
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 3px;
+    width: 87%;
+    height: 35px;
+}
+.crear-editar .bottom{
+    display: flex;
+    flex-wrap: wrap;
+    width: 86%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.crear-editar .bottom .descripcion{
+    margin-bottom: 10px;
+    width: 100%;
+}
+.crear-editar textarea{
+    background-color: var(--amarillo);
+    width: 99%;
+    height: 100px;
+}
+.crear-editar .bottom .archivos{
+    margin-bottom: 10px;
+}
+.crear-editar .bottom .archivos label{
+    font-size: 19px;
+    font-family: italic;
+    width: 100%;
+}
+.crear-editar .subirImagen{
+    border:  2px solid var(--azul);
+    background-color: var(--amarillo);
+    border-radius: 3px;
+}
+.crear-editar .boton{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.crear-editar .botonCrear{
+    background-color: var(--rojizo);
+    border-radius: 6px;
+    color: var(--blanco);
+    height: 45px;
+    width: 130px;
+}
+/*tablet*/
+@media (min-width:460px) {
+    .crear-editar .campos{
+        width: 83%;
+    }
+    .crear-editar .bottom{
+        width: 83%;
+    }
+}
+
+/*desktop*/
+@media (min-width:768px) {
+    .crear-editar .campos{
+        width: 69%;
+    }
+    .crear-editar .bottom{
+        width: 68%;
+    }
+}
