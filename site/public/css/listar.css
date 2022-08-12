@@ -3,11 +3,17 @@ main.listar{
 	width: 100% ;
     text-align: center;
 }
-
+.listar .botonCrear{
+	background-color: var(--rojizo);
+    border-radius: 6px;
+    color: var(--blanco);
+    height: 54px;
+    width: 192px;
+	margin-bottom: 10px;
+}
 main .crearboton {
     margin: 20px ;
 }
-
 
 main table{
 	background-color: white;
