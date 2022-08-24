@@ -1,3 +1,62 @@
-{
-    
-}
+[
+    {
+       "id":1,
+       "nombre":"Dilan",
+       "apellido":"Martinez",
+       "email":"dilmar@egmail.com",
+       "contraseña":"comision17",
+       "telefono":"4979118843",
+       "ciudad":"buenos aires",
+       "genero":"Masculino",
+       "codigo postal":"6637",
+       "rol":"Adminiatrador"
+    },
+    {
+       "id":2,
+       "nombre":"Melanie",
+       "apellido":"Rosi",
+       "email":"mumi@gmail.com",
+       "contraseña":"comision17",
+       "telefono":"3626632246",
+       "ciudad":"buenos aires",
+       "genero":"Femenino",
+       "codigo postal":"2781",
+       "rol":"Adminiatrador"
+    },
+    {
+        "id":3,
+        "nombre":"Cristian",
+        "apellido":"Elias",
+        "email":"kerbey2@gmail.com",
+        "contraseña":"comision17",
+        "telefono":"5542229697",
+        "ciudad":"buenos aires",
+        "genero":"Masculino",
+        "codigo postal":"3301",
+        "rol":"Adminiatrador"
+    },
+    {
+        "id":4,
+        "nombre":"Jeane",
+        "apellido":"Garcia",
+        "email":"love@gmail.com",
+        "contraseña":"comision17",
+        "telefono":"2575289945",
+        "ciudad":"buenos aires",
+        "genero":"Femenino",
+        "codigo postal":"2491",
+        "rol":"Administrador"
+    },
+    {
+        "id":5,
+        "nombre":"Fulanito",
+        "apellido":"Martinez",
+        "email":"bpas@gmail.com",
+        "contraseña":"comision17",
+        "telefono":"2158987088",
+        "ciudad":"buenos aires",
+        "genero":"Masculino",
+        "codigo postal":"2411",
+        "rol":"Usuario"
+        }
+    ]
