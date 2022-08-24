@@ -37,3 +37,7 @@ En la librería El Tiempo nuestro objetivo es llegar a todos los amantes de la l
 ### Link al tablero de trello 
 
 >[Trello](https://trello.com/b/VkYKSK8o/grupo5)
+
+### RETROSPECTIVA
+
+>[README.MD](./README.MD)
