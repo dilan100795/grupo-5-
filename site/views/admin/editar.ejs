@@ -12,7 +12,7 @@
 
         <h2>Edita los datos del producto</h2>
 
-        <form action="/admin/editar" method="post">
+        <form action="/administrador/editar<%=producto.id%>?_method=PUT" method="post">
             <section class="campos">
                 <div class="titulo">
                     <input type="text" name="Titulo" class="titulo" id="Titulo" placeholder="Titulo">
@@ -23,16 +23,16 @@
                     <small>Obligatorio</small>
                 </div>
                 <div class="idioma">
-                    <input type="text" name="idioma" class="idioma" id="Idioma" placeholder="Idioma">
+                    <input type="text" name="Idioma" class="idioma" id="Idioma" placeholder="Idioma">
                 </div>
                 <div class="editorial">
-                    <input type="text" name="editorial" class="editorial" id="Editorial" placeholder="Editorial">
+                    <input type="text" name="Editorial" class="editorial" id="Editorial" placeholder="Editorial">
                 </div>
                 <div class="tapa">
                     <input type="text" name="Tapa" class="Tapa" id="Tapa" placeholder="Tapa">
                 </div>
                 <div class="modelo">
-                    <input type="text" name="Modelo" class="modelo" id="Modelo" placeholder="Modelo">
+                    <input type="number" name="Modelo" class="modelo" id="Modelo" placeholder="Año de publicación">
                 </div>
                 <div class="categorias">
                     <select class="categoria" name="Categoria" id="" aria-label="">
@@ -54,12 +54,14 @@
                     <small>Obligatorio</small>
                 </div>
                 <div class="descuento">
-                    <input type="number" name="Descuento" class="descuento" id="Descuento" value="0"
-                        placeholder="Descuento"> 
+                    <input type="number" name="Descuento" class="Descuento" id="descuento" placeholder="Descuento"> 
                     <small>Descuento opcional</small>
                 </div>
                 <div class="stock">
                     <input type="number" name="Stock" class="stock" id="Stock" placeholder="Stock">
+                </div>
+                <div class="subcategoria">
+                    <input type="text" name="Subcategoria" class="subcategoria" id="subcategoria" placeholder="Subcategoria (Oferta, Más vendidos)"> 
                 </div>
             </section>
             <section class="bottom">
@@ -70,12 +72,12 @@
                 </div>
                 <div class="archivos">
                     <label for="" class="">Subir imagenes del producto</label>
-                    <input class="subirImagen" type="file" id="" multiple>
+                    <input class="subirImagen" name="Imagen" type="file" id="" multiple>
                     
                     <small>Obligatorio</small>
                 </div>
                 <div class="boton">
-                        <button class="botonCrear" type="submit">Editar Producto</button>
+                    <button class="botonCrear" type="submit">Crear Producto</button>
                 </div>
 
             </section>
