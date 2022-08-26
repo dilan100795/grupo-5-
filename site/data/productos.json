@@ -11,7 +11,7 @@
         "precio": 500,
         "descuento": 29,
         "stock": 8,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna",
         "subcategoria": "oferta"
     },
@@ -27,7 +27,7 @@
         "precio": 1500,
         "descuento": 48,
         "stock": 35,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec",
         "subcategoria": "masVendidos"
     },
@@ -43,9 +43,9 @@
         "precio": 1600,
         "descuento": 28,
         "stock": 44,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce",
-        "subcategoria": "oferta"
+        "subcategoria": "novedades"
     },
     {
         "id": 4,
@@ -59,7 +59,7 @@
         "precio": 850,
         "descuento": 52,
         "stock": 10,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat",
         "subcategoria": "oferta"
     },
@@ -75,9 +75,9 @@
         "precio": 2500,
         "descuento": 5,
         "stock": 12,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
-        "subcategoria": "oferta"
+        "subcategoria": "novedades"
     },
     {
         "id": 6,
@@ -91,9 +91,9 @@
         "precio": 4500,
         "descuento": 53,
         "stock": 15,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate",
-        "subcategoria": "masVendidos"
+        "subcategoria": "novedades"
     },
     {
         "id": 7,
@@ -107,7 +107,7 @@
         "precio": 3200,
         "descuento": 57,
         "stock": 13,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla",
         "subcategoria": "masVendidos"
     },
@@ -123,9 +123,9 @@
         "precio": 2100,
         "descuento": 14,
         "stock": 15,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin",
-        "subcategoria": "masVendidos"
+        "subcategoria": "novedades"
     },
     {
         "id": 9,
@@ -139,9 +139,9 @@
         "precio": 3700,
         "descuento": 19,
         "stock": 32,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus",
-        "subcategoria": "oferta"
+        "subcategoria": "novedades"
     },
     {
         "id": 10,
@@ -155,7 +155,7 @@
         "precio": 830,
         "descuento": 27,
         "stock": 15,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti",
         "subcategoria": "masVendidos"
     },
@@ -171,9 +171,9 @@
         "precio": 790,
         "descuento": 26,
         "stock": 8,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi",
-        "subcategoria": "masVendidos"
+        "subcategoria": "novedades"
     },
     {
         "id": 12,
@@ -187,7 +187,7 @@
         "precio": 2150,
         "descuento": 54,
         "stock": 24,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed",
         "subcategoria": "oferta"
     },
@@ -203,7 +203,7 @@
         "precio": 920,
         "descuento": 17,
         "stock": 13,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa",
         "subcategoria": "masVendidos"
     },
@@ -219,7 +219,7 @@
         "precio": 900,
         "descuento": 8,
         "stock": 44,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi",
         "subcategoria": "oferta"
     },
@@ -235,7 +235,7 @@
         "precio": 2540,
         "descuento": 8,
         "stock": 9,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit",
         "subcategoria": "masVendidos"
     },
@@ -251,7 +251,7 @@
         "descuento": 56,
         "precio": 2600,
         "stock": 28,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo",
         "subcategoria": "masVendidos"
     },
@@ -267,7 +267,7 @@
         "precio": 3050,
         "descuento": 8,
         "stock": 48,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales",
         "subcategoria": "oferta"
     },
@@ -283,7 +283,7 @@
         "precio": 3500,
         "descuento": 32,
         "stock": 43,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui",
         "subcategoria": "oferta"
     },
@@ -299,7 +299,7 @@
         "precio": 2200,
         "descuento": 48,
         "stock": 14,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut",
         "subcategoria": "masVendidos"
     },
@@ -315,7 +315,7 @@
         "precio": 4100,
         "descuento": 12,
         "stock": 39,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet",
         "subcategoria": "masVendidos"
     },
@@ -331,7 +331,7 @@
         "precio": 4000,
         "descuento": 57,
         "stock": 32,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus",
         "subcategoria": "oferta"
     },
@@ -347,7 +347,7 @@
         "precio": 3000,
         "descuento": 8,
         "stock": 49,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla",
         "subcategoria": "oferta"
     },
@@ -363,9 +363,9 @@
         "precio": 450,
         "descuento": 52,
         "stock": 39,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet",
-        "subcategoria": "masVendidos"
+        "subcategoria": "oferta"
     },
     {
         "id": 24,
@@ -379,9 +379,9 @@
         "precio": 3900,
         "descuento": 59,
         "stock": 15,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue",
-        "subcategoria": "masVendidos"
+        "subcategoria": "oferta"
     },
     {
         "id": 25,
@@ -395,7 +395,7 @@
         "precio": 2730,
         "descuento": 9,
         "stock": 20,
-        "imagen": "imagen",
+        "imagen": "default-image.jpg",
         "descripcion": "quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor",
         "subcategoria": "masVendidos"
     },
@@ -413,6 +413,6 @@
         "stock": "6",
         "descripcion": "Obra poética completa de una de las escritoras argentinas más emblemáticas de la segunda mitad de siglo, la controvertida, polémica y malograda Alejandra Pizarnik. \r\nNuestra edición, a cargo de Ana Becciu, incluye los libros de poemas editados en vida de la autora y los poemas inéditos compilados a partir de manuscritos.",
         "subcategoria": "masVendidos",
-        "imagen": ["default-image.jpg"]
+        "imagen": "default-image.jpg"
     }
 ]
