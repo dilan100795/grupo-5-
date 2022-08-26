@@ -15,74 +15,59 @@
 		<table>
 			<thead>
 				<tr>
-					<th>Título del libro</th>
-                    <th>Autor</th>
-                    <th>Idioma</th>
-                    <th>Precio</th>
-                    <th>Accion</th>
+                    <th scope="col">#</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Idioma</th>
+                    <th scope="col">Editorial</th>
+                    <th scope="col">Tapa</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Descuento</th>
+                    <th scope="col">Stock</th>
+                    <th scope="col">Imagen</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Subcategoria</th>
+
 				</tr>
 			</thead>
+            <% productos.forEach(product => { %>
+                <tr>
+                      
+                    <th ><a href="/admin/editar/<%= product.id %>"><%= product.id %> </a></th>
+                    <td><a href="/admin/editar/<%= product.id %>"><%= product.titulo %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %>"><%= product.autor %></a></td>
+                    <td ><a href="/admin/editar/<%= product.id %>"><%= product.idioma %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.editorial %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.tapa %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.modelo %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %>"><%= product.categoria %> </a></td>
+                    <td><a href="/admin/editar/<%= product.id %>"><%= product.precio %></a></td>
+                    <td ><a href="/admin/editar/<%= product.id %>"><%= product.descuento %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.stock %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.descripcion %></a></td>
+                    <td><a href="/admin/editar/<%= product.id %> "><%= product.subcategoria %></a></td>
 
-			<tr>
-				<td>El Aleph</td><td>Jorge Luis Borges</td><td>Español</td><td>$ 3,770</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
-			<tr>
-				<td>La Ciudad y Los Perros</td><td>Mario Vargas LLosa</td><td>Español</td><td>$6,770</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
-			<tr>
-				<td>Drácula</td><td>Bram Stoker</td><td>Inglés</td><td>$ 3,000</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
-			<tr>
-				<td>El Silencio De Los Corderos</td><td>Thomas Harris</td><td>Inglés</td><td>$ 7,254</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
-            <tr>
-				<td>Carrie</td><td>Stephen King</td><td>Inglés</td><td>$ 5.598</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
-            <tr>
-				<td>Entrevista con El Vampiro</td><td>Anne Rice</td><td>Español</td><td>$ 5,800</td><td> <div class="login-icon">
-                    <a href="/administrador/editar">
-                        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                    </a>
-                    <a href="/administador/delete">
-                        <button type="button" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
-                    </a>
-                </div></td>
-			</tr>
+                    <td>
+                        <div>
+                          
+                            <a href="/admin/editar/<%= product.id%>">
+                              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                          </a>
+                          
+                            
+                              <form action="/admin/destroy/<%= product.id%>?_method=DELETE" method="post">
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                              </form>
+                           
+                  
+                            
+                        </div>
+                    </td>
+                  
+                  </tr>
+            <% }) %>
 		</table>
 	
 
