@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const path = require('path');
+const methodOverride = require('method-override')
 
 app.use(express.static(path.resolve(__dirname,'public')));
 
@@ -18,6 +19,9 @@ app.set('view engine', 'ejs');
 /* Trabajar con metodos HTTP (post) */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+/* Trabajar con put y delete */
+app.use(methodOverride('_method'))
+
 
 /*Middlewares*/
 /*app.use(express.json());*/

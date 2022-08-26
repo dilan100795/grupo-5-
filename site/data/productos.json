@@ -414,5 +414,23 @@
         "descripcion": "Obra poética completa de una de las escritoras argentinas más emblemáticas de la segunda mitad de siglo, la controvertida, polémica y malograda Alejandra Pizarnik. \r\nNuestra edición, a cargo de Ana Becciu, incluye los libros de poemas editados en vida de la autora y los poemas inéditos compilados a partir de manuscritos.",
         "subcategoria": "masVendidos",
         "imagen": "default-image.jpg"
+    },
+    {
+        "id": 27,
+        "titulo": "dfdf",
+        "autor": "ddfdf",
+        "idioma": "dfdf",
+        "editorial": "dfdf",
+        "tapa": "dfdf",
+        "modelo": "2200",
+        "categoria": "Selecciona una opcion",
+        "precio": "44",
+        "descuento": "44",
+        "stock": "1",
+        "descripcion": "sdsxcsxsx",
+        "subcategoria": "oferta",
+        "imagen": [
+            "default-image.jpg"
+        ]
     }
 ]

@@ -9,7 +9,7 @@
        "ciudad":"buenos aires",
        "genero":"Masculino",
        "codigo postal":"6637",
-       "rol":"Adminiatrador"
+       "rol":"Administrador"
     },
     {
        "id":2,
@@ -21,7 +21,7 @@
        "ciudad":"buenos aires",
        "genero":"Femenino",
        "codigo postal":"2781",
-       "rol":"Adminiatrador"
+       "rol":"Administrador"
     },
     {
         "id":3,
@@ -33,7 +33,7 @@
         "ciudad":"buenos aires",
         "genero":"Masculino",
         "codigo postal":"3301",
-        "rol":"Adminiatrador"
+        "rol":"Administrador"
     },
     {
         "id":4,

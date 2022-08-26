@@ -26,38 +26,38 @@
                     <th scope="col">Precio</th>
                     <th scope="col">Descuento</th>
                     <th scope="col">Stock</th>
-                    <th scope="col">Imagen</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">Subcategoria</th>
+                    <th scope="col">Accion</th>
 
 				</tr>
 			</thead>
             <% productos.forEach(product => { %>
                 <tr>
                       
-                    <th ><a href="/admin/editar/<%= product.id %>"><%= product.id %> </a></th>
-                    <td><a href="/admin/editar/<%= product.id %>"><%= product.titulo %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %>"><%= product.autor %></a></td>
-                    <td ><a href="/admin/editar/<%= product.id %>"><%= product.idioma %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.editorial %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.tapa %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.modelo %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %>"><%= product.categoria %> </a></td>
-                    <td><a href="/admin/editar/<%= product.id %>"><%= product.precio %></a></td>
-                    <td ><a href="/admin/editar/<%= product.id %>"><%= product.descuento %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.stock %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.descripcion %></a></td>
-                    <td><a href="/admin/editar/<%= product.id %> "><%= product.subcategoria %></a></td>
+                    <td ><a href="/administrador/editar/<%= product.id %>"><%= product.id %> </a></td>
+                    <td><a href="/administrador/editar/<%= product.id %>"><%= product.titulo %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %>"><%= product.autor %></a></td>
+                    <td ><a href="/administrador/editar/<%= product.id %>"><%= product.idioma %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.editorial %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.tapa %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.modelo %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %>"><%= product.categoria %> </a></td>
+                    <td><a href="/administrador/editar/<%= product.id %>"><%= product.precio %></a></td>
+                    <td ><a href="/administrador/editar/<%= product.id %>"><%= product.descuento %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.stock %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.descripcion %></a></td>
+                    <td><a href="/administrador/editar/<%= product.id %> "><%= product.subcategoria %></a></td>
 
                     <td>
                         <div>
                           
-                            <a href="/admin/editar/<%= product.id%>">
+                            <a href="/administrador/editar/<%= product.id%>">
                               <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                           </a>
                           
                             
-                              <form action="/admin/destroy/<%= product.id%>?_method=DELETE" method="post">
+                              <form action="/administrador/eliminar/<%= product.id%>?_method=DELETE" method="post">
                                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                               </form>
                            

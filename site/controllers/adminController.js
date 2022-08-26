@@ -20,6 +20,14 @@ module.exports = {
         /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
         return res.render('admin/editar')
     },
+
+    actualizar:(req,res) => {
+
+    },
+    eliminar :(req,res) => {
+
+    },
+    
     nuevo:(req,res) => {
         let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
 
