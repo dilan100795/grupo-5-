@@ -15,8 +15,12 @@ let usuariosRouter = require('./routes/usuarios')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-/*Middlewares*/
+/* Trabajar con metodos HTTP (post) */
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+/*Middlewares*/
+/*app.use(express.json());*/
 app.use(express.static(path.resolve(__dirname,'public')))
 
 /*Rutas*/

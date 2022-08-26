@@ -13,4 +13,8 @@ module.exports = {
         /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
         return res.render('admin/editar')
     },
+    nuevo:(req,res) => {
+        let productoCreado = req.body
+        res.send(productoCreado)
+    }
 }
