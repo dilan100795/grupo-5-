@@ -15,306 +15,79 @@
 
         <section>
             <h2>NOVEDADES</h2>
+
+            
+             
+          
             <section class="articulos">
+                 <% productsNovedades.forEach(product => { %>
 
                 <article class="libros">
-                    <a href="/"><img src="/images/el aleph.jpg" alt="El Aleph"></a>
+                    <a href="/productos/detalle<%- product.id %>">
+                        <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
                     <div class="contenedor">
                         <div class="camion">
                             <i class="fas fa-truck"></i>
                         </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
+                        <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
+                        <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
+                        <h4><%- product.titulo %></h4>
                     </div>
 
                 </article>
 
-                <article class="libros">
-                    <a href="/"><img src="/images/la ciudad y los perros.jpg" alt="La ciudad y los perros "></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros - mario vargas </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <a href="/productos/detalle"> <img src="/images/DraculaCover.jpg" alt="Dracula"></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.079</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>Dracula -Bram Stoker </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <a href="/"><img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros "></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <a href="/"><img src="./images/el aleph.jpg" alt="El Aleph"></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <a href="/"><img src="./images/DraculaCover.jpg" alt="Dracula"></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.079</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>Dracula -Bram Stoker </h4>
-                    </div>
-
-                </article>
+                 <% }) %>
             </section>
         </section>
         <section>
             <h2>OFERTAS</h2>
             <section class="articulos">
+                <% productsOferta.forEach(product => { %>
 
-                <article class="libros">
-                    <a href="/"><img src="./images/el aleph.jpg" alt="El Aleph"></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
+                    <article class="libros">
+                        <a href="/productos/detalle<%- product.id %>">
+                            <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                        <div class="contenedor">
+                            <div class="camion">
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
+                            <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
+                            <h4><%- product.titulo %></h4>
                         </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros ">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros ">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
+    
+                    </article>
+    
+                <% }) %>
 
 
             </section>
         </section>
         <section>
-            <h2>CATEGORIAS</h2>
-            <section class="articulos">
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros ">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros ">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
+            
+                <h2>LO MAS VENDIDO</h2>
+                <section class="articulos">
+                    <% productsVendidos.forEach(product => { %>
+                        <article class="libros">
+                            <a href="/productos/detalle<%- product.id %>">
+                                <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                            <div class="contenedor">
+                                <div class="camion">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
+                                <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
+                                <h4><%- product.titulo %></h4>
+                            </div>
+        
+                        </article>
+        
+                <% }) %>
 
             </section>
         </section>
-        <section>
-            <h2>LO MAS VENDIDO</h2>
-            <section class="articulos">
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros ">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <a href="/">
-                   <img src="./images/la ciudad y los perros.jpg" alt="La ciudad y los perros "></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$6.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>La Ciudad Y Los Perros </h4>
-                    </div>
-
-                </article>
-
-                <article class="libros">
-                    <img src="./images/el aleph.jpg" alt="El Aleph">
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
-                        </div>
-                        <h3 class="precio">$3.770</h3>
-                        <p class="descuento">40% Off</p>
-                        <h4>El Aleph - Jorge Luis Borges </h4>
-                    </div>
-
-                </article>
-
-
-            </section>
-
-        </section>
-
+    
+            
     </main>
 
 

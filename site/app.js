@@ -19,6 +19,9 @@ app.set('view engine', 'ejs');
 /* Trabajar con metodos HTTP (post) */
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+/* Trabajar con put y delete */
+app.use(methodOverride('_method'))
+
 
 /* Trabajar con put y delete */
 app.use(methodOverride('_method'))

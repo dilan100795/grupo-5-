@@ -2,7 +2,9 @@ main.listar{
     margin: 30px auto;
 	width: 100% ;
     text-align: center;
+	
 }
+
 .listar .botonCrear{
 	background-color: var(--rojizo);
     border-radius: 6px;
@@ -27,8 +29,14 @@ main table thead{
 	border-bottom: solid 5px var(--azul);
 	color: white;
 }
-
-main table thead th, td{
+main table a{
+	color:black;
+}
+main tr:hover a{
+	
+	color: white;
+}
+main table thead th, td {
 	padding:20px 5px;
     margin:200px;
 }

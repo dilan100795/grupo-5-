@@ -5,7 +5,9 @@ const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/product
 
 module.exports = {
     listar: (req,res) => {
-        return res.render('admin/listar')
+        return res.render('admin/listar',{
+            productos
+        })
     },
     crear:(req,res) => {
         return res.render('admin/crear')
