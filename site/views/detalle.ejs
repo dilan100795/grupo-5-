@@ -12,13 +12,13 @@
             <section class="libro">
                 <!--iconos de flechas e imagen del libro-->
                 <div class="previa"><button><i class="fas fa-angle-left"></i></button></div>
-                <div class="portada"> <img src="/images/DraculaCover.jpg" alt="imagen del producto"> </div>
+                <div class="portada"> <img src="/images/<%- product.imagen %> " alt="imagen del producto"> </div>
                 <div class="next"><button><i class="fas fa-angle-right"></i></button></div>
             </section>
             <!--titulo y precio + iconos de tarjeta de credito y billete y boton de compra-->
             <section class="datos">
-                <h1 class="titulo">Drácula, Bram Stoker</h1>
-                <h3 class="precio">$6.079 </h3>
+                <h1 class="titulo"><%= product.titulo %></h1>
+                <h3 class="precio"><%= product.precio %>$ </h3>
                 <!--datos de pagos-->
                 <article class="promos">
                     <div class="credito">
@@ -46,19 +46,19 @@
         <section class="descripción">
             <h3>Caracteristicas principales</h3>
             <span>Título del libro :</span>
-            <p>Drácula (english Edition)</p>
+            <p><%= product.titulo %></p>
             <span>Autor : </span>
-            <p>Stoker, Bram</p>
+            <p><%= product.autor %></p>
             <span>Idioma : </span>
-            <p>Inglés</p>
+            <p><%= product.idioma %></p>
             <span>Editorial del libro : </span>
-            <p>CreateSpace Independent Publishing Platform</p>
+            <p><%= product.editorial %></p>
             <span>Tapa del libro : </span>
-            <p>Blanda</p>
+            <p><%= product.tapa %></p>
             <span>Año de publicación : </span>
-            <p>2018</p>
-            <span>Modelo : </span>
-            <p>Inglés</p>
+            <p><%= product.modelo %></p>
+            <span>Categoria : </span>
+            <p><%= product.categoria %></p>
         </section>
         <!--iconos de redes sociales-->
         <article class="redes">
@@ -72,21 +72,14 @@
         <!--Productos parecidos-->
         <section class="parecidos">
             <h3 class="relacionados">Productos relacionados</h3>
+            <% products.forEach(product => { %>
             <article class="otroslibros">
-                <a href="/detalle"><img src="/images/SilenceOfTheLamb.PNG" alt="portada de silence of the lamb"></a>
+                <a href="/productos/detalle/<%= product.id %>"><img src="/images/<%= product.imagen %> " alt="portada de silence of the lamb"></a>
             </article>
-            <article class="otroslibros">
-                <a href="/detalle"><img src="/images/Carrie.PNG" alt="portada de carrie"></a>
-            </article>
-            <article class="otroslibros">
-                <a href="/detalle"><img src="/images/interviewwiththevampire.PNG"
-                        alt="portada de interview with the vampire"></a>
-            </article>
-            <article class="otroslibros">
-                <a href="/detalle"><img src="/images/edgarallanpoe.PNG"
-                        alt="portada de coleccion de edgar allan poe"></a>
-            </article>
+           
+            <% }) %>
         </section>
+        
     </main>
 
     <%- include('./partials/footer') %>
