@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-let {crear,editar,listar,nuevo} = require('../controllers/adminController')
+let {crear,editar,listar,nuevo,actualizar,destruir} = require('../controllers/adminController')
 
 router.get('/listar', listar)
 

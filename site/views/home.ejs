@@ -23,7 +23,7 @@
                  <% productsNovedades.forEach(product => { %>
 
                 <article class="libros">
-                    <a href="/productos/detalle<%- product.id %>">
+                    <a href="/productos/detalle/<%- product.id %>">
                         <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
                     <div class="contenedor">
                         <div class="camion">
@@ -45,7 +45,7 @@
                 <% productsOferta.forEach(product => { %>
 
                     <article class="libros">
-                        <a href="/productos/detalle<%- product.id %>">
+                        <a href="/productos/detalle/<%- product.id %>">
                             <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
                         <div class="contenedor">
                             <div class="camion">
@@ -69,7 +69,7 @@
                 <section class="articulos">
                     <% productsVendidos.forEach(product => { %>
                         <article class="libros">
-                            <a href="/productos/detalle<%- product.id %>">
+                            <a href="/productos/detalle/<%- product.id %>">
                                 <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
                             <div class="contenedor">
                                 <div class="camion">
