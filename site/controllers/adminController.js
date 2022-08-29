@@ -37,15 +37,39 @@ module.exports = {
        return res.redirect('/administrador/listar')
     },
     editar:(req,res) => {
-        /* id = +req.params.id
+        let categoria = ['Suspenso', 'Ciencia Ficcion', 'No Ficcion', 'Poesia', 'Educativo', 'Novelas', 'Clasicos','Infantiles']
+
+        id = +req.params.id
         let producto = productos.find((elemento) => {
             return elemento.id == id
-        }) */
-        /* return res.send(producto) Comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editar')
+        }) 
+        /*return res.send(producto) Comprobar que esta llegando bien el elemento*/
+        return res.render('admin/editar', {
+            producto,
+            categoria
+        })
     },
     actualizar:(req,res) => {
-
+        idParams = +req.params.id
+        let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
+        productos.forEach(producto => {
+            if (producto.id === idParams) {
+                producto.titulo = Titulo
+                producto.autor = Autor
+                producto.idioma = Idioma
+                producto.editorial = Editorial
+                producto.tapa = Tapa
+                producto.modelo = +Modelo
+                producto.categoria = Categoria
+                producto.precio = +Precio
+                producto.descuento = +Descuento
+                producto.stock = +Stock
+                producto.descripcion = Descripcion
+                producto.subcategoria = Subcategoria
+            }
+        })
+        guardar(productos)
+        return res.redirect('/administrador/listar')
     },
     destruir:(req,res) => {
 
