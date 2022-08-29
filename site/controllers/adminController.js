@@ -10,13 +10,13 @@ const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../dat
 
 module.exports = {
     listar: (req,res) => {
-        return res.render('admin/listar',{
+        return res.render('administrador/listar',{
             productos,
             redirection: "historial"
         })
     },
     crear:(req,res) => {
-        return res.render('admin/crear')
+        return res.render('administrador/crear')
     },
     nuevo:(req,res) => {
         let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
@@ -50,7 +50,7 @@ module.exports = {
             return elemento.id == id
         }) 
         /*return res.send(producto) Comprobar que esta llegando bien el elemento*/
-        return res.render('admin/editar', {
+        return res.render('administrador/editar', {
             producto,
             categoria
         })
