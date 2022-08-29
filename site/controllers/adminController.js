@@ -1,12 +1,18 @@
 const fs = require('fs');
 const path = require('path')
 const productos = require('../data/productos.json');
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8')
+const historial = require('../data/historial.json');
+
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8');
+
+const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8');
 
 module.exports = {
     listar: (req,res) => {
         return res.render('admin/listar',{
-            productos
+            productos,
+            redirection: "historial"
         })
     },
     crear:(req,res) => {
@@ -72,6 +78,25 @@ module.exports = {
         return res.redirect('/administrador/listar')
     },
     destruir:(req,res) => {
+        idParams = +req.params.id
 
+        let productoParaEliminar = productos.find((elemento) => {
+            return elemento.id == idParams
+        })
+
+        historial.push(productoParaEliminar)
+        guardarHistorial(historial)
+
+        let productosModificados = productos.filter(producto => producto.id !== idParams)
+        guardar(productosModificados)
+
+        return res.redirect('/administrador/listar')
+    },
+    historial:(req,res) => {
+        return res.render('/administrador/listar', {
+            productos: historial,
+            redirection: "listar"
+        })
     }
+
 }

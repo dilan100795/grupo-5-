@@ -1,13 +1,15 @@
 const express = require('express')
 const router = express.Router()
 
-let {crear,listar,nuevo,editar,actualizar,destruir} = require('../controllers/adminController')
+let {crear,listar,nuevo,editar,actualizar,destruir,historial} = require('../controllers/adminController')
 
 router.get('/listar', listar)
+router.get('/historial', historial);
 
 /*crear producto*/
 router.get('/crear', crear)
 router.post('/crear', nuevo)
+
 
 /*editar producto*/ 
 /*router.get('/editar', editar)*/

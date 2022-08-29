@@ -12,6 +12,9 @@
     <div class="boton"><a href="/administrador/crear">
             <button class="botonCrear">Crear Nuevo Producto</button>
     </a></div>
+    <div class="boton"><a href="/administrador/<%= redirection %>">
+      <button class="botonCrear"> <%= redirection === "historial" ? "Historial de Productos" : "Listado de Productos" %> </button>
+  </a></div>
 		<table>
 			<thead>
 				<tr>
@@ -60,9 +63,6 @@
                               <form action="/administrador/destruir/<%= product.id%>?_method=DELETE" method="post">
                                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
                               </form>
-                           
-                  
-                            
                         </div>
                     </td>
                   

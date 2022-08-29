@@ -1,0 +1,20 @@
+[
+    {
+        "id": 27,
+        "titulo": "Ejemplo para eliminar",
+        "autor": "Melanie",
+        "idioma": "mmmmm",
+        "editorial": "mmmm",
+        "tapa": "m",
+        "modelo": "2000",
+        "categoria": "suspenso",
+        "precio": "1234",
+        "descuento": "5",
+        "stock": "2",
+        "descripcion": "101010001",
+        "subcategoria": "oferta",
+        "imagen": [
+            "default-image.jpg"
+        ]
+    }
+]
