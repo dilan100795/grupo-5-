@@ -60,24 +60,17 @@
             <span>Categoria : </span>
             <p><%= product.categoria %></p>
         </section>
-        <!--iconos de redes sociales-->
-        <article class="redes">
-            <!-- < class="lista-iconos">-->
-            <a class="red-icon" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
-            <a class="red-icon" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-            <a class="red-icon" href="https://www.gmail.com"><i class="far fa-envelope"></i></a>
-            <a class="red-icon" href="https://web.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-
-        </article>
+      
+       
         <!--Productos parecidos-->
         <section class="parecidos">
             <h3 class="relacionados">Productos relacionados</h3>
-            <% products.forEach(product => { %>
+            <% for( let i = 0; i < 4; i++ ){ %>
             <article class="otroslibros">
                 <a href="/productos/detalle/<%= product.id %>"><img src="/images/<%= product.imagen %> " alt="portada de silence of the lamb"></a>
             </article>
            
-            <% }) %>
+            <% } %>
         </section>
         
     </main>

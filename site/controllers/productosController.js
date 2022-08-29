@@ -9,30 +9,36 @@ module.exports = {
         return res.render('detalle',{
             product : productoenDetalle,
             products,
-         
         })
-
-
-       /* let categoriaSeleccionada = req.params.categoria
-        let categoria = ['suspenso','educativo','poesia','infantiles','noFiccion','cienciaFiccion','clasicos','novelas']
-        
-        productoPorCategoria = products.filter(product =>product.categoria === categoriaSeleccionada)*/
-
-        /*res.render('productos',{
-            categoria,
-            categoriaSeleccionada,
-            products,
-            productoPorCategoria
-        })*/
     },
-
-
-
-
 
     carrito: (req,res) => {
         return res.render('carrito')
     },
 
+   categorias: (req,res) => {
+        
+        let productsSuspenso =products.filter( product =>product.categoria === "suspenso");
+        let productsCienciaFiccion =products.filter( product =>product.categoria === "cienciaFiccion");
+        let productsNovelas =products.filter(product =>product.categoria === "novelas");
+        let productsClasicos =products.filter( product =>product.categoria === "clasicos");
+        let productsPoesia =products.filter( product =>product.categoria === "poesia");
+		let productsEducativo =products.filter(product =>product.categoria === "educativo");
+        let productsInfantiles =products.filter( product =>product.categoria === "infantiles");
+		let productsNoFiccion =products.filter(product =>product.categoria === "noFiccion");
+	
+        res.render('categorias',
+        {
+            productsSuspenso,
+            productsCienciaFiccion,
+            productsNovelas,
+            productsClasicos,
+            productsPoesia,
+            productsEducativo,
+            productsInfantiles,
+            productsNoFiccion, 
+        });
+    },
+   
 
 }
