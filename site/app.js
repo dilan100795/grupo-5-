@@ -23,8 +23,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
 
 
-/* Trabajar con put y delete */
-app.use(methodOverride('_method'))
 
 /*Middlewares*/
 /*app.use(express.json());*/

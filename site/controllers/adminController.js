@@ -3,7 +3,8 @@ const path = require('path')
 const productos = require('../data/productos.json');
 const historial = require('../data/historial.json');
 
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json'), JSON.stringify(dato, null, 4), 'utf-8');
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
+   , JSON.stringify(dato, null, 4), 'utf-8');
 
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
     , JSON.stringify(dato, null, 4), 'utf-8');
