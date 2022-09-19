@@ -5,11 +5,6 @@ module.exports = {
     register: (req,res) => {
         return res.render('register')
     },
-
-
-
-
-
     login: (req,res) => {
         return res.render('login')
     },
@@ -26,5 +21,8 @@ module.exports = {
            })
         }
        
+    },
+    perfil: (req,res) => {
+        return res.render('usuarios/perfil')
     }
 }

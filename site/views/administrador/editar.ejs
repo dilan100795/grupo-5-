@@ -13,7 +13,7 @@
 
         <h2>Edita los datos del producto </h2>
 
-        <form action="/administrador/editar/<%= producto.id %>?_method=PUT" method="post">
+        <form action="/administrador/editar/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data">
             <section class="campos">
                 <div class="titulo">
                     <input type="text" name="Titulo" class="titulo" id="Titulo" value="<%= producto.titulo %>" placeholder="Titulo">

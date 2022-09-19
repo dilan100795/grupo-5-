@@ -20,6 +20,11 @@ module.exports = {
         return res.render('administrador/crear')
     },
     nuevo:(req,res) => {
+
+        let img = req.files.map(imagen => {
+            return imagen.filename
+        })
+
         let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
 
         let productoNuevo = {
@@ -36,7 +41,7 @@ module.exports = {
             stock: Stock,
             descripcion: Descripcion,
             subcategoria: Subcategoria,
-            imagen: ["default-image.jpg"]
+            imagen: req.files ? img : "default-image.jpg"
         }
         productos.push(productoNuevo)
         guardar(productos)
@@ -91,13 +96,20 @@ module.exports = {
         let productosModificados = productos.filter(producto => producto.id !== idParams)
         guardar(productosModificados)
 
-        return res.redirect('/administrador/listar')
+        return res.redirect('/administrador/historial')
     },
     historial:(req,res) => {
         return res.render('/administrador/listar', {
             productos: historial,
             redirection: "listar"
         })
+    },
+    basura:(req,res) => {
+        idParams = +req.params.id
+
+        let productosModificados = productos.filter(producto => producto.id !== idParams)
+        guardar(productosModificados)
+        
     }
 
 }

@@ -398,23 +398,5 @@
         "imagen": "default-image.jpg",
         "descripcion": "arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate",
         "subcategoria": "oferta"
-    },
-    {
-        "id": 27,
-        "titulo": "Otro jemplo para eliminar",
-        "autor": "Melanie",
-        "idioma": "mmmmm",
-        "editorial": "mmmm",
-        "tapa": "m",
-        "modelo": "2000",
-        "categoria": "suspenso",
-        "precio": "1234",
-        "descuento": "5",
-        "stock": "2",
-        "descripcion": "101010001",
-        "subcategoria": "oferta",
-        "imagen": [
-            "default-image.jpg"
-        ]
     }
 ]
