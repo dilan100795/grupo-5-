@@ -1,6 +1,9 @@
 const fs = require('fs');
-const path = require('path')
+const path = require('path');
 const {validationResult} = require('express-validator')
+const users = require('../data/usuarios.json')
+const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')
 module.exports = {
     register: (req,res) => {
         return res.render('register')
@@ -17,7 +20,19 @@ module.exports = {
     processLogin:(req,res) => {
         let errors = validationResult(req)
         if (errors.isEmpty()){
-            return res.send(req.body)
+
+
+        const {email} = req.body
+        let user = users.find(usuario => usuario.email === email)
+
+        req.session.userLogin = {
+            id : user.id,
+            nombre : user.nombre,
+            rol : user.rol
+        }
+         return res.redirect('/')
+
+            /*return res.send(req.body)*/
         } else {
            /* return res.send(errors.mapped())*/
            return res.render('login', {
@@ -26,5 +41,14 @@ module.exports = {
            })
         }
        
+    },
+    perfil: (req,res) => {
+        return res.render('usuarios/perfil')
+    },
+
+    logout : (req,res) => {
+        req.session.destroy();
+        return res.redirect('/')
     }
+
 }

@@ -8,7 +8,6 @@
        "telefono":"4979118843",
        "ciudad":"buenos aires",
        "genero":"Masculino",
-       "codigo postal":"6637",
        "rol":"Administrador"
     },
     {
@@ -20,7 +19,6 @@
        "telefono":"3626632246",
        "ciudad":"buenos aires",
        "genero":"Femenino",
-       "codigo postal":"2781",
        "rol":"Administrador"
     },
     {
@@ -32,7 +30,6 @@
         "telefono":"5542229697",
         "ciudad":"buenos aires",
         "genero":"Masculino",
-        "codigo postal":"3301",
         "rol":"Administrador"
     },
     {
@@ -44,7 +41,6 @@
         "telefono":"2575289945",
         "ciudad":"buenos aires",
         "genero":"Femenino",
-        "codigo postal":"2491",
         "rol":"Administrador"
     },
     {
@@ -56,7 +52,6 @@
         "telefono":"2158987088",
         "ciudad":"buenos aires",
         "genero":"Masculino",
-        "codigo postal":"2411",
         "rol":"Usuario"
-        }
+    }
     ]

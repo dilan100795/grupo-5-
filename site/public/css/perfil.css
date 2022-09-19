@@ -1,0 +1,20 @@
+.perfil main {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.perfil main h1 {
+    text-transform: capitalize;
+}
+
+
+.perfil main button {
+    border: none;
+    background-color: var(--rojizo);
+    height: 40px;
+    color: white;
+    border-radius: 8px;
+}

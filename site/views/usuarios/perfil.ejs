@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<%- include('./partials/head') %>
+<%- include('../partials/head') %>
 
-<body class="nosotros">
+<body class="perfil">
 
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 
 <body>
 <main>
+   
+    <h1>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h1>
 
+
+ <form action="/usuarios/logout?_method=DELETE" method="post">
+        <button type="submit">Cerrar Sesion</button>
+    </form>
 </main>   
 
-<%- include('./partials/footer') %>
+<%- include('../partials/footer') %>
 
 </body>

@@ -27,15 +27,18 @@
         <section class="icon">
             <!--logo de login pantallas grandes-->
             <div class="cart">
-                <a href="/usuarios/login">
-                    <i class="fas fa-user"></i>
-                </a>
+                <% if (locals.userLogin) { %>
+                    <a href="/usuarios/perfil">Bienvenido <%= locals.userLogin.nombre %> </a>
+                <% } else { %>
+                <a href="/usuarios/login"><i class="fas fa-user"></i></a>
+                <% } %>
             </div>
+
+
+
             <!--logo del carito que redireccione al carrito -->
             <div class="cart">
-                <a href="/productos/carrito">
-                    <i class="fas fa-cart-arrow-down"></i>
-                </a>
+                <a href="/productos/carrito"><i class="fas fa-cart-arrow-down"></i></a>
             </div>
         </section>
 
@@ -52,7 +55,11 @@
             <li><a href="/productos/categorias">Categorias</a></li>
             <li><a href="/nosotros">Nosotros</a></li>
             <li><a href="/usuarios/register">Registrate</a></li>
+            <% if (locals.userLogin && locals.userLogin.rol === "Administrador") { %>
             <li><a href="/administrador/listar">Administrador</a></li>
+            <% } %>
+       
         </ul>
+
     </section>
 </header>
