@@ -44,10 +44,20 @@
     width: 170px;
     margin-top: 10px;
 }
+.register .container .image{
+    border: 2px solid var(--azul);
+    background-color: var(--amarillo);
+    border-radius: 3px;
+}
 .register main textarea{
     resize: none;
 }
 .register .bottom{
     margin-bottom: 20px;
     
+}
+.register main .bottom small{
+    margin-top: 5px;
+    color: var(--rojizo);
+    font-weight: bold;
 }

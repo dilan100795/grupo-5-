@@ -103,13 +103,13 @@ module.exports = {
             productos: historial,
             redirection: "listar"
         })
-    },
+    } /*,
     basura:(req,res) => {
         idParams = +req.params.id
 
         let productosModificados = productos.filter(producto => producto.id !== idParams)
         guardar(productosModificados)
         
-    }
+    }*/
 
 }

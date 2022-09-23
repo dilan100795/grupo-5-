@@ -8,6 +8,38 @@ module.exports = {
     register: (req,res) => {
         return res.render('register')
     },
+    processRegister:(req,res) => {
+         
+        let errors = validationResult(req)
+        if (req.fileValidationError) {
+            let imagen = {
+                param: 'image',
+                msg: req.fileValidationError,
+            }
+            errors.errors.push(imagen)
+        }
+
+        if (errors.isEmpty()){
+            return res.send(req.body);
+            let {id,name,email,pass} = req.body
+            let usuarioNuevo = {
+                    id:6,
+                    name,
+                    email,
+                    pass,
+                    image,
+                    rol
+            }
+
+        } else {   
+            return res.send(errors.mapped())
+            /*return res.render('register', {
+                errors: errors.mapped(),
+                old: req.body
+            })*/
+    }
+},
+
     login: (req,res) => {
         return res.render('login')
     },

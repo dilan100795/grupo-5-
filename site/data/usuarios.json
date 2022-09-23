@@ -1,57 +1,42 @@
 [
-    {
-       "id":1,
-       "nombre":"Dilan",
-       "apellido":"Martinez",
+    {  
+        "id":1,
+       "name":"Dilan",
        "email":"dilmar@egmail.com",
-       "contraseña":"comision17",
-       "telefono":"4979118843",
-       "ciudad":"buenos aires",
-       "genero":"Masculino",
+       "pass":"comision17",
+       "image":"default-image.jpg",
        "rol":"Administrador"
     },
     {
        "id":2,
-       "nombre":"Melanie",
-       "apellido":"Rosi",
+       "name":"Melanie",
        "email":"mumi@gmail.com",
-       "contraseña":"comision17",
-       "telefono":"3626632246",
-       "ciudad":"buenos aires",
-       "genero":"Femenino",
+       "pass":"comision17",
+       "image":"default-image.jpg",
        "rol":"Administrador"
     },
     {
         "id":3,
-        "nombre":"Cristian",
-        "apellido":"Elias",
+        "name":"Cristian",
         "email":"kerbey2@gmail.com",
-        "contraseña":"comision17",
-        "telefono":"5542229697",
-        "ciudad":"buenos aires",
-        "genero":"Masculino",
+        "pass":"comision17",
+        "image":"default-image.jpg",
         "rol":"Administrador"
     },
     {
         "id":4,
-        "nombre":"Jeane",
-        "apellido":"Garcia",
+        "name":"Jeane",
         "email":"love@gmail.com",
-        "contraseña":"comision17",
-        "telefono":"2575289945",
-        "ciudad":"buenos aires",
-        "genero":"Femenino",
+        "pass":"comision17",
+        "image":"default-image.jpg",
         "rol":"Administrador"
     },
     {
         "id":5,
-        "nombre":"Fulanito",
-        "apellido":"Martinez",
+        "name":"Fulanito",
         "email":"bpas@gmail.com",
-        "contraseña":"comision17",
-        "telefono":"2158987088",
-        "ciudad":"buenos aires",
-        "genero":"Masculino",
+        "pass":"comision17",
+        "image":"default-image.jpg",
         "rol":"Usuario"
-    }
+    } 
     ]
