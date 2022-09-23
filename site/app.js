@@ -4,6 +4,7 @@ const port = 3000;
 const path = require('path');
 const methodOverride = require('method-override')
 const session = require('express-session')
+const cookieParser = require('cookie-parser');
 
 /* Implementamos locals dentro de nuestra aplicacion */
 const userLogin = require('./middlewares/userLoginCheck')
@@ -34,9 +35,9 @@ app.use(session({
   
   app.use(userLogin)
 
+app.use(cookieParser());
 
-/*Middlewares*/
-/*app.use(express.json());*/
+
 app.use(express.static(path.resolve(__dirname,'public')))
 
 /*Rutas*/

@@ -13,11 +13,12 @@ module.exports = {
     },
 
     processLogin:(req,res) => {
+       
         let errors = validationResult(req)
         if (errors.isEmpty()){
 
 
-        const {email} = req.body
+        const {email,recordarme} = req.body
         let user = users.find(usuario => usuario.email === email)
 
         req.session.userLogin = {
@@ -25,7 +26,10 @@ module.exports = {
             nombre : user.nombre,
             rol : user.rol
         }
-         return res.redirect('/')
+        if(recordarme){
+            res.cookie('eltiempo',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
+        }
+         return res.redirect('/usuarios/perfil')
 
             /*return res.send(req.body)*/
         } else {
@@ -42,7 +46,11 @@ module.exports = {
     },
 
     logout : (req,res) => {
+        
         req.session.destroy();
+        if(req.cookies.eltiempo){
+            res.cookie('eltiempo','',{maxAge: -1})
+        }
         return res.redirect('/')
     }
 

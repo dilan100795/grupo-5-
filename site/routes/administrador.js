@@ -1,21 +1,21 @@
 const express = require('express')
 const router = express.Router()
 const upload = require('../middlewares/multerProductos')
-
+const adminCheck = require('../middlewares/adminCheck')
 let {crear,listar,nuevo,editar,actualizar,destruir,historial,basura} = require('../controllers/adminController')
 
-router.get('/listar', listar)
-router.get('/historial', historial);
+router.get('/listar',adminCheck, listar)
+router.get('/historial',adminCheck, historial);
 
 /*crear producto*/
-router.get('/crear', crear)
-router.post('/crear', upload.array('Imagen'), nuevo)
+router.get('/crear',adminCheck, crear)
+router.post('/crear', adminCheck,upload.array('Imagen'), nuevo)
 
 
 /*editar producto*/ 
 /*router.get('/editar', editar)*/
-router.get('/editar/:id', editar);
-router.put('/editar/:id', upload.array('Imagen'), actualizar);
+router.get('/editar/:id',adminCheck, editar);
+router.put('/editar/:id', adminCheck,upload.array('Imagen'), actualizar);
 
 /* Eliminar un producto */
 router.delete('/destruir/:id', destruir);
