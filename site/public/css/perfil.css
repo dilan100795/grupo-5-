@@ -1,9 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
 .perfil main {
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
 .perfil main h1 {
@@ -17,4 +22,26 @@
     height: 40px;
     color: white;
     border-radius: 8px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 9px;
+}
+.perfil main img{
+    width: 226px;
+    padding: 20px;
+}
+
+/*tablet*/
+@media (min-width:460px) {
+    .perfil main img{
+        width: 226px;
+        padding: 20px;
+    }
+}
+/*desktop*/
+@media (min-width:768px) {
+    .perfil main img{
+        width: 226px;
+        padding: 20px;
+    }
 }
