@@ -29,7 +29,7 @@ module.exports = {
                     name,
                     email,
                     pass: bcrypt.hashSync(pass, 12),
-                    image: req.file.size > 1 ? req.file.filename : "default-image.jpg",
+                    image: req.file ? req.file.filename : "default-image.jpg",
                     rol : "usuario"
             }
             users.push(usuarioNuevo)

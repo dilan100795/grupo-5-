@@ -46,5 +46,21 @@
         "pass": "$2a$12$FpkSXP0FCZJGMvkRpOIv5.BiPtxVGOadA6nBmk3iwSpZAZ6/dGau2",
         "image": "avatar-1663965100659.png",
         "rol": "usuario"
+    },
+    {
+        "id": 7,
+        "name": "dilan",
+        "email": "zzdilan@yahoo.com",
+        "pass": "$2a$12$yjCshayRgFgC5ma1NukyyuvThibXuRrp5kfBsvSXp6.4vgRKyxgr2",
+        "image": "default-image.jpg",
+        "rol": "usuario"
+    },
+    {
+        "id": 8,
+        "name": "ewrewr",
+        "email": "zzdilan123@gmail.com",
+        "pass": "$2a$12$rmgsa5iwJFZIeZZALqDivO6CqrKuJWkK2xozfJ/arA03hEBJRX8qO",
+        "image": "default-image.jpg",
+        "rol": "usuario"
     }
 ]
