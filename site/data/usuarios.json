@@ -38,5 +38,13 @@
         "pass": "$2a$12$3Amrx1dXEWw8wPo0kTGs2OFyMNLccmQerTOgp0/DcQ5kjzDxBVENK",
         "image": "avatar-1663956465845.jpg",
         "rol": "usuario"
+    },
+    {
+        "id": 6,
+        "name": "fulanita",
+        "email": "fulanita@gmail.com",
+        "pass": "$2a$12$FpkSXP0FCZJGMvkRpOIv5.BiPtxVGOadA6nBmk3iwSpZAZ6/dGau2",
+        "image": "avatar-1663965100659.png",
+        "rol": "usuario"
     }
 ]
