@@ -1,9 +1,12 @@
 const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator')
-const users = require('../data/usuarios.json')
+const bcrypt = require('bcryptjs')
+/*const users = require('../data/usuarios.json')*/
+const usuarios = require('../data/usuarios.json')
 const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
     , JSON.stringify(dato, null, 4), 'utf-8')
+
 module.exports = {
     register: (req,res) => {
         return res.render('register')
@@ -20,17 +23,20 @@ module.exports = {
         }
 
         if (errors.isEmpty()){
-            return res.send(req.body);
-            let {id,name,email,pass} = req.body
+            /*return res.send(req.body);*/
+            let {name,email,pass} = req.body
             let usuarioNuevo = {
-                    id:6,
+                    id:usuarios[usuarios.length - 1].id + 1,
                     name,
                     email,
-                    pass,
-                    image,
-                    rol
+                    pass: bcrypt.hashSync(pass, 12),
+                    image: req.file.size > 1 ? req.file.filename : "default-image.jpg",
+                    rol : "usuario"
             }
-
+            usuarios.push(usuarioNuevo)
+            guardar(usuarios)
+            
+            return res.redirect('/')
         } else {   
             return res.send(errors.mapped())
             /*return res.render('register', {
@@ -50,11 +56,12 @@ module.exports = {
 
 
         const {email} = req.body
-        let user = users.find(usuario => usuario.email === email)
+        let user = usuarios.find(usuario => usuario.email === email)
 
         req.session.userLogin = {
             id : user.id,
-            nombre : user.nombre,
+            nombre : user.name,
+            image: user.image,
             rol : user.rol
         }
          return res.redirect('/')

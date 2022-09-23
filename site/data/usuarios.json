@@ -1,42 +1,42 @@
 [
-    {  
-        "id":1,
-       "name":"Dilan",
-       "email":"dilmar@egmail.com",
-       "pass":"comision17",
-       "image":"default-image.jpg",
-       "rol":"Administrador"
+    {
+        "id": 1,
+        "name": "Dilan",
+        "email": "dilmar@egmail.com",
+        "pass": "$2a$12$8xbfBT0jeUUNG8xgYmKLn.A4DXM57cmqVNY/ZGeW9HWU6EfCurpXW",
+        "image": "avatar-1663955920816.jpg",
+        "rol": "Administrador"
     },
     {
-       "id":2,
-       "name":"Melanie",
-       "email":"mumi@gmail.com",
-       "pass":"comision17",
-       "image":"default-image.jpg",
-       "rol":"Administrador"
+        "id": 2,
+        "name": "Melanie",
+        "email": "mumi@gmail.com",
+        "pass": "$2a$12$Ie3X5oPCWmO2aTwq2/YUreZj0pztyNTuKbyls47dFhP9UzgGmPx26",
+        "image": "avatar-1663956247474.jpg",
+        "rol": "Administrador"
     },
     {
-        "id":3,
-        "name":"Cristian",
-        "email":"kerbey2@gmail.com",
-        "pass":"comision17",
-        "image":"default-image.jpg",
-        "rol":"Administrador"
+        "id": 3,
+        "name": "Cristian",
+        "email": "kerbey2@gmail.com",
+        "pass": "$2a$12$LMNXc8AdwuDP21vvPbxR/.XWDBunHVlfdXDwF1GM8jUoLmHuMp8wC",
+        "image": "avatar-1663956338754.png",
+        "rol": "Administrador"
     },
     {
-        "id":4,
-        "name":"Jeane",
-        "email":"love@gmail.com",
-        "pass":"comision17",
-        "image":"default-image.jpg",
-        "rol":"Administrador"
+        "id": 4,
+        "name": "Jeane",
+        "email": "love@gmail.com",
+        "pass": "$2a$12$QPDxhREc1YLOlTJ4jyJYZOScNy04DcCskcv2Q/fHiEiM/Zhu03x4G",
+        "image": "avatar-1663956392169.png",
+        "rol": "Administrador"
     },
     {
-        "id":5,
-        "name":"Fulanito",
-        "email":"bpas@gmail.com",
-        "pass":"comision17",
-        "image":"default-image.jpg",
-        "rol":"Usuario"
-    } 
-    ]
+        "id": 5,
+        "name": "Fulanito",
+        "email": "bpas@gmail.com",
+        "pass": "$2a$12$3Amrx1dXEWw8wPo0kTGs2OFyMNLccmQerTOgp0/DcQ5kjzDxBVENK",
+        "image": "avatar-1663956465845.jpg",
+        "rol": "usuario"
+    }
+]
