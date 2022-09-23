@@ -19,6 +19,6 @@ router.put('/editar/:id', adminCheck,upload.array('Imagen'), actualizar);
 
 /* Eliminar un producto */
 router.delete('/destruir/:id', destruir);
-router.delete('/basura/:id', basura);
+/*router.delete('/basura/:id', basura);*/
 
 module.exports = router

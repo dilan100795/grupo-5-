@@ -15,35 +15,52 @@
     <form action="" method="post" enctype="multipart/form-data">
         <div class="container bottom">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" required>
-            <small>Debe ingresar su nombre</small>
+            <input type="text" name="name" id="name" placeholder="Ingresa tu nombre" value="<%= locals.old && old.name ? old.name : null%>">
+            <% if (locals.errors && errors.name) { %>
+                <small><%= errors.name.msg %></small>
+            <% } %>
         </div>
         <div class="container bottom">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="Ingresa tu email">
-            <small>Debe ingresar su email</small>
+            <input type="email" name="email" id="email" placeholder="Ingresa tu email" value="<%= locals.old && old.email ? old.email : null%>">
+            <% if (locals.errors && errors.email) { %>
+                <small><%= errors.email.msg %></small>
+            <% } %>
         </div>
         <div class="container bottom">
             <label for="pass">Contraseña</label>
             <input type="password" name="pass" id="pass" placeholder="Ingresa tu Contraseña">
-            <small>Debe ingresar su contraseña</small>
+            <% if (locals.errors && errors.pass) { %>
+                <small><%= errors.pass.msg %></small>
+            <% } %>
         </div>
         <div class="container bottom">
             <label for="pass2">Confirma tu contraseña</label>
             <input type="password" name="pass2" id="pass2" placeholder="Confirmar Contraseña">
-            <small>Las contraseñas no coinciden</small>
+            <% if (locals.errors && errors.pass2) { %>
+                <small><%= errors.pass2.msg %></small>
+            <% } %>
+        </div>     
+        <div class="container bottom">
+            <label for="image">Subí tu imagen aquí</label>
+            <input class="image" type="file" name="image" id="image">
+            <% if (locals.errors && errors.image) { %>
+                <small><%= errors.image.msg %></small>
+            <% } %>
         </div>
-        
-    
 
-        <h2 class="bottom">Dejanos tus comentarios</h2>
+        <!--<h2 class="bottom">Dejanos tus comentarios</h2>
         
-            <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Escribi tus comentarios"></textarea>
+           <textarea class="bottom" name="comentarios" id="comentarios" cols="30" rows="10" placeholder="Escribi tus comentarios"></textarea> -->
+
             <div class="bottom">
                 <input type="checkbox" name="terminos" id="terminos">
                 <label for="terminos">Acepto los terminos y condiciones</label>
+                <% if (locals.errors && errors.terminos) { %>
+                    <small><%= errors.terminos.msg %></small>
+                <% } %>
             </div>
-        
+           
 
      
         <button type="submit">Registrarme</button>
