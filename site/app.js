@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -5,6 +7,7 @@ const path = require('path');
 const methodOverride = require('method-override')
 const session = require('express-session')
 const cookieParser = require('cookie-parser');
+
 
 /* Implementamos locals dentro de nuestra aplicacion */
 const userLogin = require('./middlewares/userLoginCheck')
