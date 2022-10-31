@@ -10,11 +10,24 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      carrito.belongsTo(models.usuarios, {
+        as: 'user',
+        foreignKey: 'usuariosId'
+      })
+      carrito.belongsTo(models.Products, {
+        as: 'producto',
+        foreignKey: 'productsId'
+      })
+      carrito.hasMany(models.ordenes, {
+        as: 'ordenes',
+        foreignKey: 'carritoId'
+      })
     }
   }
   carrito.init({
-    name: DataTypes.STRING
+    productsId: DataTypes.INTERGER,
+    usuariosId:DataTypes.INTERGER
+
   }, {
     sequelize,
     modelName: 'carrito',

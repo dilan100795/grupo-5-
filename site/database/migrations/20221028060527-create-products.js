@@ -9,13 +9,65 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      titulo: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      autor: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      idioma: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      tapa: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+     precio: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+       descuento: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+
+      }, stock: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      }, descripcion: {
+        type: Sequelize.STRING(400),
+        allowNull: false,
+      }, modelo: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
       },
+      categoriesId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'Categories'
+          },
+          key: 'id'
+        }, 
+      },
+      editorialesId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'editoriales'
+          },
+          key: 'id'
+        }, 
+      },
+
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE

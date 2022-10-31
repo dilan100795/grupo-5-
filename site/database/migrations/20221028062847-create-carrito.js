@@ -9,9 +9,27 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
-        type: Sequelize.STRING
+      productsId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'products'
+          },
+          key: 'id'
+        }, 
       },
+      usuariosId: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: {
+            tableName: 'usuarios'
+          },
+          key: 'id'
+        }, 
+      },
+
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

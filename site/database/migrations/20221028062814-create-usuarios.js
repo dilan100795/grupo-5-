@@ -10,7 +10,37 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      password: {
+        type: Sequelize.STRING(200),
+        allowNull: false,
+      },
+      imagen: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      rol: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      telefono: {
+        type: Sequelize.STRING,
+        
+      },
+      direcion: {
+        type: Sequelize.STRING,
+       
+      },
+      codigo_postal: {
+        type: Sequelize.STRING,
+       
       },
       createdAt: {
         allowNull: false,
