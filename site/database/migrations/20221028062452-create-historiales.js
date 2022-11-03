@@ -36,7 +36,7 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
       }, descripcion: {
-        type: Sequelize.STRING(500),
+        type: Sequelize.STRING(1000),
         allowNull: false,
       }, modelo: {
         type: Sequelize.INTEGER
