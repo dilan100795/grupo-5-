@@ -6,12 +6,11 @@ let listado = require('../../data/usuarios.json')
 
 let usuarios = listado.map(usuario => {
   let elemento = {
-    nombre: usuario.name,
-    apellido: null,
+    name: usuario.name,
     email: usuario.email,
     password: usuario.pass,
     imagen: usuario.image,
-    rolId: usuario.rol === 'admin' ? 1 : 2,
+    rolId: usuario.rol === 'Administrador' ? 1 : 2,
     createdAt:new Date,
     updatedAt:new Date
   }

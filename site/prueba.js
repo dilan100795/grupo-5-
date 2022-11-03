@@ -1,9 +1,16 @@
-let listado=['Fontana','Debolsillo','Alienta','Booket', 'PlanetaLector', 'Click', 'Urano']
-let editoriales =listado.map(editorial =>{
- return {
-   name: editorial,
-   createdAt : new Date,
-   updatedAt : new Date
- }})
+let listado = require('./data/productos.json')
 
-console.log(editoriales)
+let imagenes = []
+
+listado.forEach(producto => {
+ 
+  let imagen = {
+    nombre: producto.imagen,
+    productsId: producto.id,
+    createdAt : new Date,
+    updatedAt : new Date
+  }
+  imagenes.push(imagen)
+});
+
+console.log(imagenes)
