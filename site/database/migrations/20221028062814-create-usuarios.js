@@ -30,7 +30,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      telefono: {
+      /*telefono: {
         type: Sequelize.STRING,
         
       },
@@ -41,7 +41,7 @@ module.exports = {
       codigo_postal: {
         type: Sequelize.STRING,
        
-      },
+      },*/
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

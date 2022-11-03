@@ -1,6 +1,7 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
+
 let listado=['Fontana','Debolsillo','Alienta','Booket', 'PlanetaLector', 'Click', 'Urano']
 let editoriales =listado.map(editorial =>{
  return {

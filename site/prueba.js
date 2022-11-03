@@ -1,10 +1,9 @@
-let lista=['suspenso','novelas','poesia','infantiles', 'noFiccion', 'educativo', 'clasicos','cienciaFiccion'];
-let categories =lista.map(categoria =>{
+let listado=['Fontana','Debolsillo','Alienta','Booket', 'PlanetaLector', 'Click', 'Urano']
+let editoriales =listado.map(editorial =>{
  return {
-   name: categoria,
+   name: editorial,
    createdAt : new Date,
    updatedAt : new Date
- }}
-)
+ }})
 
-console.log(categories)
+console.log(editoriales)
