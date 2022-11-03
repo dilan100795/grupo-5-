@@ -8,7 +8,6 @@ const methodOverride = require('method-override')
 const session = require('express-session')
 const cookieParser = require('cookie-parser');
 
-const testConection = require('./utils/dbConectionTest')
 
 /* Implementamos locals dentro de nuestra aplicacion */
 const userLogin = require('./middlewares/userLoginCheck')
@@ -25,7 +24,6 @@ let usuariosRouter = require('./routes/usuarios')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-testConection()
 
 /* Trabajar con metodos HTTP (post) */
 app.use(express.json());
