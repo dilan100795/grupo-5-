@@ -33,7 +33,7 @@ module.exports = (sequelize, DataTypes) => {
     }
 
   }
-  products.init({
+  Products.init({
     titulo: DataTypes.STRING,
     autor:DataTypes.STRING,
     idiomar:DataTypes.STRING,
@@ -49,5 +49,5 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'products',
   });
-  return products;
+  return Products;
 };

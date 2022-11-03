@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   imagenes.init({
     nombre: DataTypes.STRING,
-    productsId:DataTypes.INTERGER
+    productsId:DataTypes.INTEGER
 
   }, {
     sequelize,

@@ -30,8 +30,7 @@ module.exports = {
         allowNull: false,
       },
        descuento: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+        type: Sequelize.INTEGER
 
       }, stock: {
         type: Sequelize.INTEGER,
@@ -40,8 +39,8 @@ module.exports = {
         type: Sequelize.STRING(400),
         allowNull: false,
       }, modelo: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
+        type: Sequelize.INTEGER
+
       },
       createdAt: {
         allowNull: false,

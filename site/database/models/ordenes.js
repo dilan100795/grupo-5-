@@ -16,13 +16,13 @@ module.exports = (sequelize, DataTypes) => {
       })
       ordenes.belongsTo(models.carrito, {
         as: 'cars',
-        foreignKey: 'carritoId'
+        foreignKey: 'carritosId'
       })
     }
   }
   ordenes.init({
-    carritoId: DataTypes.INTERGER,
-    usuariosId:DataTypes.INTERGER
+    carritoId: DataTypes.INTEGER,
+    usuariosId:DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'ordenes',

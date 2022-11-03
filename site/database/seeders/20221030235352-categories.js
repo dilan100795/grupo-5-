@@ -1,7 +1,7 @@
 'use strict';
 
 /** @type {import('sequelize-cli').Migration} */
-let lista=['suspenso','novela','poesia']
+let lista=['suspenso','novelas','poesia','infantiles', 'noFiccion', 'educativo', 'clasicos','cienciaFiccion']
 let categories =lista.map(categoria =>{
  return {
    name: categoria,
