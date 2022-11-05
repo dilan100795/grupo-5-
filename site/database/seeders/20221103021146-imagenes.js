@@ -19,11 +19,11 @@ listado.forEach(producto => {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Imagenes', imagenes, {});
+    await queryInterface.bulkInsert('imagenes', imagenes, {});
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Imagenes', null, {});
+    await queryInterface.bulkDelete('imagenes', null, {});
     
   }
 };

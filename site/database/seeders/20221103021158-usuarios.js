@@ -10,7 +10,7 @@ let usuarios = listado.map(usuario => {
     email: usuario.email,
     password: usuario.pass,
     imagen: usuario.image,
-    rolId: usuario.rol === 'Administrador' ? 1 : 2,
+    rol: usuario.rol === 'Administrador' ? 1 : 2,
     createdAt:new Date,
     updatedAt:new Date
   }
