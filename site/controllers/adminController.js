@@ -1,20 +1,20 @@
 const fs = require('fs');
 const path = require('path')
-const productos = require('../data/productos.json');
-const historial = require('../data/historial.json');
+/*const productos = require('../data/productos.json');*/
+/*const historial = require('../data/historial.json');*/
 
-/*let db = require('../database/models')*/
+let db = require('../database/models')
 
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
-   , JSON.stringify(dato, null, 4), 'utf-8');
+/*const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
+   , JSON.stringify(dato, null, 4), 'utf-8');*/
 
-const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
-    , JSON.stringify(dato, null, 4), 'utf-8'); 
+/*const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
+    , JSON.stringify(dato, null, 4), 'utf-8'); */
 
 module.exports = {
     listar: (req,res) => {
 
-      /* db.products.findAll({
+       db.products.findAll({
             include: [{
                 all: true
             }]
@@ -22,12 +22,12 @@ module.exports = {
        .then(productos => {
         return res.send(productos)
 
-        /*return res.render('administrador/listar',{
+        return res.render('administrador/listar',{
             productos,
             redirection: "historial"
         })  
         }) 
-        */
+        
        
     
         
