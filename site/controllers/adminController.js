@@ -3,44 +3,44 @@ const path = require('path')
 const productos = require('../data/productos.json');
 const historial = require('../data/historial.json');
 
-/*let db = require('../database/models')*/
+let db = require('../database/models')
 
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
+/* const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/productos.json')
    , JSON.stringify(dato, null, 4), 'utf-8');
 
 const guardarHistorial = (dato) => fs.writeFileSync(path.join(__dirname, '../data/historial.json')
     , JSON.stringify(dato, null, 4), 'utf-8'); 
-
+*/
 module.exports = {
     listar: (req,res) => {
 
-      /* db.products.findAll({
+       db.Products.findAll({
             include: [{
                 all: true
             }]
        })
        .then(productos => {
-        return res.send(productos)
+       /* return res.send(productos) */
 
-        /*return res.render('administrador/listar',{
-            productos,
-            redirection: "historial"
-        })  
-        }) 
-        */
-       
-    
-        
-        
         return res.render('administrador/listar',{
             productos,
             redirection: "historial"
-
-
-        })
+        })  
+        })    
+       /* return res.render('administrador/listar',{
+            productos,
+            redirection: "historial"
+        })*/
     },
-    crear:(req,res) => {
-        return res.render('administrador/crear')
+    crear: async(req,res) => {
+        try {
+            let categorias = await db.categories.findAll()
+            return res.render('administrador/crear',{
+                categorias
+            })
+        } catch (error) {
+            return res.send(error)
+        } 
     },
     nuevo:(req,res) => {
 
@@ -72,17 +72,39 @@ module.exports = {
        return res.redirect('/administrador/listar')
     },
     editar:(req,res) => {
-        let categoria = ['Suspenso', 'Ciencia Ficcion', 'No Ficcion', 'Poesia', 'Educativo', 'Novelas', 'Clasicos','Infantiles']
+        let idParams = +req.params.id
+        let categorias = db.categories.findAll()
+        let producto = db.Products.findOne({
+            where: {
+                id : idParams
+            },
+            include: [{
+                all:true
+            }]
+        })
+        Promise.all([categorias,producto])
+
+        .then(([categorias,producto]) => {
+
+            return res.render('administrador/editar', {
+                producto,
+                categorias,
+            })
+    })
+    .catch(error => res.send(error))
+
+
+        /*let categoria = ['Suspenso', 'Ciencia Ficcion', 'No Ficcion', 'Poesia', 'Educativo', 'Novelas', 'Clasicos','Infantiles']
 
         id = +req.params.id
         let producto = productos.find((elemento) => {
             return elemento.id == id
         }) 
         /*return res.send(producto) Comprobar que esta llegando bien el elemento*/
-        return res.render('administrador/editar', {
+       /* return res.render('administrador/editar', {
             producto,
             categoria
-        })
+        })*/
     },
     actualizar:(req,res) => {
         idParams = +req.params.id
