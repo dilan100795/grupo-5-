@@ -2,10 +2,11 @@ const fs = require('fs');
 const path = require('path');
 const {validationResult} = require('express-validator')
 const bcrypt = require('bcryptjs')
-const users = require('../data/usuarios.json')
+const db = require('../database/models')
+/*const users = require('../data/usuarios.json')*/
 /*const usuarios = require('../data/usuarios.json')*/
-const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
-    , JSON.stringify(dato, null, 4), 'utf-8')
+/*const guardar = (dato) => fs.writeFileSync(path.join(__dirname, '../data/usuarios.json')
+    , JSON.stringify(dato, null, 4), 'utf-8')*/
 
 module.exports = {
     register: (req,res) => {
@@ -23,8 +24,21 @@ module.exports = {
         }
 
         if (errors.isEmpty()){
-            let {name,email,pass} = req.body
-            let usuarioNuevo = {
+            let {name,email,pass,} = req.body
+
+            db.Users.create({
+                nombre: name,
+                email,
+                password: bcrypt.hashSync(pass, 12),
+                imagen: req.file.size > 1 ? req.file.filename : "default-image.jpg",
+                rolId: 2
+            })
+
+
+
+
+
+            /*let usuarioNuevo = {
                     id:users[users.length - 1].id + 1,
                     name,
                     email,
@@ -33,9 +47,22 @@ module.exports = {
                     rol : "usuario"
             }
             users.push(usuarioNuevo)
-            guardar(users)
-            
+            guardar(users)*/
+         
+
+            .then(user => {
+            req.session.userLogin = {
+                id : user.id,
+                nombre : user.name,
+                image: user.image,
+                rol : user.rolId
+            }
+
             return res.redirect('/')
+        })
+
+        .catch(errores => res.send(errores))
+
         } else {   
            /* return res.send(errors.mapped())*/
             return res.render('register', {
@@ -56,19 +83,28 @@ module.exports = {
 
 
         const {email,recordarme} = req.body
-        let user = users.find(usuario => usuario.email === email)
+    
+        /*let user = users.find(usuario => usuario.email === email)*/
+
+        db.Users.findOne({
+            where : {
+                email
+            }
+        })
+        .then(user => {
 
         req.session.userLogin = {
             id : user.id,
             nombre : user.name,
             image: user.image,
-            rol : user.rol
+            rol : user.rolId
         }
         if(recordarme){
             res.cookie('eltiempo',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
         }
          return res.redirect('/usuarios/perfil')
-
+     })
+     .catch(errores => res.send(errores))
             /*return res.send(req.body)*/
         } else {
            /* return res.send(errors.mapped())*/
