@@ -26,8 +26,13 @@
                 <div class="idioma">
                     <input type="text" name="Idioma" class="idioma" id="Idioma" value="<%= producto.idioma %>" placeholder="Idioma">
                 </div>
-                <div class="editorial">
-                    <input type="text" name="Editorial" class="editorial" id="Editorial" value="<%= producto.editorial %>" placeholder="Editorial">
+                <div class="editorial">                  
+                    <select class="editorial" name="Editorial" id="Editorial" aria-label="">
+                        <option selected hidden>Selecciona una opcion</option>
+                        <% editoriales.forEach(editorial => { %>
+                            <option value="<%= editorial.id %>"<%= producto.editorialesId === editorial.id ? "selected" : null %>><%= editorial.name %></option>
+                        <% }) %> 
+                    </select>
                 </div>
                 <div class="tapa">
                     <input type="text" name="Tapa" class="Tapa" id="Tapa" value="<%= producto.tapa %>" placeholder="Tapa">
@@ -37,9 +42,10 @@
                 </div>
                 <div class="categorias">
                     <select class="categoria" name="Categoria" id="" aria-label="">
-                        <% categoria.forEach(categoria => { %>
-                            <option value="<%= categoria %>" <%= producto.categoria.toLowerCase() === categoria.toLowerCase() ? 'selected' : null %> ><%= categoria %></option>
-                          <% }) %>
+                        <option selected hidden>Selecciona una opcion</option>
+                       <% categorias.forEach(categoria => { %>
+                            <option value="<%= categoria.id %>"<%= producto.categoriesId === categoria.id ? "selected" : null %>><%= categoria.name %></option>
+                        <% }) %> 
                    </select>
                     <small>Obligatorio</small>
                 </div>

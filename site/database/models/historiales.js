@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
 
       historiales.hasMany(models.imagenes_historiales, {
         as: 'imagen_historial',
-        foreignKey: 'historialesI'
+        foreignKey: 'historialesId'
       })
     }
     
@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   historiales.init({
     titulo: DataTypes.STRING,
     autor:DataTypes.STRING,
-    idiomar:DataTypes.STRING,
+    idioma:DataTypes.STRING,
     tapa:DataTypes.STRING,
     precio:DataTypes.INTEGER,
     descuento:DataTypes.INTEGER,

@@ -47,7 +47,7 @@ module.exports = (sequelize, DataTypes) => {
     editorialesId: DataTypes.INTEGER,
   }, {
     sequelize,
-    modelName: 'products',
+    modelName: 'Products',
   });
   return Products;
 };

@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'usuariosId'
       })
 
-      carritos.belongsTo(models.products, {
+      carritos.belongsTo(models.Products, {
         as: 'producto',
         foreignKey: 'productsId'
       })

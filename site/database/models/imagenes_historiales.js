@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   imagenes_historiales.init({
-    name: DataTypes.STRING,
+    nombre: DataTypes.STRING,
     historialesId: DataTypes.INTEGER
   }, {
     sequelize,

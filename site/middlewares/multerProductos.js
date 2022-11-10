@@ -1,17 +1,17 @@
 const path = require('path')
-const multer = require('multer');
+const multer = require('multer')
 
 const storage = multer.diskStorage({
     destination: (req,file,callback) => {
         callback(null,'./public/images/productosImages')
     },
     filename:(req,file,callback) => {
-        callback(null,'producto-' + Date.now() + path.extname(file.originalname))
+        callback(null,'img-' + Date.now() + path.extname(file.originalname))
     }
 })
 
 const fileFilter = function(req, file,callback) {
-    if(!file.originalname.match(/\.(jpg|jpeg|png|jfif|gif|webp)$/)){
+    if(!file.originalname.match(/\.(jpg|jpeg|png|jfif|gif|webp|PNG)$/)){
         req.fileValidationError = "Solo se permite imágenes";
         return callback(null,false,req.fileValidationError);
     }
@@ -23,4 +23,4 @@ const upload = multer({
     fileFilter
     })
 
-module.exports = upload   
+module.exports = upload

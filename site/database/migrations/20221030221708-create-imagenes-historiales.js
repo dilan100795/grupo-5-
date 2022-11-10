@@ -16,6 +16,7 @@ module.exports = {
       historialesId: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        onDelete: 'CASCADE',
         references: {
           model: {
             tableName: 'historiales'
