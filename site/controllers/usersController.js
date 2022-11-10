@@ -24,14 +24,15 @@ module.exports = {
         }
 
         if (errors.isEmpty()){
+            /*return res.send (req.body)*/
             let {name,email,pass,} = req.body
 
-            db.Users.create({
-                nombre: name,
+            db.usuarios.create({
+                name,
                 email,
                 password: bcrypt.hashSync(pass, 12),
-                imagen: req.file.size > 1 ? req.file.filename : "default-image.jpg",
-                rolId: 2
+                imagen: req.file? req.file.filename : "default-image.jpg",
+                rol: 2
             })
 
 
@@ -55,7 +56,7 @@ module.exports = {
                 id : user.id,
                 nombre : user.name,
                 image: user.image,
-                rol : user.rolId
+                rol : user.rol
             }
 
             return res.redirect('/')
@@ -86,7 +87,7 @@ module.exports = {
     
         /*let user = users.find(usuario => usuario.email === email)*/
 
-        db.Users.findOne({
+        db.usuarios.findOne({
             where : {
                 email
             }
@@ -97,7 +98,7 @@ module.exports = {
             id : user.id,
             nombre : user.name,
             image: user.image,
-            rol : user.rolId
+            rol : user.rol
         }
         if(recordarme){
             res.cookie('eltiempo',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
