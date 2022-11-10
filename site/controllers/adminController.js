@@ -21,55 +21,81 @@ module.exports = {
        })
        .then(productos => {
        /* return res.send(productos) */
-
-        return res.render('administrador/listar',{
+            return res.render('administrador/listar',{
             productos,
             redirection: "historial"
         })  
         })    
-       /* return res.render('administrador/listar',{
-            productos,
-            redirection: "historial"
-        })*/
     },
     crear: async(req,res) => {
         try {
             let categorias = await db.categories.findAll()
+            let editoriales = await db.editoriales.findAll()
             return res.render('administrador/crear',{
-                categorias
+                categorias,
+                editoriales
             })
         } catch (error) {
             return res.send(error)
         } 
     },
-    nuevo:(req,res) => {
+    nuevo: async (req,res) => {
+        try {
+                let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
+                let productoNuevo = await db.Products.create ({
+                    titulo: Titulo,
+                    autor: Autor,
+                    idioma: Idioma,
+                    editorialesId: Editorial,
+                    tapa: Tapa,
+                    modelo: Modelo,
+                    categoriesId: Categoria,
+                    precio: +Precio,
+                    descuento: +Descuento,
+                    stock: +Stock,
+                    descripcion: Descripcion,
+                    subcategoria: Subcategoria,
+                
+                })
+ /*      let imagenes = (imagen: req.files) ? img : ["default-image.jpg"];*/
 
-        let img = req.files.map(imagen => {
-            return imagen.filename
+            if (req.file) {
+
+            /*let img = req.files.map(imagen => {
+                return imagen.filename
+            })
+            await img.forEach(imagen=>{ 
+                db.imagenes.create({
+                name: imagen,
+                productsId: productoNuevo.id
+            })
+        });*/
+ 
+        let img = req.file.map(imagen=>{
+            let nuevo= {
+                name: imagen.filename,
+                productsId: productoNuevo.id
+            }
+            return nuevo
         })
+        let bulkInsert = await db.imagenes.create({img})
+        
+           } else {
+            let imagenPorDefecto = await db.imagenes.create({
+                name: "default-image.jpg" ,
+                productsId: productoNuevo.id
+            })
 
-        let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
+           }
+              return res.redirect('/administrador/listar')
 
-        let productoNuevo = {
-            id : productos[productos.length - 1].id + 1,
-            titulo: Titulo,
-            autor: Autor,
-            idioma: Idioma,
-            editorial: Editorial,
-            tapa: Tapa,
-            modelo: Modelo,
-            categoria: Categoria,
-            precio: Precio,
-            descuento: Descuento,
-            stock: Stock,
-            descripcion: Descripcion,
-            subcategoria: Subcategoria,
-            imagen: req.files ? img : "default-image.jpg"
-        }
-        productos.push(productoNuevo)
-        guardar(productos)
-
-       return res.redirect('/administrador/listar')
+            } catch (error) {
+            
+                return res.send(error)
+            }          
+       /* productos.push(productoNuevo)
+        guardar(productos)*/
+    
     },
     editar:(req,res) => {
         let idParams = +req.params.id

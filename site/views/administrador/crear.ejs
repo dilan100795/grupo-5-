@@ -25,7 +25,14 @@
                             <input type="text" name="Idioma" class="idioma" id="Idioma" placeholder="Idioma">
                         </div>
                         <div class="editorial">
-                            <input type="text" name="Editorial" class="editorial" id="Editorial" placeholder="Editorial">
+<!--                        <input type="text" name="Editorial" class="editorial" id="Editorial" placeholder="Editorial"> -->
+                            <select class="editorial" name="Editorial" id="Editorial" aria-label="">
+                                <option selected hidden>Selecciona una opcion</option>
+                                <% editoriales.forEach(editorial => { %>
+                                    <option value="<%= editorial.id %>"><%= editorial.name %></option>
+                                <% }) %> 
+
+                            </select>
                         </div>
                         <div class="tapa">
                             <input type="text" name="Tapa" class="Tapa" id="Tapa" placeholder="Tapa">
@@ -36,14 +43,19 @@
                         <div class="categorias">
                             <select class="categoria" name="Categoria" id="" aria-label="">
                                 <option selected hidden>Selecciona una opcion</option>
-                                <option value="Suspenso">Suspenso</option>
+
+                                <% categories.forEach(categoria => { %>
+                                    <option value="<%= categoria.id %>"><%= categoria.name %></option>
+                                <% }) %> 
+ 
+<!--                            <option value="Suspenso">Suspenso</option>
                                 <option value="Ciencia Ficcion">Ciencia Ficción</option>
                                 <option value="No Ficcion">No Ficción</option>
                                 <option value="Poesia">Poesia</option>
                                 <option value="Educativo">Educativo</option>
                                 <option value="Novelas">Novelas</option>
                                 <option value="Clasicos">Clásicos</option>
-                                <option value="Infantiles">Infantiles</option>
+                                <option value="Infantiles">Infantiles</option>  -->
 
                             </select>
                             <small>Obligatorio</small>
