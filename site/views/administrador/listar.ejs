@@ -54,15 +54,25 @@
 
                     <td>
                         <div>
-                          
-                            <a href="/administrador/editar/<%= product.id%>">
-                              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                          </a>
-                          
-                            
-                              <form action="/administrador/destruir/<%= product.id%>?_method=DELETE" method="post">
-                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                              </form>
+                      
+                              <% if (redirection !== "listar") { %>
+                                <a href="administrador/editar/<%= product.id%>">
+                                  <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                              </a>
+                              <% }else{ %>
+                                <form action="administrador/restaurar/<%= product.id%>?_method=DELETE" method="post">
+                                  <button type="submit" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                </form>
+                              <% } %>
+                                <% if (redirection !== "listar") { %>
+                                  <form action="administrador/destruir/<%= product.id%>?_method=DELETE" method="post">
+                                    <button type="submit" id="eliminar-producto" class="btn btn-danger"><i class="fas fa-plane-departure"></i></button>
+                                  </form>
+                                <% }else{ %>
+                                  <form action="administrador/basura/<%= product.id%>?_method=DELETE" method="post">
+                                    <button type="submit" id="eliminar-producto" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                  </form>
+                                <% } %>
                         </div>
                     </td>
                   

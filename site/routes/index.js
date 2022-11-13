@@ -21,5 +21,17 @@ router.get('/nosotros', nosotros)
 
 })*/
 
+/*    
+dejo comentado el viejo redireccionamento de basura: 
+                            <a href="/administrador/editar/<%= product.id%>">
+                              <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                          </a>
+                          
+                            
+                              <form action="/administrador/destruir/<%= product.id%>?_method=DELETE" method="post">
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                              </form>
+
+ */
 
 module.exports = router

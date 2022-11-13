@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const upload = require('../middlewares/multerProductos')
 const adminCheck = require('../middlewares/adminCheck')
-let {crear,listar,nuevo,editar,actualizar,destruir,historial,basura} = require('../controllers/adminController')
+let {crear,listar,nuevo,editar,actualizar,destruir,historial,restaurar,basura} = require('../controllers/adminController')
 
 router.get('/listar',/*adminCheck,*/ listar)
 router.get('/historial',/*adminCheck,*/ historial);
@@ -19,6 +19,7 @@ router.put('/editar/:id', /*adminCheck,*/ upload.array('Imagen'), actualizar);
 
 /* Eliminar un producto */
 router.delete('/destruir/:id', destruir);
-/*router.delete('/basura/:id', basura);*/
+router.delete('/restaurar/:id', restaurar);
+router.delete('/basura/:id', basura);
 
 module.exports = router

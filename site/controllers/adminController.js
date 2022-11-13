@@ -253,8 +253,69 @@ module.exports = {
                     redirection: "listar"
                 })
             }) .catch(error => res.send (error)) 
-    }}
-    /*basura:(req,res) => {
+    }, 
+    restaurar:(req,res) => {
+
+        let idParams = +req.params.id
+        db.historiales.findOne({
+            where : {
+                id :idParams
+            },
+            include : [
+                "categoria",
+                "editorial",
+                "imagenes"
+            ]
+        })
+        .then(historialProducto => {
+            db.Products.create({
+                titulo: historialProducto.titulo,
+                autor: historialProducto.autor,
+                idioma: historialProducto.idioma,
+                editorialesId:historialProducto.editorialesId,
+                tapa: historialProducto.tapa,
+                modelo: historialProducto.modelo,
+                categoriesId: historialProducto.categoriesId,
+                precio: historialProducto.precio,
+                descuento: historialProducto.descuento,
+                stock: historialProducto.stock,
+                descripcion: historialProducto.descripcion,
+                subcategoria:historialProducto.subcategoria
+            })
+            .then(productoNuevo => {
+                let imagen1 = db.imagenes.create({
+                    nombre: historialProducto.imagenes[0].name,
+                    productsId: productoNuevo.id
+                })
+                let imagen2 = db.imagenes.create({
+                    nombre: historialProducto.imagenes[1].name,
+                    productsId: productoNuevo.id
+                })
+                let imagen3 = db.imagenes.create({
+                    nombre: historialProducto.imagenes[2].name,
+                    productsId: productoNuevo.id
+                })
+                let imagen4 = db.imagenes.create({
+                    nombre: historialProducto.imagenes[3].name,
+                    productsId: productoNuevo.id
+                })
+                Promise.all([imagen1,imagen2,imagen3,imagen4])
+                .then(([imagen1,imagen2,imagen3,imagen4]) =>{
+                    db.historiales.destroy({
+                        where : {
+                            id : idParams
+                        }
+                    })
+                    .then(eliminar => {
+                        return res.redirect('administrador/listar')
+                    })
+                })
+            })
+        })
+        .catch(errores => res.send(errores))
+        
+    },
+    basura: (req,res) => {
         idParams = +req.params.id
 
         db.historiales.findOne({
@@ -283,7 +344,4 @@ module.exports = {
         .catch(errores => res.send(errores))
 
         }) .catch(error => res.send (error))
-
-        
-    }
-}*/
+    }}
