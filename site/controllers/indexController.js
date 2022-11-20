@@ -13,9 +13,9 @@ module.exports = {
         })
         .catch(error => res.send(error))*/
 
-        let productsOferta =products.filter( product =>product.subcategoria === "oferta");
-		let productsVendidos =products.filter(product =>product.subcategoria === "masVendidos");
-		let productsNovedades =products.filter( product =>product.subcategoria === "novedades");
+        let productsOferta =products.filter( product =>product.subcategoria === "Oferta");
+		let productsVendidos =products.filter(product =>product.subcategoria === "MasVendidos");
+		let productsNovedades =products.filter( product =>product.subcategoria === "Novedades");
 		
         res.render('home',
         { productsOferta,

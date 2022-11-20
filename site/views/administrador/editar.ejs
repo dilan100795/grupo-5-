@@ -3,106 +3,119 @@
 
 <%- include('../partials/head') %>
 
-<body class="crear-editarProducto">
+    <body class="crear-editarProducto">
 
-<%- include('../partials/header') %>
+        <%- include('../partials/header') %>
 
-<main>
-    <main class="crear-editar">
+            <main>
+                <main class="crear-editar">
 
 
-        <h2>Edita los datos del producto </h2>
+                    <h2>Edita los datos del producto </h2>
 
-        <form action="/administrador/editar/<%= producto.id %>?_method=PUT" method="post" enctype="multipart/form-data">
-            <section class="campos">
-                <div class="titulo">
-                    <input type="text" name="Titulo" class="titulo" id="Titulo" value="<%= producto.titulo %>" placeholder="Titulo">
-                    <small>Obligatorio</small>
-                </div>
-                <div class="autor">
-                    <input type="text" name="Autor"  class="autor" id="Autor" value="<%= producto.autor %>" placeholder="Autor">
-                    <small>Obligatorio</small>
-                </div>
-                <div class="modelo">
-                    <input type="number" name="Modelo" class="modelo" id="Modelo" value="<%= producto.modelo %>" placeholder="Año de publicación">
-                </div>
-                <div class="precio">
-                    <input type="number" name="Precio" class="precio" id="Precio" value="<%= producto.precio %>" placeholder="Precio">
-                    <small>Obligatorio</small>
-                </div>
-                <div class="descuento">
-                    <input type="number" name="Descuento" class="Descuento" id="descuento" value="<%= producto.descuento %>" placeholder="Descuento"> 
-                    <small>Descuento opcional</small>
-                </div>
-                <div class="stock">
-                    <input type="number" name="Stock" class="stock" id="Stock" value="<%= producto.stock %>" placeholder="Stock">
-                </div>
-                <div class="tapa">
-<!--                   <input type="text" name="Tapa" class="Tapa" id="Tapa" value=" <%= /*producto.tapa*/ %>" placeholder="Tapa">--> 
+                    <form action="/administrador/editar/<%= producto.id %>?_method=PUT" method="post"
+                        enctype="multipart/form-data">
+                        <section class="campos">
+                            <div class="titulo">
+                                <input type="text" name="Titulo" class="titulo" id="Titulo"
+                                    value="<%= producto.titulo %>" placeholder="Titulo">
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="autor">
+                                <input type="text" name="Autor" class="autor" id="Autor" value="<%= producto.autor %>"
+                                    placeholder="Autor">
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="modelo">
+                                <input type="number" name="Modelo" class="modelo" id="Modelo"
+                                    value="<%= producto.modelo %>" placeholder="Año de publicación">
+                            </div>
+                            <div class="precio">
+                                <input type="number" name="Precio" class="precio" id="Precio"
+                                    value="<%= producto.precio %>" placeholder="Precio">
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="descuento">
+                                <input type="number" name="Descuento" class="Descuento" id="descuento"
+                                    value="<%= producto.descuento %>" placeholder="Descuento">
+                                <small>Descuento opcional</small>
+                            </div>
+                            <div class="stock">
+                                <input type="number" name="Stock" class="stock" id="Stock" value="<%= producto.stock %>"
+                                    placeholder="Stock">
+                            </div>
+                            <div class="tapa">
+<!--                   <input type="text" name="Tapa" class="Tapa" id="Tapa" value=" <%= /*producto.tapa*/ %>" placeholder="Tapa">-->
 
-<select class="tapa" name="Tapa" id="Tapa" aria-label="">
-    <option selected hidden>Selecciona la tapa</option>
-    <option value="Blanda">Blanda</option>
-    <option value="Dura">Dura</option>
-</select> 
-                </div>
-                <div class="idioma">
-<!--                  <input type="text" name="Idioma" class="idioma" id="Idioma" value="<%= /*producto.idioma */%>" placeholder="Idioma">-->  
-                    <select class="idioma" name="Idioma" id="Idioma" aria-label="">
-                        <option selected hidden>Selecciona un idioma</option>
-                        <option value="Español">Español</option>
-                        <option value="Ingles">Inglés</option>
-                    </select>
-                </div>
-                <div class="editorial">                  
-                    <select class="editorial" name="Editorial" id="Editorial" aria-label="">
-                        <option selected hidden>Selecciona una opcion</option>
-                        <% editoriales.forEach(editorial => { %>
-                            <option value="<%= editorial.id %>"<%= producto.editorialesId === editorial.id ? "selected" : null %>><%= editorial.name %></option>
-                        <% }) %> 
-                    </select>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="categorias">
-                    <select class="categoria" name="Categoria" id="" aria-label="">
-                        <option selected hidden>Selecciona una opcion</option>
-                       <% categorias.forEach(categoria => { %>
-                            <option value="<%= categoria.id %>"<%= producto.categoriesId === categoria.id ? "selected" : null %>><%= categoria.name %></option>
-                        <% }) %> 
-                   </select>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="subcategoria">
+                                <select class="tapa" name="Tapa" id="Tapa" aria-label="">
+                                    <option selected hidden>Selecciona la tapa</option>
+                                    <option value="Blanda">Blanda</option>
+                                    <option value="Dura">Dura</option>
+                                </select>
+                            </div>
+                            <div class="idioma">
+<!--                  <input type="text" name="Idioma" class="idioma" id="Idioma" value="<%= /*producto.idioma */%>" placeholder="Idioma">-->
+                                <select class="idioma" name="Idioma" id="Idioma" aria-label="">
+                                    <option selected hidden>Selecciona un idioma</option>
+                                    <option value="Español">Español</option>
+                                    <option value="Ingles">Inglés</option>
+                                </select>
+                            </div>
+                            <div class="editorial">
+                                <select class="editorial" name="Editorial" id="Editorial" aria-label="">
+                                    <option selected hidden>Selecciona una opcion</option>
+                                    <% editoriales.forEach(editorial=> { %>
+                                        <option value="<%= editorial.id %>" <%=producto.editorialesId===editorial.id
+                                            ? "selected" : null %>><%= editorial.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="categorias">
+                                <select class="categoria" name="Categoria" id="" aria-label="">
+                                    <option selected hidden>Selecciona una opcion</option>
+                                    <% categorias.forEach(categoria=> { %>
+                                        <option value="<%= categoria.id %>" <%=producto.categoriesId===categoria.id
+                                            ? "selected" : null %>><%= categoria.name %>
+                                        </option>
+                                        <% }) %>
+                                </select>
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="subcategoria">
 <!--                    <input type="text" name="Subcategoria" class="subcategoria" id="subcategoria" value="<%= /*producto.subcategoria */%>" placeholder="Subcategoria (Oferta, Más vendidos)"> -->
-                    <select class="subcategoria" name="Subcategoria" id="" aria-label="">
-                        <option selected hidden>Selecciona una subcategoria</option>
-                        <option value="masVendidos">Más vendidos</option>
-                        <option value="oferta">Oferta</option>
-                        <option value="novedades">Novedades</option>
-                    </select>
-                </div>
-            </section>
-            <section class="bottom">
-                <div class="descripcion">
-                    <textarea class="" name="Descripcion"
-                        placeholder="Por favor inserte la descripcion del producto" id=""><%= producto.descripcion %></textarea>
-                    <small>Obligatorio</small>
-                </div>
-                <div class="archivos">
-                    <label for="" class="">Subir imagenes del producto</label>
-                    <input class="subirImagen" name="Imagen" type="file" id="" multiple>
-                    
-                    <small>Obligatorio</small>
-                </div>
-                <div class="boton">
-                    <button class="botonCrear" type="submit">Editar Producto</button>
-                </div>
+                                <select class="subcategoria" name="Subcategoria" id="" aria-label="">
+                                    <option selected hidden>Selecciona una subcategoria</option>
+                                    <option value="MasVendidos">Más vendidos</option>
+                                    <option value="Oferta">Oferta</option>
+                                    <option value="Novedades">Novedades</option>
+                                </select>
+                            </div>
+                        </section>
+                        <section class="bottom">
+                            <div class="descripcion">
+                                <textarea class="" name="Descripcion"
+                                    placeholder="Por favor inserte la descripcion del producto"
+                                    id=""><%= producto.descripcion %></textarea>
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="archivos">
+                                <label for="" class="">Subir imagenes del producto</label>
+                                <input class="subirImagen" name="Imagen" type="file" id="" multiple>
 
-            </section>
-        </form>
-</main>
+                                <small>Obligatorio</small>
+                            </div>
+                            <div class="boton">
+                                <button class="botonCrear" type="submit">Editar Producto</button>
+                            </div>
 
-<%- include('../partials/footer') %>
+                        </section>
+                    </form>
+                </main>
 
-</body>
+                <%- include('../partials/footer') %>
+
+    </body>
+
 </html>

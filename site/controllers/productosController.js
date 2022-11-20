@@ -20,14 +20,14 @@ module.exports = {
 
    categorias: (req,res) => {
         
-        let productsSuspenso =products.filter( product =>product.categoria === "suspenso");
-        let productsCienciaFiccion =products.filter( product =>product.categoria === "cienciaFiccion");
-        let productsNovelas =products.filter(product =>product.categoria === "novelas");
-        let productsClasicos =products.filter( product =>product.categoria === "clasicos");
-        let productsPoesia =products.filter( product =>product.categoria === "poesia");
-		let productsEducativo =products.filter(product =>product.categoria === "educativo");
-        let productsInfantiles =products.filter( product =>product.categoria === "infantiles");
-		let productsNoFiccion =products.filter(product =>product.categoria === "noFiccion");
+        let productsSuspenso =products.filter( product =>product.categoria === "Suspenso");
+        let productsCienciaFiccion =products.filter( product =>product.categoria === "CienciaFiccion");
+        let productsNovelas =products.filter(product =>product.categoria === "Novelas");
+        let productsClasicos =products.filter( product =>product.categoria === "Clasicos");
+        let productsPoesia =products.filter( product =>product.categoria === "Poesia");
+		let productsEducativo =products.filter(product =>product.categoria === "Educativo");
+        let productsInfantiles =products.filter( product =>product.categoria === "Infantiles");
+		let productsNoFiccion =products.filter(product =>product.categoria === "NoFiccion");
 	
         res.render('categorias',
         {

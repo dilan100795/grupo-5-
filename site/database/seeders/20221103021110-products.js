@@ -4,7 +4,7 @@
 
 let listado = require('../../data/productos.json')
 
-let listadoCategorias=['suspenso','novelas','poesia','infantiles', 'noFiccion', 'educativo', 'clasicos','cienciaFiccion']
+let listadoCategorias=['Suspenso','Novelas','Poesia','Infantiles', 'NoFiccion', 'Educativo', 'Clasicos','CienciaFiccion']
 
 let listadoEditoriales=['Fontana','Debolsillo','Alienta','Booket', 'PlanetaLector', 'Click', 'Urano']
 
