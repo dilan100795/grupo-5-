@@ -36,14 +36,10 @@
 
 .crear-editar .titulo input,
 .crear-editar .autor input,
-.crear-editar .idioma input,
-.crear-editar .editorial input,
-.crear-editar .tapa input,
 .crear-editar .modelo input,
 .crear-editar .precio input,
 .crear-editar .descuento input,
-.crear-editar .stock input, 
-.crear-editar .subcategoria input{
+.crear-editar .stock input{
     background-color: var(--amarillo);
     color: var(--azul);
     border-radius: 3px;
@@ -51,15 +47,48 @@
     height: 35px;
 }
 
-.crear-editar .idioma input,
-.crear-editar .editorial input,
-.crear-editar .tapa input,
 .crear-editar .modelo input,
 .crear-editar .stock input{
     margin-bottom: 10px;
 }
 
+.crear-editar .tapa .tapa {
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 3px;
+    width: 87%;
+    height: 35px;
+}
+
+.crear-editar .idioma .idioma {
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 3px;
+    width: 87%;
+    height: 35px;
+}
+
+.crear-editar .editorial .editorial {
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 3px;
+    width: 87%;
+    height: 35px;
+}
+
 .crear-editar .categoria {
+    margin-top: 10px;
+    background-color: var(--azul);
+    color: var(--blanco);
+    border-radius: 3px;
+    width: 87%;
+    height: 35px;
+}
+
+.crear-editar .subcategoria .subcategoria {
     margin-top: 10px;
     background-color: var(--azul);
     color: var(--blanco);

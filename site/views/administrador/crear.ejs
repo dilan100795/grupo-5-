@@ -21,33 +21,66 @@
                             <input type="text" name="Autor" class="autor" id="Autor" placeholder="Autor">
                             <small>Obligatorio</small>
                         </div>
-                        <div class="idioma">
-                            <input type="text" name="Idioma" class="idioma" id="Idioma" placeholder="Idioma">
+                        <div class="modelo">
+                            <input type="number" name="Modelo" class="modelo" id="Modelo"
+                                placeholder="Año de publicación">
                         </div>
+
+                        <div class="precio">
+                            <input type="number" name="Precio" class="precio" id="Precio" placeholder="Precio">
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="descuento">
+                            <input type="number" name="Descuento" class="Descuento" id="descuento"
+                                placeholder="Descuento">
+                            <small>Descuento opcional</small>
+                        </div>
+                        <div class="stock">
+                            <input type="number" name="Stock" class="stock" id="Stock" placeholder="Stock">
+                        </div>
+                        <div class="tapa">
+<!--                           <input type="text" name="Tapa" class="Tapa" id="Tapa" placeholder="Tapa">-->
+                            <select class="tapa" name="Tapa" id="Tapa" aria-label="">
+                                <option selected hidden>Selecciona la tapa</option>
+                                <option value="Blanda">Blanda</option>
+                                <option value="Dura">Dura</option>
+                            </select>
+                            <small>Obligatorio</small>
+                        </div>
+                        <div class="idioma">
+<!--                            <input type="text" name="Idioma" class="idioma" id="Idioma" placeholder="Idioma">-->
+                            <select class="idioma" name="Idioma" id="Idioma" aria-label="">
+                                <option selected hidden>Selecciona un idioma</option>
+                                <option value="Español">Español</option>
+                                <option value="Ingles">Inglés</option>
+                            </select>
+                            <small>Obligatorio</small>
+                        </div>
+
                         <div class="editorial">
 <!--                        <input type="text" name="Editorial" class="editorial" id="Editorial" placeholder="Editorial"> -->
                             <select class="editorial" name="Editorial" id="Editorial" aria-label="">
-                                <option selected hidden>Selecciona una opcion</option>
-                                <% editoriales.forEach(editorial => { %>
-                                    <option value="<%= editorial.id %>"><%= editorial.name %></option>
-                                <% }) %> 
+                                <option selected hidden>Selecciona una editorial</option>
+                                <% editoriales.forEach(editorial=> { %>
+                                    <option value="<%= editorial.id %>">
+                                        <%= editorial.name %>
+                                    </option>
+                                    <% }) %>
 
                             </select>
+                            <small>Obligatorio</small>
                         </div>
-                        <div class="tapa">
-                            <input type="text" name="Tapa" class="Tapa" id="Tapa" placeholder="Tapa">
-                        </div>
-                        <div class="modelo">
-                            <input type="number" name="Modelo" class="modelo" id="Modelo" placeholder="Año de publicación">
-                        </div>
+
                         <div class="categorias">
                             <select class="categoria" name="Categoria" id="" aria-label="">
-                                <option selected hidden>Selecciona una opcion</option>
+                                <option selected hidden>Selecciona una categoria</option>
 
-                                <% categorias.forEach(categoria => { %>
-                                    <option value="<%= categoria.id %>"><%= categoria.name %></option>
-                                <% }) %> 
- 
+                                <% categorias.forEach(categoria=> { %>
+                                    <option value="<%= categoria.id %>">
+                                        <%= categoria.name %>
+                                    </option>
+                                    <% }) %>
+
 <!--                            <option value="Suspenso">Suspenso</option>
                                 <option value="Ciencia Ficcion">Ciencia Ficción</option>
                                 <option value="No Ficcion">No Ficción</option>
@@ -60,19 +93,14 @@
                             </select>
                             <small>Obligatorio</small>
                         </div>
-                        <div class="precio">
-                            <input type="number" name="Precio" class="precio" id="Precio" placeholder="Precio">
-                            <small>Obligatorio</small>
-                        </div>
-                        <div class="descuento">
-                            <input type="number" name="Descuento" class="Descuento" id="descuento" placeholder="Descuento"> 
-                            <small>Descuento opcional</small>
-                        </div>
-                        <div class="stock">
-                            <input type="number" name="Stock" class="stock" id="Stock" placeholder="Stock">
-                        </div>
                         <div class="subcategoria">
-                            <input type="text" name="Subcategoria" class="subcategoria" id="subcategoria" placeholder="Subcategoria (Oferta, Más vendidos)"> 
+<!--                <input type="text" name="Subcategoria" class="subcategoria" id="subcategoria" placeholder="Subcategoria (Oferta, Más vendidos)"> -->
+                            <select class="subcategoria" name="Subcategoria" id="" aria-label="">
+                                <option selected hidden>Selecciona una subcategoria</option>
+                                <option value="masVendidos">Más vendidos</option>
+                                <option value="oferta">Oferta</option>
+                                <option value="novedades">Novedades</option>
+                            </select>
                         </div>
                     </section>
                     <section class="bottom">
@@ -84,7 +112,7 @@
                         <div class="archivos">
                             <label for="" class="">Subir imagenes del producto</label>
                             <input class="subirImagen" name="Imagen" type="file" id="" multiple>
-                            
+
                             <small>Obligatorio</small>
                         </div>
                         <div class="boton">
