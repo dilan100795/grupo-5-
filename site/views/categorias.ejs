@@ -43,127 +43,7 @@
                     </section>
                 </section>
                 <section>
-                    <h2>INFANTIL</h2>
-
-                    <section class="articulos">
-                        <% productsInfantiles.forEach(product=> { %>
-
-                            <article class="libros">
-                                <a href="/productos/detalle/<%- product.id %>">
-                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
-                                <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <h3>
-                                        <%- product.precio - product.precio * product.descuento / 100 %>$
-                                    </h3>
-                                    <p>
-                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
-                                    </p>
-                                    <h4>
-                                        <%- product.titulo %>
-                                    </h4>
-                                </div>
-
-                            </article>
-
-                            <% }) %>
-                    </section>
-                </section>
-                <section>
-                    <h2>POESIA</h2>
-                    <section class="articulos">
-                        <% productsPoesia.forEach(product=> { %>
-
-                            <article class="libros">
-                                <a href="/productos/detalle/<%- product.id %>">
-                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
-                                <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <h3>
-                                        <%- product.precio - product.precio * product.descuento / 100 %>$
-                                    </h3>
-                                    <p>
-                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
-                                    </p>
-                                    <h4>
-                                        <%- product.titulo %>
-                                    </h4>
-                                </div>
-
-                            </article>
-
-                            <% }) %>
-
-
-                    </section>
-                </section>
-                <section>
-
-                    <h2>EDUCATIVO</h2>
-                    <section class="articulos">
-                        <% productsEducativo.forEach(product=> { %>
-                            <article class="libros">
-                                <a href="/productos/detalle/<%- product.id %>">
-                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
-                                <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <h3>
-                                        <%- product.precio - product.precio * product.descuento / 100 %>$
-                                    </h3>
-                                    <p>
-                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
-                                    </p>
-                                    <h4>
-                                        <%- product.titulo %>
-                                    </h4>
-                                </div>
-
-                            </article>
-
-                            <% }) %>
-
-                    </section>
-                </section>
-
-                <section>
-                    <h2>NO FICCION</h2>
-                    <section class="articulos">
-                        <% productsNoFiccion.forEach(product=> { %>
-
-                            <article class="libros">
-                                <a href="/productos/detalle/<%- product.id %>">
-                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
-                                <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
-                                    <h3>
-                                        <%- product.precio - product.precio * product.descuento / 100 %>$
-                                    </h3>
-                                    <p>
-                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
-                                    </p>
-                                    <h4>
-                                        <%- product.titulo %>
-                                    </h4>
-                                </div>
-
-                            </article>
-
-                            <% }) %>
-
-
-                    </section>
-                </section>
-
-                <section>
-                    <h2>CIENCIA FICCION</h2>
+                    <h2>CIENCIA FICCIÓN</h2>
                     <section class="articulos">
                         <% productsCienciaFiccion.forEach(product=> { %>
 
@@ -220,10 +100,39 @@
                             <% }) %>
 
                     </section>
-                </section>
-
+                </section>                
                 <section>
-                    <h2>CLASICOS</h2>
+                    <h2>NO FICCIÓN</h2>
+                    <section class="articulos">
+                        <% productsNoFiccion.forEach(product=> { %>
+
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                                <div class="contenedor">
+                                    <div class="camion">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+
+                            </article>
+
+                            <% }) %>
+
+
+                    </section>
+                </section>
+                <section>
+                    <h2>CLÁSICOS</h2>
 
 
                     <section class="articulos">
@@ -252,8 +161,93 @@
                             <% }) %>
                     </section>
                 </section>
-               
-                
+                <section>
+                    <h2>POESÍA</h2>
+                    <section class="articulos">
+                        <% productsPoesia.forEach(product=> { %>
+
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                                <div class="contenedor">
+                                    <div class="camion">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+
+                            </article>
+
+                            <% }) %>
+
+
+                    </section>
+                </section>
+                <section>
+                    <h2>INFANTIL</h2>
+
+                    <section class="articulos">
+                        <% productsInfantiles.forEach(product=> { %>
+
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                                <div class="contenedor">
+                                    <div class="camion">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+
+                            </article>
+
+                            <% }) %>
+                    </section>
+                </section>
+                <section>
+                    <h2>EDUCATIVO</h2>
+                    <section class="articulos">
+                        <% productsEducativo.forEach(product=> { %>
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="El Aleph"></a>
+                                <div class="contenedor">
+                                    <div class="camion">
+                                        <i class="fas fa-truck"></i>
+                                    </div>
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+
+                            </article>
+
+                            <% }) %>
+
+                    </section>
+                </section>  
             </main>
 
             <%- include('./partials/footer') %>

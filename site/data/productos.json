@@ -17,7 +17,7 @@
     },
     {
         "id": 2,
-        "titulo": "El silencio de los corderos",
+        "titulo": "El Silencio de los Corderos",
         "autor": "Thomas Harris",
         "idioma": "Español",
         "editorial": "Debolsillo",
@@ -33,7 +33,7 @@
     },
     {
         "id": 3,
-        "titulo": "El club de la lucha",
+        "titulo": "El Club de la Lucha",
         "autor": "Chuck Palahniuk",
         "idioma": "Español",
         "editorial": "Debolsillo",
@@ -161,7 +161,7 @@
     },
     {
         "id": 11,
-        "titulo": "La divina comedia",
+        "titulo": "La Divina Comedia",
         "autor": "Dante Alighieri",
         "idioma": "Español",
         "editorial": "Click",
@@ -177,7 +177,7 @@
     },
     {
         "id": 12,
-        "titulo": "A room of one's own",
+        "titulo": "A Room Of One's Own",
         "autor": "virginia Woolf",
         "idioma": "ingles",
         "editorial": "Fontana",
@@ -209,7 +209,7 @@
     },
     {
         "id": 14,
-        "titulo": "Entrevista con el vampiro",
+        "titulo": "Entrevista con el Vampiro",
         "autor": "Anne Rice",
         "idioma": "español",
         "editorial": "Debolsillo",
@@ -225,34 +225,34 @@
     },
     {
         "id": 15,
-        "titulo": "Eyjafjallajökull",
-        "autor": "Virgil De Lorenzo",
+        "titulo": "Los Miserables",
+        "autor": "Victor Hugo",
         "idioma": "español",
         "editorial": "Urano",
         "tapa": "dura",
         "modelo": 1997,
-        "categoria": "infantiles",
-        "precio": 2540,
+        "categoria": "novelas",
+        "precio": 5540,
         "descuento": 10,
         "stock": 9,
-        "imagen": "default-image.jpg",
-        "descripcion": "turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit",
+        "imagen": "los-miserables.jpg",
+        "descripcion": "Los miserables es una novela del poeta y escritor francés Victor Hugo publicada en 1862, considerada como una de las obras más importantes del siglo XIX.",
         "subcategoria": "masVendidos"
     },
     {
         "id": 16,
-        "titulo": "Love the Beast",
-        "autor": "Berenice Blunkett",
+        "titulo": "Hamlet",
+        "autor": "William Shakespeare",
         "idioma": "español",
         "editorial": "Fontana",
         "tapa": "blanda",
         "modelo": 2012,
-        "categoria": "educativo",
-        "descuento": 20,
+        "categoria": "clasicos",
+        "descuento": 5,
         "precio": 2600,
         "stock": 28,
-        "imagen": "default-image.jpg",
-        "descripcion": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo",
+        "imagen": "hamlet.jpg",
+        "descripcion": "Hamlet es una tragedia de venganza. El espíritu de su padre le pide al joven príncipe de Dinamarca que vengue el asesinato que su propio hermano perpetró contra él. Sin embargo, en la obra de Shakespeare, no destaca la realización de la venganza, sino que el conflicto interno del héroe tiene prioridad.",
         "subcategoria": "masVendidos"
     },
     {
@@ -337,7 +337,7 @@
     },
     {
         "id": 22,
-        "titulo": "El hombre en busca de sentido",
+        "titulo": "El Hombre en Busca de Sentido",
         "autor": "Viktor Frankl",
         "idioma": "español",
         "editorial": "Urano",
@@ -369,7 +369,7 @@
     },
     {
         "id": 24,
-        "titulo": "Cuentos De La Selva",
+        "titulo": "Cuentos de la Selva",
         "autor": "Horacio Quiroga",
         "idioma": "español",
         "editorial": "Fontana",
@@ -385,7 +385,7 @@
     },
     {
         "id": 25,
-        "titulo": "El Soldadito De Plomo",
+        "titulo": "El Soldadito de Plomo",
         "autor": "Hans Christian Andersen",
         "idioma": "español",
         "editorial": "Alienta",
@@ -397,6 +397,22 @@
         "stock": 15,
         "imagen": "elSoldaditoDePlomo-HansChristianAndersen.PNG",
         "descripcion": "El soldadito de plomo (Den standhaftige Tinsoldat) es un cuento del escritor y poeta danés Hans Christian Andersen, famoso por sus relatos infantiles.",
+        "subcategoria": "oferta"
+    },
+    {
+        "id": 26,
+        "titulo": "El Principito",
+        "autor": "Antoine de Saint-Exupéry",
+        "idioma": "español",
+        "editorial": "Alienta",
+        "tapa": "blanda",
+        "modelo": 2010,
+        "categoria": "infantiles",
+        "precio": 1000,
+        "descuento": 0,
+        "stock": 15,
+        "imagen": "el-principito.jpg",
+        "descripcion": "El principito es una narración corta del escritor francés Antoine de Saint-Exupéry, que trata de la historia de un pequeño príncipe que parte de su asteroide a una travesía por el universo, en la cual descubre la extraña forma en que los adultos ven la vida y comprende el valor del amor y la amistad.",
         "subcategoria": "oferta"
     }
 ]
