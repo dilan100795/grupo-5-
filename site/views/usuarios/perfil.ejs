@@ -10,7 +10,7 @@
 
 <main>
     <img src="/images/imagenesDePerfil/<%= locals.userLogin.image %> " alt=""> 
-    <h1>Hola <%= `${locals.userLogin.rol} ${locals.userLogin.nombre}` %></h1>
+    <h1>Hola <%= `${locals.userLogin.rol ==1 ? 'Administrador' : 'usuario'} ${locals.userLogin.nombre}` %></h1>
 
 
  <form action="/usuarios/logout?_method=DELETE" method="post">

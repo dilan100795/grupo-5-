@@ -55,7 +55,7 @@ module.exports = {
             req.session.userLogin = {
                 id : user.id,
                 nombre : user.name,
-                image: user.image,
+                image: user.imagen,
                 rol : user.rol
             }
 
@@ -97,7 +97,7 @@ module.exports = {
         req.session.userLogin = {
             id : user.id,
             nombre : user.name,
-            image: user.image,
+            image: user.imagen,
             rol : user.rol
         }
         if(recordarme){
