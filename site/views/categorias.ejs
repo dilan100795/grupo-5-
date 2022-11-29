@@ -8,10 +8,22 @@
         <%- include('./partials/header') %>
 
             <main>
-
                 <section class="banner">
-                    <img src="/images/banner.png" alt="banner promocional">
+                    <div class="glider-contain">
+                        <div class="glider">
+                             <img src="/images/CATEGORIAS.png" alt="banner promocional">
+                          
+                        </div>
+
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
+                    </div>
+
                 </section>
+
+
+
 
                 <section>
                     <h2>SUSPENSO</h2>
@@ -23,9 +35,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -36,7 +46,9 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
 
                             <% }) %>
@@ -51,9 +63,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -64,7 +74,9 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
 
                             <% }) %>
@@ -81,9 +93,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -94,9 +104,10 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
-
                             <% }) %>
 
                     </section>
@@ -110,9 +121,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -123,9 +132,10 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
-
                             <% }) %>
 
 
@@ -142,9 +152,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -155,7 +163,9 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
 
                             <% }) %>
@@ -170,9 +180,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -183,7 +191,9 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
 
                             <% }) %>
@@ -201,9 +211,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -214,9 +222,10 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
-
                             <% }) %>
                     </section>
                 </section>
@@ -228,9 +237,7 @@
                                 <a href="/productos/detalle/<%- product.id %>">
                                     <img src="/images/<%- product.imagen %> " alt="portada"></a>
                                 <div class="contenedor">
-                                    <div class="camion">
-                                        <i class="fas fa-truck"></i>
-                                    </div>
+                                  
                                     <h3>
                                         <%- product.precio - product.precio * product.descuento / 100 %>$
                                     </h3>
@@ -241,9 +248,10 @@
                                         <%- product.titulo %>
                                     </h4>
                                 </div>
-
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
                             </article>
-
                             <% }) %>
 
                     </section>

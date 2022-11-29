@@ -4,95 +4,126 @@
 
 <%- include('./partials/head') %>
 
-<body class="home">
-<%- include('./partials/header') %>
+    <body class="home">
+        <%- include('./partials/header') %>
 
-    <main>
+            <main>
 
-        <section class="banner">
-            <img src="/images/banner.png" alt="banner promocional">
-        </section>
-
-        <section>
-            <h2>NOVEDADES</h2>
-
-            
-             
-          
-            <section class="articulos">
-                 <% productsNovedades.forEach(product => { %>
-
-                <article class="libros">
-                    <a href="/productos/detalle/<%- product.id %>">
-                        <img src="/images/<%- product.imagen %> " alt="portada"></a>
-                    <div class="contenedor">
-                        <div class="camion">
-                            <i class="fas fa-truck"></i>
+                <section class="banner">
+                    <div class="glider-contain">
+                        <div class="glider">
+                            <img src="/images/banner.png" alt="banner promocional">
+                            <img src="/images/banner.png" alt="banner promocional">
+                            <img src="/images/banner.png" alt="banner promocional">
                         </div>
-                        <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
-                        <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
-                        <h4><%- product.titulo %></h4>
+
+                        <button aria-label="Previous" class="glider-prev">«</button>
+                        <button aria-label="Next" class="glider-next">»</button>
+                        <div role="tablist" class="dots"></div>
                     </div>
 
-                </article>
+                </section>
 
-                 <% }) %>
-            </section>
-        </section>
-        <section>
-            <h2>OFERTAS</h2>
-            <section class="articulos">
-                <% productsOferta.forEach(product => { %>
-
-                    <article class="libros">
-                        <a href="/productos/detalle/<%- product.id %>">
-                            <img src="/images/<%- product.imagen %> " alt="portada"></a>
-                        <div class="contenedor">
-                            <div class="camion">
-                                <i class="fas fa-truck"></i>
-                            </div>
-                            <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
-                            <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
-                            <h4><%- product.titulo %></h4>
-                        </div>
-    
-                    </article>
-    
-                <% }) %>
+                <section>
+                    <h2>NOVEDADES</h2>
 
 
-            </section>
-        </section>
-        <section>
-            
-                <h2>LO MAS VENDIDO</h2>
-                <section class="articulos">
-                    <% productsVendidos.forEach(product => { %>
-                        <article class="libros">
-                            <a href="/productos/detalle/<%- product.id %>">
-                                <img src="/images/<%- product.imagen %> " alt="portada"></a>
-                            <div class="contenedor">
-                                <div class="camion">
-                                    <i class="fas fa-truck"></i>
+
+
+                    <section class="articulos">
+
+                        <% productsNovedades.forEach(product=> { %>
+
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="portada"></a>
+                                <div class="contenedor">
+                                  
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
                                 </div>
-                                <h3> <%- product.precio - product.precio * product.descuento / 100 %>$</h3>
-                                <p><%= product.descuento> 0 ? `${product.descuento}% OFF` :""%></p>
-                                <h4><%- product.titulo %></h4>
-                            </div>
-        
-                        </article>
-        
-                <% }) %>
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
+                            </article>
 
-            </section>
-        </section>
-    
-            
-    </main>
+                            <% }) %>
+                    </section>
+                </section>
+                <section>
+                    <h2>OFERTAS</h2>
 
 
-    <%- include('./partials/footer') %>
-   
-</body>
+                    <section class="articulos">
+
+
+                        <% productsOferta.forEach(product=> { %>
+
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="portada"></a>
+                                <div class="contenedor">
+                                  
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
+                            </article>
+                            <% }) %>
+
+                    </section>
+                </section>
+                <section>
+
+                    <h2>LO MAS VENDIDO</h2>
+                    <section class="articulos">
+                        <% productsVendidos.forEach(product=> { %>
+                            <article class="libros">
+                                <a href="/productos/detalle/<%- product.id %>">
+                                    <img src="/images/<%- product.imagen %> " alt="portada"></a>
+                                <div class="contenedor">
+                                  
+                                    <h3>
+                                        <%- product.precio - product.precio * product.descuento / 100 %>$
+                                    </h3>
+                                    <p>
+                                        <%= product.descuento> 0 ? `${product.descuento}% OFF` :""%>
+                                    </p>
+                                    <h4>
+                                        <%- product.titulo %>
+                                    </h4>
+                                </div>
+                              
+                                <a href="/productos/detalle/<%- product.id %>"><div class="botoncomprar">comprar <i class="fas fa-truck"></i></div></a>
+                                
+                            </article>
+                            <% }) %>
+
+                    </section>
+                </section>
+
+
+            </main>
+
+
+            <%- include('./partials/footer') %>
+
+    </body>
 
 </html>

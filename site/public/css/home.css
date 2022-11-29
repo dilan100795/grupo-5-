@@ -1,55 +1,86 @@
-
- .home main section.banner img{
+.home{
+   background-image: url("../images/librosfondo.png");
+}
+.home main section.banner img {
    display: none;
-    
-   
- }
-  
- .home main section h2{
-    padding: 20px;
- }
- 
- 
- .home main section .articulos {
- display:flex;
- justify-content: space-evenly;
- text-align: center;
- flex-wrap: wrap;
- }
- 
- 
- .home main section .articulos .libros{
+   text-align: center;
+   border: solid 5px white;
+
+
+
+}
+
+.home main section h2 {
+   padding: 20px;
+}
+
+
+.home main section .articulos {
+   display: flex;
+   justify-content: space-evenly;
+   text-align: center;
+   flex-wrap: wrap;
+}
+
+
+.home main section .articulos .libros {
    margin: 10px;
-    padding: 10px;
-    border:solid 1px black;
-    width: 200px;
- }
- .home main section .articulos .libros img{
-   
-    width: 100px;
- }
- .home main section .articulos .libros p{
-    display:none;
- }
- 
- /* tablet */
- @media (min-width:461px) {
- 
- 
-    .home main section.banner img{
-       width :100%;
-       display:block;     
-    }
-     
-    .home main section .articulos .libros p{
-       display:block;
-    }
- 
- 
- }
- 
- 
- /* desktop */
- @media (min-width:769px) {
-    
- }
+   padding: 5px;
+   border: solid 1px black;
+   border-radius: 20px;
+   width: 200px;
+}
+
+.home main section .articulos .libros .contenedor {
+   height: 105px;
+}
+
+.home main section .articulos .libros img {
+   height: 190px;
+}
+.home main section .articulos .libros img:hover {
+   height: 240px;
+}
+.home main section .articulos .libros p {
+   display: none;
+   margin: 0px;
+}
+
+.home main section .articulos .libros h4,h3 {
+   margin: 15px;
+}
+
+.home main section .articulos .libros .botoncomprar {
+   background-color: var(--rojizo);
+   color: white;
+   width: 80%;
+   border: none;
+   margin: 10px auto 10px;
+   padding: 10px 0;
+   text-transform: uppercase;
+
+   display: inline-block;
+
+}
+
+/* tablet */
+@media (min-width:461px) {
+
+
+   .home main section.banner img {
+      width: 50%;
+      display: block;
+
+
+   }
+
+   .home main section .articulos .libros p {
+      display: block;
+   }
+
+
+}
+
+
+/* desktop */
+@media (min-width:769px) {}

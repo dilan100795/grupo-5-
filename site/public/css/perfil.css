@@ -27,21 +27,24 @@
     padding: 9px;
 }
 .perfil main img{
-    width: 226px;
+   height: 200px;
+   width: 200px;
     padding: 20px;
+    border-radius: 50%;
 }
 
 /*tablet*/
 @media (min-width:460px) {
     .perfil main img{
-        width: 226px;
+       
         padding: 20px;
     }
 }
 /*desktop*/
 @media (min-width:768px) {
     .perfil main img{
-        width: 226px;
+       
         padding: 20px;
+        border-radius: 50%;
     }
 }

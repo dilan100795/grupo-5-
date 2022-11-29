@@ -68,12 +68,11 @@ header .top .log {
 header .logo img {
     height: 130px;
     margin-top: 5px;
-
     text-align: center;
 }
 
 header .busqueda {
-    width: 60%;
+    width: 50%;
     display: none;
     text-align: center;
     margin-top: 40px;
@@ -107,6 +106,7 @@ header .menu-opciones {
     justify-content: space-around;
     width: 100%;
     flex-grow: 1;
+
 }
 
 header .menu-opciones ul {
@@ -114,6 +114,8 @@ header .menu-opciones ul {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
+    margin: 1px;
+    background-color: var(--azul);
     
 }
 
@@ -123,13 +125,19 @@ header .menu-opciones li {
     margin: 4px;
     border-radius: 5px;
     text-align: center;
+    
 }
 
-header .menu-opciones a {
+header .menu-opciones li a {
     color: var(--blanco);
     text-transform: uppercase;
 }
-
+header .menu-opciones li a:hover {
+   
+   font-size: 20px;
+    text-transform: uppercase;
+   
+}
 header .menu-opciones ul li:first-child {
     display: none;
 }
