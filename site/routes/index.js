@@ -2,10 +2,11 @@ const express = require('express')
 const router = express.Router()
 let db = require('../database/models')
 
-let {home,nosotros} = require('../controllers/indexController')
+let {home,nosotros, ayuda} = require('../controllers/indexController')
 
 router.get('/', home)
 router.get('/nosotros', nosotros)
+router.get('/ayuda', ayuda)
 
 /*router.get("/prueba", (req, res) => {db.historiales.findAll({
     include: [

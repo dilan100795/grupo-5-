@@ -25,6 +25,9 @@ module.exports = {
     },
     nosotros: (req,res) => {
         return res.render('nosotros')
+    },
+    ayuda: (req,res) => {
+        return res.render('ayuda')
     }
  /*   error404: (req,res) => {
         return res.render('404')

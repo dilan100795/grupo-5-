@@ -3,7 +3,7 @@
 }
 
 .perfil main {
-    height: 70vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +15,54 @@
     text-transform: capitalize;
 }
 
+.perfil main .container_img .avatar_edit {
+    position: absolute;
+    right: 670px;
+    z-index: 1;
+    top: 400px;
+    width: 15px;
+}
+.perfil main .container_img .avatar_edit input {
+    display: none;
+}
+.perfil main .container_img .avatar_edit label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.perfil main .container_img .avatar_edit label{
+    color: #757575;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.perfil main .container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    font-weight: bold;
+}
+.perfil main .container label{
+    margin-bottom: 5px;
+}
+.perfil main .container input{
+    width: 100%;
+    padding: 5px;
+}
+.perfil main small{
+    margin-top: 5px;
+    color: var(--rojizo);
+}
 .perfil main button {
     border: none;
     background-color: var(--rojizo);

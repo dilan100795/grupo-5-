@@ -1,5 +1,5 @@
 const express = require('express')
-let {login,register,processLogin,perfil,logout, processRegister} = require('../controllers/usersController')
+let {login,register,processLogin,perfil,editperfil,logout, processRegister} = require('../controllers/usersController')
 const router = express.Router()
 
 const loginValidator = require('../validations/loginValidation')
@@ -16,5 +16,6 @@ router.get('/login', login);
 router.post('/login',loginValidator,processLogin);
 
 router.get('/perfil',userCheck, perfil);
+router.put('/perfil/:id',userCheck,upload.single('image') , editperfil);
 router.delete('/logout', logout);
 module.exports = router

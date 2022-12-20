@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const {validationResult} = require('express-validator')
+const { validationResult } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const db = require('../database/models')
 /*const users = require('../data/usuarios.json')*/
@@ -9,11 +9,11 @@ const db = require('../database/models')
     , JSON.stringify(dato, null, 4), 'utf-8')*/
 
 module.exports = {
-    register: (req,res) => {
+    register: (req, res) => {
         return res.render('register')
     },
-    processRegister:(req,res) => {
-         
+    processRegister: (req, res) => {
+
         let errors = validationResult(req)
         if (req.fileValidationError) {
             let imagen = {
@@ -23,15 +23,15 @@ module.exports = {
             errors.errors.push(imagen)
         }
 
-        if (errors.isEmpty()){
+        if (errors.isEmpty()) {
             /*return res.send (req.body)*/
-            let {name,email,pass,} = req.body
+            let { name, email, pass, } = req.body
 
             db.usuarios.create({
                 name,
                 email,
                 password: bcrypt.hashSync(pass, 12),
-                imagen: req.file? req.file.filename : "default-image.jpg",
+                imagen: req.file ? req.file.filename : "default-image.jpg",
                 rol: 2
             })
 
@@ -39,92 +39,169 @@ module.exports = {
 
 
 
-            /*let usuarioNuevo = {
-                    id:users[users.length - 1].id + 1,
-                    name,
-                    email,
-                    pass: bcrypt.hashSync(pass, 12),
-                    image: req.file ? req.file.filename : "default-image.jpg",
-                    rol : "usuario"
-            }
-            users.push(usuarioNuevo)
-            guardar(users)*/
-         
+                /*let usuarioNuevo = {
+                        id:users[users.length - 1].id + 1,
+                        name,
+                        email,
+                        pass: bcrypt.hashSync(pass, 12),
+                        image: req.file ? req.file.filename : "default-image.jpg",
+                        rol : "usuario"
+                }
+                users.push(usuarioNuevo)
+                guardar(users)*/
 
-            .then(user => {
-            req.session.userLogin = {
-                id : user.id,
-                nombre : user.name,
-                image: user.imagen,
-                rol : user.rol
-            }
 
-            return res.redirect('/')
-        })
+                .then(user => {
+                    req.session.userLogin = {
+                        id: user.id,
+                        nombre: user.name,
+                        image: user.imagen,
+                        rol: user.rol
+                    }
 
-        .catch(errores => res.send(errores))
+                    return res.redirect('/')
+                })
 
-        } else {   
-           /* return res.send(errors.mapped())*/
+                .catch(errores => res.send(errores))
+
+        } else {
+            /* return res.send(errors.mapped())*/
             return res.render('register', {
                 errors: errors.mapped(),
                 old: req.body
             })
-    }
-},
+        }
+    },
 
-    login: (req,res) => {
+    login: (req, res) => {
         return res.render('login')
     },
 
-    processLogin:(req,res) => {
-       
+    processLogin: (req, res) => {
+
         let errors = validationResult(req)
-        if (errors.isEmpty()){
+        if (errors.isEmpty()) {
 
 
-        const {email,recordarme} = req.body
-    
-        /*let user = users.find(usuario => usuario.email === email)*/
+            const { email, recordarme } = req.body
 
-        db.usuarios.findOne({
-            where : {
-                email
-            }
-        })
-        .then(user => {
+            /*let user = users.find(usuario => usuario.email === email)*/
 
-        req.session.userLogin = {
-            id : user.id,
-            nombre : user.name,
-            image: user.imagen,
-            rol : user.rol
-        }
-        if(recordarme){
-            res.cookie('eltiempo',req.session.userLogin,{maxAge: 1000 * 60 * 60 * 24})
-        }
-         return res.redirect('/usuarios/perfil')
-     })
-     .catch(errores => res.send(errores))
+            db.usuarios.findOne({
+                where: {
+                    email
+                }
+            })
+                .then(user => {
+
+                    req.session.userLogin = {
+                        id: user.id,
+                        nombre: user.name,
+                        image: user.imagen,
+                        rol: user.rol
+                    }
+                    if (recordarme) {
+                        res.cookie('eltiempo', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
+                    }
+                    return res.redirect('/usuarios/perfil')
+                })
+                .catch(errores => res.send(errores))
             /*return res.send(req.body)*/
         } else {
-           /* return res.send(errors.mapped())*/
-           return res.render('login', {
-            errors: errors.mapped(),
-            old: req.body
-           })
+            /* return res.send(errors.mapped())*/
+            return res.render('login', {
+                errors: errors.mapped(),
+                old: req.body
+            })
         }
-       
+
     },
-    perfil: (req,res) => {
+    perfil: (req, res) => {
         return res.render('usuarios/perfil')
     },
+    editperfil: (req, res) => {
+        console.log(req.body)
 
-    logout : (req,res) => {
-        
+
+        let errors = validationResult(req)
+        if (errors.isEmpty()) {
+
+
+            const { nombre, codigo_postal, direcion, ciudad, provincia, telefono } = req.body
+
+            /*let user = users.find(usuario => usuario.email === email)*/
+
+            db.usuarios.findOne({
+                where: {
+                    id: req.params.id
+                }
+            })
+                .then(user => {
+                    console.log(user)
+                    db.usuarios.update({
+                        name: nombre.trim(),
+                        email: user.email,
+                        password: user.password,
+                        rol: user.rol,
+                        telefono: telefono.trim(),
+                        ciudad: ciudad.trim(),
+                        provincia: provincia.trim(),
+                        codigo_postal: codigo_postal.trim(),
+                        direcion: direcion.trim(),
+                        imagen: req.file ? req.file.filename : user.imagen,
+                    }, { where: { id: req.params.id } })
+                        .then(data => {
+                            db.usuarios.findOne({
+                                where: {
+                                    id: req.params.id
+                                }
+                            }).then(usuario => {
+                                req.session.userLogin = {
+                                    id: usuario.id,
+                                    nombre: usuario.name,
+                                    image: usuario.imagen,
+                                    rol: usuario.rol,
+                                    direcion: usuario.direcion,
+                                    telefono: usuario.telefono,
+                                    provincia: usuario.provincia,
+                                    ciudad: usuario.ciudad,
+                                    codigo_postal: usuario.codigo_postal,
+
+                                }
+                                if (req.cookies.eltiempo) {
+                                    res.cookie('eltiempo', '', { maxAge: -1 })
+
+                                    res.cookie('eltiempo', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
+                                }
+                                req.session.save( (err) => {
+                                    req.session.reload((err) => {
+                                        return res.redirect('/usuarios/perfil')
+                    
+                                    });
+                                 });
+
+                            }).catch(errores => res.send(errores))
+
+                        }).catch(errores => res.send(errores))
+
+                  
+                })
+                .catch(errores => res.send(errores))
+            /*return res.send(req.body)*/
+        } else {
+            /* return res.send(errors.mapped())*/
+            return res.render('usuarios/perfil', {
+                errors: errors.mapped(),
+                old: req.body
+            })
+        }
+
+    },
+    logout: (req, res) => {
+
         req.session.destroy();
-        if(req.cookies.eltiempo){
-            res.cookie('eltiempo','',{maxAge: -1})
+        if (req.cookies.eltiempo) {
+            res.cookie('eltiempo', '', { maxAge: -1 })
         }
         return res.redirect('/')
     }
