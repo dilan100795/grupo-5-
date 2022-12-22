@@ -1,9 +1,13 @@
 *{
     box-sizing: border-box;
 }
-
+.perfil{
+    background-image: url('../images/fondonosotros.png');
+    background-size:contain
+   
+}
 .perfil main {
-    height: 120vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -13,14 +17,19 @@
 
 .perfil main h1 {
     text-transform: capitalize;
+    margin:10px 5px 5px ;
 }
 
+.perfil main h2 {
+    text-transform: capitalize;
+    margin:2px;
+}
 .perfil main .container_img .avatar_edit {
-    position: absolute;
-    right: 670px;
+    position:absolute;
+    right: 50%;
     z-index: 1;
-    top: 400px;
-    width: 15px;
+    top: 360px;
+    width:35px;
 }
 .perfil main .container_img .avatar_edit input {
     display: none;
@@ -38,7 +47,7 @@
     transition: all .2s ease-in-out;
 }
 .perfil main .container_img .avatar_edit label{
-    color: #757575;
+    color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,11 +62,11 @@
     font-weight: bold;
 }
 .perfil main .container label{
-    margin-bottom: 5px;
+    margin: 4px;
 }
 .perfil main .container input{
     width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
 }
 .perfil main small{
     margin-top: 5px;
@@ -69,9 +78,8 @@
     height: 40px;
     color: white;
     border-radius: 8px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 9px;
+    margin: 15px 35px 15px 35px;
+    padding: 10px;
 }
 .perfil main img{
    height: 200px;
@@ -86,9 +94,15 @@
        
         padding: 20px;
     }
+
+    .perfil main .container_img .avatar_edit {
+        
+        top: 400px;
+        
+    }
 }
 /*desktop*/
-@media (min-width:768px) {
+@media (min-width:769px) {
     .perfil main img{
        
         padding: 20px;

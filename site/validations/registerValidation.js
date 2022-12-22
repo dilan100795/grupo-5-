@@ -1,5 +1,5 @@
 const {check,body} = require('express-validator');
-
+const db=require('../database/models')
 module.exports = [
 
 /*Nombre*/ 
@@ -13,12 +13,27 @@ check('name').trim()
 check('email').trim()
 .notEmpty().withMessage('Debes ingresar tu email').bail()
 .isEmail().withMessage('Debes ingresar un email valido'),
-
+body('email').custom((value) => {
+    return db.usuarios.findOne({
+        where: {
+            email: value,
+        }
+    })
+    .then((user) => {
+        if(user){
+            return Promise.reject('Email ya registrado')
+        }
+    })
+}),
 /*Contraseña*/ 
 check('pass')
-.isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
+.isLength({min:8, max:12}).withMessage('Debe contener al menos 8 caracteres').bail()
+.matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(.{8,12})$/)
+.withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener entre 8 y 12 caracteres'),
 check('pass2')
-.isLength({min:8}).withMessage('Debe contener al menos 8 caracteres').bail(),
+.isLength({min:8, max:12}).withMessage('Debe contener al menos 8 caracteres').bail()
+.matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(.{8,12})$/)
+.withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener entre 8 y 12 caracteres'),
 /*Comentario - textarea
 check('comentarios')
 .notEmpty().withMessage('')
@@ -32,4 +47,5 @@ check('terminos')
 body('pass2')
     .custom((value,{req}) => value !== req.body.pass ? false : true)
     .withMessage('Las contraseñas no coinciden')
+
 ]

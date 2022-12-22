@@ -1,6 +1,13 @@
+.nosotros{
+    background-image: url('../images/fondonosotros.png');
+    background-size:contain
+   
+}
 .nosotros main h2{
     text-align: center;
-
+}
+.nosotros main p{
+    font-size: large;
 }
 .nosotros main {
    margin: 30px 30px ;
@@ -30,8 +37,8 @@
 }
 
 
-/*tablet*/
-@media (min-width:460px) {
+
+@media (min-width:769px) {
     .nosotros .mapa{
         text-align: center;
     }
@@ -40,5 +47,13 @@
     }
     .nosotros .red-icon-banner{
         font-size: 1.4em;
+    }
+    .nosotros main p {
+        margin:20px 150px;
+    
+    }
+    .nosotros main h3 {
+        margin:20px 150px;
+    
     }
 }

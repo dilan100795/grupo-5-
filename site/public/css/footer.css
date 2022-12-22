@@ -1,52 +1,179 @@
-footer .piedepagina{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: var(--rojizo);
-    flex-wrap: wrap;
-}
-footer ul{
-    display:inline;
-    justify-content:space-around;
-    flex-wrap: wrap;
-}
-footer ul li{
-    color:var(--amarillo);
-    list-style: none;  
-    margin: 10px;
-}
-footer ul li a{
-    text-transform: capitalize;
-    margin: 10px;
-    padding: 10px;   
-    color:var(--blanco);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
 }
 
-footer .piedepaginaa .log {
-    text-align: center;
+footer{
+  position: relative;
+  background: var(--azul);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+footer::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 140px;
+  height: 1px;
+  width: 100%;
+  background: #AFAFB6;
+}
+footer .content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 25px;
+}
+footer .content .top{
+    flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details{
+  color: #fff;
+  font-size: 30px;
+}
+.content .top .media-icons{
+  display: flex;
+  margin-top: 16px;
+}
+.content .top .media-icons a{
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1){
+  background: #4267B2;
+}
+.top .media-icons a:nth-child(1):hover{
+  color: #4267B2;
+  background: #fff;
+}
+.top .media-icons a:nth-child(2){
+  background:  #00bb2d;
+}
+.top .media-icons a:nth-child(2):hover{
+  color:  #00bb2d;
+  background: #fff;
+}
+.top .media-icons a:nth-child(3){
+  background: #E1306C;
+}
+.top .media-icons a:nth-child(3):hover{
+  color: #E1306C;
+  background: #fff;
+}
+.top .media-icons a:nth-child(4){
+  background: #0077B5;
+}
+.top .media-icons a:nth-child(4):hover{
+  color: #0077B5;
+  background: #fff;
+}
+.top .media-icons a:nth-child(5){
+  background: #FF0000;
+}
+.top .media-icons a:nth-child(5):hover{
+  color: #FF0000;
+  background: #fff;
+}
+footer .content .link-boxes{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box{
+  width: calc(100% / 2.2 - 10px);
+}
+.content .link-boxes .box .link_name{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
 }
 
-footer .piedepagina img {
-    height: 120px;
-    margin-top: 5px;
-
-    text-align: center;
+.content .link-boxes .box li{
+  margin: 6px 0;
+  list-style: none;
+ 
+}
+.content .link-boxes .box li a{
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease
+}
+.content .link-boxes .box li a:hover{
+  opacity: 1;
+  text-decoration: underline;
 }
 
-footer .piedepagina .servicios{
-    color:var(--blanco);
+footer .bottom-details{
+  width: 100%;
+  background: var(--azul)
+}
+footer .bottom-details .bottom_text{
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a{
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover{
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a{
+  margin-right: 10px;
 }
 
-footer .redes{
-    background-color: var(--azul);
-}
-footer .redes a{
-   color:var(--amarillo);
-    margin: 10px;  
-}
-
-@media (min-width:769px) {
-
-    footer ul{
-        display:flex;
+@media (min-width:768px) {
+    
+    footer::before{
+        top: 100px;
+      }
+footer .content{
+       
+        margin: 10px;
+        padding: 30px;
+      }
+    footer .content .top{
+        flex-direction:row;
+     
     }
+    
+      footer .content .link-boxes .box{
+        width: calc(100% / 5 - 10px);
+      }
+      .content .link-boxes .box li a{
+      
+        font-size: 16px;
+        
+      }
 }
+    
+       
+

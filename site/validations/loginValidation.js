@@ -10,7 +10,9 @@ module.exports = [
     /* Contraseña */
     check('pass').trim()
     .notEmpty().withMessage('Debe ingresar su contraseña').bail()
-    .isLength({min:8}).withMessage('Debe contener al menos 8 caracteres'),
+    .isLength({ min: 8, max: 12 }).withMessage('Debe contener al menos 8 caracteres')
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(.{8,12})$/)
+    .withMessage('La contraseña debe contener al menos un número, una mayúscula, una minúscula y tener entre 8 y 12 caracteres'),
 
     body('pass')
     .custom((value, {req}) => {

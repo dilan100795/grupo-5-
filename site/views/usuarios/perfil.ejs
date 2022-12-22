@@ -9,11 +9,15 @@
 
 
             <main>
-                <h1>Hola <%= `${locals.userLogin.rol==1 ? 'Administrador' : 'usuario' } ${locals.userLogin.nombre}`%> </h1>
+                
+                <h1>Bienvenido <%= `${locals.userLogin.nombre} `%> </h1>
+               <h2><%= `${locals.userLogin.rol==1 ? '(administrador)' : '(usuario)' }`%> </h2>
+                <form action="/usuarios/perfil/<%= locals.userLogin.id %>?_method=PUT" method="post"
+                    enctype="multipart/form-data">
                 <div class="container_img">
                 <img src="/images/imagenesDePerfil/<%= locals.userLogin.image %> " alt="">
                 <div class="avatar_edit">
-                    <input name="avatar" type='file' id="imageUpload" />
+                    <input name="image" type='file' id="imageUpload" />
                     <label for="imageUpload" class="fas fa-pencil-alt"></label>
                 </div>
                         
@@ -39,7 +43,7 @@
                     <div class="container bottom">
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email"
-                            value="<%=locals.userLogin.email%> " disabled>
+                            value="<%=locals.userLogin.email %>" disabled>
 
                     </div>
 
@@ -106,17 +110,13 @@
 
 
 
-                    <button type="submit">Guardar Cambios</button>
+             <button type="submit">Guardar Cambios</button>
 
-
-
-
-
-                    <form action="/usuarios/logout?_method=DELETE" method="post">
-                        <button type="submit">Cerrar Sesion</button>
-                    </form>
                 </form>
-           
+                
+              <form action="/usuarios/logout?_method=DELETE" method="post">
+                        <button type="submit">Cerrar Sesion</button>
+            </form>
             </main>
 
             <%- include('../partials/footer') %>

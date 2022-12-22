@@ -56,8 +56,14 @@ module.exports = {
                         id: user.id,
                         nombre: user.name,
                         image: user.imagen,
-                        rol: user.rol
-                    }
+                        email: user.email,
+                        rol: user.rol,
+                        direcion: user.direcion,
+                        telefono: user.telefono,
+                        provincia: user.provincia,
+                        ciudad: user.ciudad,
+                        codigo_postal: user.codigo_postal,
+}
 
                     return res.redirect('/')
                 })
@@ -98,8 +104,14 @@ module.exports = {
                         id: user.id,
                         nombre: user.name,
                         image: user.imagen,
-                        rol: user.rol
-                    }
+                        email: user.email,
+                        rol: user.rol,
+                        direcion: user.direcion,
+                        telefono: user.telefono,
+                        provincia: user.provincia,
+                        ciudad: user.ciudad,
+                        codigo_postal: user.codigo_postal,
+}
                     if (recordarme) {
                         res.cookie('eltiempo', req.session.userLogin, { maxAge: 1000 * 60 * 60 * 24 })
                     }
@@ -127,7 +139,7 @@ module.exports = {
         if (errors.isEmpty()) {
 
 
-            const { nombre, codigo_postal, direcion, ciudad, provincia, telefono } = req.body
+            const { name, codigo_postal, direcion, ciudad, provincia, telefono } = req.body
 
             /*let user = users.find(usuario => usuario.email === email)*/
 
@@ -139,7 +151,7 @@ module.exports = {
                 .then(user => {
                     console.log(user)
                     db.usuarios.update({
-                        name: nombre.trim(),
+                        name: name,
                         email: user.email,
                         password: user.password,
                         rol: user.rol,
@@ -151,6 +163,10 @@ module.exports = {
                         imagen: req.file ? req.file.filename : user.imagen,
                     }, { where: { id: req.params.id } })
                         .then(data => {
+                            if ((fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'imagenesDePerfil', user.imagen)) && user.imagen !== 'default-image.jpg')){
+                                fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'imagenesDePerfil', user.imagen))
+                            }
+
                             db.usuarios.findOne({
                                 where: {
                                     id: req.params.id
@@ -159,6 +175,7 @@ module.exports = {
                                 req.session.userLogin = {
                                     id: usuario.id,
                                     nombre: usuario.name,
+                                    email: user.email,
                                     image: usuario.imagen,
                                     rol: usuario.rol,
                                     direcion: usuario.direcion,
