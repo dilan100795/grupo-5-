@@ -11,9 +11,9 @@
         <section class="top-main">
             <section class="libro">
                 <!--iconos de flechas e imagen del libro-->
-                <div class="previa"><button><i class="fas fa-angle-left"></i></button></div>
+               <!-- <div class="previa"><button><i class="fas fa-angle-left"></i></button></div>-->
                 <div class="portada"> <img src="/images/<%- product.imagen %> " alt="imagen del producto"> </div>
-                <div class="next"><button><i class="fas fa-angle-right"></i></button></div>
+               <!-- <div class="next"><button><i class="fas fa-angle-right"></i></button></div>-->
             </section>
             <!--titulo y precio + iconos de tarjeta de credito y billete y boton de compra-->
             <section class="datos">
@@ -23,11 +23,11 @@
                 <article class="promos">
                     <div class="credito">
                         <i class="far fa-credit-card"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Podes abonar con tu tarjeta de credito.</p>
                     </div>
                     <div class="efectivo">
                         <i class="far fa-money-bill-alt"></i>
-                        <p>Proin varius felis ut arcu scelerisque eleifend.</p>
+                        <p>Si compras en nuestro local podes abonar con efectivo.</p>
                     </div>
                 </article>
                 <!-- boton de agregar al carrito y caja de envios y compra por local-->
@@ -61,16 +61,31 @@
             <p><%= product.categoria %></p>
         </section>
       
-       
+       <section class="descripciones">
+        <div>
+            <p><%= product.descripcion %></p>
+        </div>
+       </section>
+
+
         <!--Productos parecidos-->
         <section class="parecidos">
             <h3 class="relacionados">Productos relacionados</h3>
-            <% for( let i = 0; i < 4; i++ ){ %>
-            <article class="otroslibros">
-                <a href="/productos/detalle/<%= product.id %>"><img src="/images/<%= product.imagen %> " alt="portada de silence of the lamb"></a>
-            </article>
            
-            <% } %>
+
+            <article class="otroslibros">
+                <a href="/productos/detalle/7"><img src="/images/crush-richard-siken.jpg" alt="portada de crush"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/productos/detalle/15"><img src="/images/los-miserables.jpg " alt="portada de los miserables"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/productos/detalle/17"><img src="/images/war-and-peace.PNG" alt="portada de war and peace"></a>
+            </article>
+            <article class="otroslibros">
+                <a href="/productos/detalle/12"><img src="/images/a-room-of-ones-own.jpg" alt="portada de a room of ones own"></a>
+            </article>
+
         </section>
         
     </main>

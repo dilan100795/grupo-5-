@@ -19,6 +19,7 @@ let indexRouter = require('./routes/index')
 let administradorRouter = require('./routes/administrador')
 let productosRouter = require('./routes/productos')
 let usuariosRouter = require('./routes/usuarios')
+let apiRouter = require('./routes/api/api')
 
 /*View Engine Setup*/
 app.set('views', path.join(__dirname, 'views'));
@@ -49,6 +50,7 @@ app.use('/', indexRouter);
 app.use('/usuarios', usuariosRouter);
 app.use('/productos', productosRouter);
 app.use('/administrador', administradorRouter);
+app.use('/api', apiRouter);
 
 /*app.get('*',(req,res) => res.sendFile(path.resolve(__dirname,'views','404.html')));*/
 app.listen(port,() => console.log(`Servidor corriendo en http://localhost:${port}`))
