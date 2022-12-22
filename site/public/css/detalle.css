@@ -200,6 +200,26 @@ align-self: center;
     margin: 4px;
     font-size: 1.1em;
 }
+/*descripcion del libro texto*/
+.detalle-de-producto main .descripciones{
+    background-color: var(--amarillo);
+    border:2px solid var(--azul);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    border-radius: 4px;
+    margin: 10px 20px 10px 20px;
+    padding: 5px 5px;
+}
+.detalle-de-producto main .descripciones div{
+    
+    text-align: center;
+}
+.detalle-de-producto main .descripciones div p{
+    
+    font-weight: bold;
+}
 /*productos relacionados*/
 .detalle-de-producto main .relacionados{
     width: 100%;
