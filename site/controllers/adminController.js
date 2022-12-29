@@ -6,43 +6,42 @@ const historial = require('../data/historial.json');
 let db = require('../database/models')
 
 module.exports = {
-    listar: (req,res) => {
+    listar: (req, res) => {
 
-       db.Products.findAll({
+        db.Products.findAll({
             include: [
                 "categoria",
                 "editorial"
             ]
-       })
-       .then(productos => {
-       /*return res.send(productos)*/
-            return res.render('administrador/listar',{
-            productos,
-            redirection: "historial"
-        })  
-        })  .catch (error =>
-         {
-            return res.send(error)
         })
+            .then(productos => {
+                /*return res.send(productos)*/
+                return res.render('administrador/listar', {
+                    productos,
+                    redirection: "historial"
+                })
+            }).catch(error => {
+                return res.send(error)
+            })
     },
 
-    crear: async(req,res) => {
+    crear: async (req, res) => {
         try {
             let categorias = await db.categories.findAll()
             let editoriales = await db.editoriales.findAll()
-            return res.render('administrador/crear',{
+            return res.render('administrador/crear', {
                 categorias,
                 editoriales
             })
         } catch (error) {
             return res.send(error)
-        } 
+        }
     },
-    nuevo: (req,res) => {
+    nuevo: (req, res) => {
         /*return res.send (req.files)*/
 
-        let {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
-        db.Products.create ({
+        let { Titulo, Autor, Idioma, Editorial, Tapa, Modelo, Categoria, Precio, Descuento, Stock, Descripcion, Subcategoria } = req.body;
+        db.Products.create({
             titulo: Titulo,
             autor: Autor,
             idioma: Idioma,
@@ -55,52 +54,52 @@ module.exports = {
             stock: +Stock,
             descripcion: Descripcion,
             subcategoria: Subcategoria,
-                
-    })
-  /*let imagenes = (imagen: req.files) ? img : ["default-image.jpg"];*/
 
-    .then(productoNuevo => {
-        if (req.files) {
+        })
+            /*let imagenes = (imagen: req.files) ? img : ["default-image.jpg"];*/
 
-            let img = req.files.map(imagen=>{
-                let nuevo= {
-                    name: imagen.filename,
-                    productsId: productoNuevo.id
-                    }
-            return nuevo
+            .then(productoNuevo => {
+                if (req.files) {
+
+                    let img = req.files.map(imagen => {
+                        let nuevo = {
+                            name: imagen.filename,
+                            productsId: productoNuevo.id
+                        }
+                        return nuevo
+                    })
+                    console.log(img)
+                    db.imagenes.bulkCreate(img)
+                        .then(imagenes => {
+                            return res.redirect('/administrador/listar')
+                        })
+
+                } else {
+                    db.imagenes.create({
+                        name: "default-image.jpg",
+                        productsId: productoNuevo.id
+                    })
+
+                        .then(imagenes => {
+                            return res.redirect('/administrador/listar')
+                        })
+
+                }
             })
-        console.log(img)
-            db.imagenes.bulkCreate(img)
-            .then(imagenes => {
-            return res.redirect('/administrador/listar')
-            })
-    
-        } else {
-                db.imagenes.create({
-                    name: "default-image.jpg" ,
-                    productsId: productoNuevo.id
-                })
-    
-                .then(imagenes => {
-                    return res.redirect('/administrador/listar')
-                      })
-            
-      }
-    })
 
-    .catch(error => res.send(error))
-       /* productos.push(productoNuevo)
-        guardar(productos)*/
+            .catch(error => res.send(error))
+        /* productos.push(productoNuevo)
+         guardar(productos)*/
     },
 
-    editar:(req,res) => {
+    editar: (req, res) => {
 
         let idParams = +req.params.id
         let categorias = db.categories.findAll()
         let editoriales = db.editoriales.findAll()
         let producto = db.Products.findOne({
             where: {
-                id : idParams
+                id: idParams
             },
             include: [
                 "categoria",
@@ -108,27 +107,27 @@ module.exports = {
                 "imagenes"
             ]
         })
-        Promise.all([categorias,producto,editoriales])
+        Promise.all([categorias, producto, editoriales])
 
-        .then(([categorias,producto,editoriales]) => {
-        /* return res.send(imagenes) */
-            return res.render('administrador/editar', {
-                producto,
-                categorias,
-                editoriales
+            .then(([categorias, producto, editoriales]) => {
+                /* return res.send(imagenes) */
+                return res.render('administrador/editar', {
+                    producto,
+                    categorias,
+                    editoriales
+                })
             })
-    })
-    .catch(error => res.send(error))
+            .catch(error => res.send(error))
 
     },
-    actualizar:(req,res) => {
+    actualizar: (req, res) => {
 
         const idParams = +req.params.id
-        const {Titulo,Autor,Idioma,Editorial,Tapa,Modelo,Categoria,Precio,Descuento,Stock,Descripcion,Subcategoria} = req.body;
+        const { Titulo, Autor, Idioma, Editorial, Tapa, Modelo, Categoria, Precio, Descuento, Stock, Descripcion, Subcategoria } = req.body;
 
         let producto = db.Products.findOne({
             where: {
-                id : idParams
+                id: idParams
             },
             include: [
                 "categoria",
@@ -149,199 +148,220 @@ module.exports = {
             stock: +Stock,
             descripcion: Descripcion,
             subcategoria: Subcategoria,
-        },{
+        }, {
             where: {
-                id : idParams
+                id: idParams
             }
         })
-        Promise.all([producto,actualizacion])
+        Promise.all([producto, actualizacion])
 
-        .then(([producto, actualizacion]) => { 
-            
-            if (req.file) {
+            .then(([producto, actualizacion]) => {
 
-            let img = req.file.map(imagen=>{
-                let nuevo= {
-                    name: imagen.filename,
-                    productsId: productos.id
-                    }
-            return nuevo
+                if (req.file) {
+                    db.imagenes.update({
+                        name: req.file.filename
+                    },
+                        {
+                            where: { productsId: producto.imagenes[0].id }
+                        })
+                        .then(imagenes => {
+                            return res.redirect(
+                                '/administrador/listar'
+                            )
+                        })
+                        .catch(error => res.send(error))
+
+
+
+
+                    /*let img = req.file.map(imagen=>{
+                        let nuevo= {
+                            name: imagen.filename,
+                            productsId: productos.id
+                            }
+                    return nuevo
+                    })*/
+                }
+                else{
+                    return res.redirect(
+                        '/administrador/listar'
+                    )
+                }
             })
-        }
-    })
 
-    .catch(error => res.send(error))
+            .catch(error => res.send(error))
 
     },
-    destruir:(req,res) => {
-        
+    destruir: (req, res) => {
+
         let idParams = +req.params.id
         db.Products.findOne({
-            where : {
-                id : idParams
+            where: {
+                id: idParams
             },
-            include : [
+            include: [
                 "categoria",
                 "editorial",
                 "imagenes"
             ]
         })
-        .then(producto => {
+            .then(producto => {
 
-            db.historiales.create({
-                titulo: producto.titulo,
-                autor: producto.autor,
-                idioma: producto.idioma,
-                editorialesId: producto.editorialesId,
-                tapa: producto.tapa,
-                modelo: producto.modelo,
-                categoriesId: producto.categoriesId,
-                precio: producto.precio,
-                descuento: producto.descuento,
-                stock: producto.stock,
-                descripcion: producto.descripcion,
-                subcategoria: producto.subcategoria
+                db.historiales.create({
+                    titulo: producto.titulo,
+                    autor: producto.autor,
+                    idioma: producto.idioma,
+                    editorialesId: producto.editorialesId,
+                    tapa: producto.tapa,
+                    modelo: producto.modelo,
+                    categoriesId: producto.categoriesId,
+                    precio: producto.precio,
+                    descuento: producto.descuento,
+                    stock: producto.stock,
+                    descripcion: producto.descripcion,
+                    subcategoria: producto.subcategoria
+                })
+                    .then(historial => {
+                        let promesas = []
+
+                        let imagen1 = db.imagenes_historiales.create({
+                            nombre: producto.imagenes[0].name,
+                            historialesId: historial.id
+                        })
+                        let imagen2 = db.imagenes_historiales.create({
+                            nombre: producto.imagenes[1].name,
+                            historialesId: historial.id
+                        })
+                        let imagen3 = db.imagenes_historiales.create({
+                            nombre: producto.imagenes[2].name,
+                            historialesId: historial.id
+                        })
+                        let imagen4 = db.imagenes_historiales.create({
+                            nombre: producto.imagenes[3].name,
+                            historialesId: historial.id
+                        })
+
+                        Promise.all([imagen1, imagen2, imagen3, imagen4])
+                            .then(([imagen1, imagen2, imagen3, imagen4]) => {
+                                db.Products.destroy({
+                                    where: {
+                                        id: idParams
+                                    }
+                                })
+                                    .then(producto => {
+                                        return res.redirect('/administrador/historial')
+                                    }).catch(error => res.send(error))
+                            }).catch(error => res.send(error))
+                    }).catch(error => res.send(error))
+
             })
-            .then(historial => {
-                let promesas = []
-    
-                let imagen1 = db.imagenes_historiales.create({
-                    nombre: producto.imagenes[0].name,
-                    historialesId: historial.id
-                })
-                let imagen2 = db.imagenes_historiales.create({
-                    nombre: producto.imagenes[1].name,
-                    historialesId: historial.id
-                })
-                let imagen3 = db.imagenes_historiales.create({
-                    nombre: producto.imagenes[2].name,
-                    historialesId: historial.id
-                })
-                let imagen4 = db.imagenes_historiales.create({
-                    nombre: producto.imagenes[3].name,
-                    historialesId: historial.id
-                })
-    
-                Promise.all([imagen1,imagen2,imagen3,imagen4])
-                .then(([imagen1,imagen2,imagen3,imagen4])=>{
-                    db.Products.destroy({
-                        where : {
-                            id : idParams
-                        }
-                    })
-                    .then(producto => {
-                        return res.redirect('/administrador/historial')
-                    }) .catch(error => res.send(error))
-                }) .catch(error => res.send(error))
-            }) .catch(error => res.send(error))
-
-        })
-    .catch(error => res.send(error))
+            .catch(error => res.send(error))
     },
-    historial:(req,res) => {
+    historial: (req, res) => {
 
         db.historiales.findAll({
-            include : [
+            include: [
                 "categoria",
                 "editorial"
             ]
-        })   
+        })
             .then(historial => {
                 /* return res.send(historial) */
                 return res.render('administrador/listar', {
                     productos: historial,
                     redirection: "listar"
                 })
-            }) .catch(error => res.send (error)) 
-    }, 
-    restaurar:(req,res) => {
+            }).catch(error => res.send(error))
+    },
+    restaurar: (req, res) => {
 
         let idParams = +req.params.id
         db.historiales.findOne({
-            where : {
-                id :idParams
+            where: {
+                id: idParams
             },
-            include : [
+            include: [
                 "categoria",
                 "editorial",
                 "imagenes"
             ]
         })
-        .then(historialProducto => {
-            db.Products.create({
-                titulo: historialProducto.titulo,
-                autor: historialProducto.autor,
-                idioma: historialProducto.idioma,
-                editorialesId:historialProducto.editorialesId,
-                tapa: historialProducto.tapa,
-                modelo: historialProducto.modelo,
-                categoriesId: historialProducto.categoriesId,
-                precio: historialProducto.precio,
-                descuento: historialProducto.descuento,
-                stock: historialProducto.stock,
-                descripcion: historialProducto.descripcion,
-                subcategoria:historialProducto.subcategoria
-            })
-            .then(productoNuevo => {
-                let imagen1 = db.imagenes.create({
-                    nombre: historialProducto.imagenes[0].name,
-                    productsId: productoNuevo.id
+            .then(historialProducto => {
+                db.Products.create({
+                    titulo: historialProducto.titulo,
+                    autor: historialProducto.autor,
+                    idioma: historialProducto.idioma,
+                    editorialesId: historialProducto.editorialesId,
+                    tapa: historialProducto.tapa,
+                    modelo: historialProducto.modelo,
+                    categoriesId: historialProducto.categoriesId,
+                    precio: historialProducto.precio,
+                    descuento: historialProducto.descuento,
+                    stock: historialProducto.stock,
+                    descripcion: historialProducto.descripcion,
+                    subcategoria: historialProducto.subcategoria
                 })
-                let imagen2 = db.imagenes.create({
-                    nombre: historialProducto.imagenes[1].name,
-                    productsId: productoNuevo.id
-                })
-                let imagen3 = db.imagenes.create({
-                    nombre: historialProducto.imagenes[2].name,
-                    productsId: productoNuevo.id
-                })
-                let imagen4 = db.imagenes.create({
-                    nombre: historialProducto.imagenes[3].name,
-                    productsId: productoNuevo.id
-                })
-                Promise.all([imagen1,imagen2,imagen3,imagen4])
-                .then(([imagen1,imagen2,imagen3,imagen4]) =>{
-                    db.historiales.destroy({
-                        where : {
-                            id : idParams
-                        }
+                    .then(productoNuevo => {
+                        let imagen1 = db.imagenes.create({
+                            nombre: historialProducto.imagenes[0].name,
+                            productsId: productoNuevo.id
+                        })
+                        let imagen2 = db.imagenes.create({
+                            nombre: historialProducto.imagenes[1].name,
+                            productsId: productoNuevo.id
+                        })
+                        let imagen3 = db.imagenes.create({
+                            nombre: historialProducto.imagenes[2].name,
+                            productsId: productoNuevo.id
+                        })
+                        let imagen4 = db.imagenes.create({
+                            nombre: historialProducto.imagenes[3].name,
+                            productsId: productoNuevo.id
+                        })
+                        Promise.all([imagen1, imagen2, imagen3, imagen4])
+                            .then(([imagen1, imagen2, imagen3, imagen4]) => {
+                                db.historiales.destroy({
+                                    where: {
+                                        id: idParams
+                                    }
+                                })
+                                    .then(eliminar => {
+                                        return res.redirect('administrador/listar')
+                                    })
+                            })
                     })
-                    .then(eliminar => {
-                        return res.redirect('administrador/listar')
-                    })
-                })
             })
-        })
-        .catch(errores => res.send(errores))
-        
+            .catch(errores => res.send(errores))
+
     },
-    basura: (req,res) => {
+    basura: (req, res) => {
         idParams = +req.params.id
 
         db.historiales.findOne({
-            where: {id : idParams},
-            include : [
-            "imagen_historial"
+            where: { id: idParams },
+            include: [
+                "imagen_historial"
             ]
-    })
-        .then(historiales => {
-            console.log(historiales)
-            console.log(idParams)
-            let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'productosImages', dato))
-            historiales.imagen_historial.forEach(imagen => {
-                if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.jpg")) {
-                    fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'productosImages', imagen.nombre))
-                }
-         })
-         db.historiales.destroy({
-            where : {
-                id : idParams
-            }
         })
-        .then(eliminar => {
-            return res.redirect('administrador/listar')
-        }) 
-        .catch(errores => res.send(errores))
+            .then(historiales => {
+                console.log(historiales)
+                console.log(idParams)
+                let ruta = (dato) => fs.existsSync(path.join(__dirname, '..', 'public', 'images', 'productosImages', dato))
+                historiales.imagen_historial.forEach(imagen => {
+                    if (ruta(imagen.nombre) && (imagen.nombre !== "default-image.jpg")) {
+                        fs.unlinkSync(path.join(__dirname, '..', 'public', 'images', 'productosImages', imagen.nombre))
+                    }
+                })
+                db.historiales.destroy({
+                    where: {
+                        id: idParams
+                    }
+                })
+                    .then(eliminar => {
+                        return res.redirect('administrador/listar')
+                    })
+                    .catch(errores => res.send(errores))
 
-        }) .catch(error => res.send (error))
-    }}
+            }).catch(error => res.send(error))
+    }
+}

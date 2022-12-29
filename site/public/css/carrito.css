@@ -1,4 +1,9 @@
 /*articulo de cada producto*/
+.carrito{
+    background-image: url('../images/fondonosotros.png');
+    background-size:contain
+   
+}
 .carrito main{
     box-sizing: border-box;
 }
@@ -13,6 +18,7 @@
     position: relative;
     margin-bottom: 20px;
     margin-top:20px;
+    
 }
 /*titulo de los productos*/
 .carrito section article h3{
@@ -110,7 +116,7 @@
 .carrito .Numeros h3{
     margin-top: 20px;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .carrito .Numeros h3:first-child{
     margin-top: 0;
@@ -216,6 +222,19 @@
 }
 /* Desktop */
 @media (min-width:769px){
+    .carrito .primeraSection article{
+        background-color: var(--amarillo);
+        margin: 0 auto;
+        width: 100%;
+        border: 1px solid var(--azul);
+        border-radius: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin-bottom: 20px;
+        margin-top:20px;
+      
+    }
     .carrito main{
         display: flex;
         flex-wrap: wrap;
@@ -225,11 +244,41 @@
         width: 100%;
     }
     .carrito main section{
-        width: 58%;
-        padding-top: 20px;
+        width: 35%;
+        padding: 20px 1px 20px 80px ;
+        margin: 10px;
     }
+    .carrito section article h3{
+        width: 100%;
+        text-align:left;
+        font-size: 1.1rem;
+        color:var(--bordo);
+        margin: 10px 70px 10px 10px;
+      
+    }
+
+    .carrito section article .imagenes img{
+        margin-left: 28px;
+        width: 50%;
+        padding-bottom: 5px;
+    }
+
+   
     .carrito main section.Numeros{
         width: 40%;
         border-radius: 10px;
+      
+    }
+    .carrito .Numeros{
+        width: 90%;
+        margin: 0 auto;
+        background-color: var(--amarillo);
+        border:solid 1px black;
+        color: var(--bordo);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 60px;
+        margin-bottom:500px;
+        
     }
 }

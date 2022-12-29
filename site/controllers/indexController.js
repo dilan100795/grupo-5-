@@ -7,9 +7,7 @@ module.exports = {
 
         /*let productos = db.product.findAll()
         Promise.all(productos)
-
         .then((productos) => { return res.render
-
         })
         .catch(error => res.send(error))*/
 
