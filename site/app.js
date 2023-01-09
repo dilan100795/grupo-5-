@@ -7,6 +7,7 @@ const path = require('path');
 const methodOverride = require('method-override')
 const session = require('express-session')
 const cookieParser = require('cookie-parser');
+const cors = require('cors')
 
 
 /* Implementamos locals dentro de nuestra aplicacion */
@@ -25,6 +26,7 @@ let apiRouter = require('./routes/api/api')
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(cors())
 
 /* Trabajar con metodos HTTP (post) */
 app.use(express.json());
