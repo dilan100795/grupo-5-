@@ -134,12 +134,12 @@ header .menu-opciones li a {
     color: var(--blanco);
     text-transform: uppercase;
 }
-header .menu-opciones li a:hover {
+/*header .menu-opciones li a:hover {
    
    font-size: 20px;
     text-transform: uppercase;
    
-}
+}*/
 header .menu-opciones ul li:first-child {
     display: none;
 }
